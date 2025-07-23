@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animated Menu</title>
+  <link rel="stylesheet" href="./dist/nav.css" />
+  <link rel="stylesheet" href="./dist/style.css" />
+  <link rel="stylesheet" href="./dist/hero.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav-section d-flex justify-content-between align-items-center py-3">
+        <div class="left-logo">
+          <h2>LOGO</h2>
+        </div>
+        <div class="navbar d-flex align-items-center gap-3">
+          <div class="menu-logo" onclick="toggleMenu()">
+            <!-- Menu Icon -->
+            <svg id="menuIcon" class="menu-icon" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="19.5" fill="white" stroke="#545454"/>
+              <path d="M13 20H27" stroke="#545454" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 15H27" stroke="#545454" stroke-width="2" stroke-linecap="round"/>
+              <path d="M13 25H27" stroke="#545454" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+
+            <!-- Close Icon -->
+            <svg id="closeIcon" class="close-icon d-none" width="40" height="40" viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="19.5" fill="white" stroke="#545454"/>
+              <line x1="14" y1="14" x2="26" y2="26" stroke="#545454" stroke-width="2"/>
+              <line x1="14" y1="26" x2="26" y2="14" stroke="#545454" stroke-width="2"/>
+            </svg>
+          </div>
+          <button class="btn btn-dark">Let's Talk</button>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <div class="nav-menu" id="navMenu">
+        <div class="nav-content">
+          <a href="#">Home</a>
+          <a href="#">About Us</a>
+          <a href="#">Pages</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    const navMenu = document.getElementById("navMenu");
+    const menuIcon = document.getElementById("menuIcon");
+    const closeIcon = document.getElementById("closeIcon");
+
+    let isOpen = false;
+
+    function toggleMenu() {
+      isOpen = !isOpen;
+
+      if (isOpen) {
+        navMenu.classList.add("active");
+        menuIcon.classList.add("spin");
+        setTimeout(() => {
+          menuIcon.classList.add("d-none");
+          closeIcon.classList.remove("d-none");
+        }, 300);
+      } else {
+        navMenu.classList.remove("active");
+        closeIcon.classList.add("d-none");
+        menuIcon.classList.remove("d-none", "spin");
+      }
+    }
+  </script>
+</body>
+</html>

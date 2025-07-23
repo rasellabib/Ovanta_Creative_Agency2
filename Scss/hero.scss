@@ -1,0 +1,30 @@
+.hero-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.right-hero {
+  .right-content {
+    position: absolute;
+    right: 58px;
+    bottom: 80px;
+    max-width: 680px;
+    margin: auto;
+    @media screen and (max-width: 1199.98px) {
+      right: 0;
+      top: 500px;
+      max-width: 100%;
+    }
+  }
+}
+
+.hero-image {
+
+    background-image: url("../Assets/images/heroimage.jpeg");
+  height: 800px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}

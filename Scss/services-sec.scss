@@ -1,0 +1,22 @@
+.services-sec {
+  background-image: url("../Assets/images/services/bg.png");
+  .services-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left-service-title {
+      color: white;
+      h2 {
+        color: white;
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+    }
+    .button-white{
+        align-content: center;
+    }
+  }
+  .services-content{
+    margin-top: 80px;
+  }
+}
