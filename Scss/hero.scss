@@ -13,9 +13,7 @@
     max-width: 680px;
     margin: auto;
     @media screen and (max-width: 1199.98px) {
-      right: 0;
-      top: 500px;
-      max-width: 100%;
+      display: none;
     }
   }
 }

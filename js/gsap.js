@@ -16,3 +16,4 @@ const logoTrack = document.getElementById("logoTrack");
   // Pause on hover
   logoWrapper.addEventListener("mouseenter", () => animation.pause());
   logoWrapper.addEventListener("mouseleave", () => animation.resume());
+

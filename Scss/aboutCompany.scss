@@ -1,7 +1,12 @@
 .about-company-sec{
     display: flex;
     gap: 78px;
-
+    @media screen and (max-width: 1399px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      
+    }
 .about-company {
     width: 450px;
   .experience-image-div {
