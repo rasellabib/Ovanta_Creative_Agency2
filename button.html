@@ -1,233 +1,535 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Project Slider</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f7f7f7;
-    }
-
-    .section-padding-top-bottom {
-      padding: 80px 0;
-    }
-
-    .projects-title {
-      position: relative;
-      text-align: center;
-    }
-
-    .projects-title .section-title-div {
-      justify-content: center;
-      margin-bottom: 30px;
-      display: flex;
-      align-items: center;
-    }
-
-    .projects-title .section-title {
-      font-size: 18px;
-      text-transform: uppercase;
-      color: #888;
-      margin-left: 10px;
-    }
-
-    .projects-title h2 {
-      font-weight: bold;
-      font-size: 36px;
-    }
-
-    .arrow-div {
-      position: absolute;
-      left: 50%;
-      top: 10%;
-      width: 95%;
-      display: flex;
-      transform: translateX(-50%);
-      justify-content: space-between;
-      margin: auto;
-    }
-
-    .arrow {
-      width: 75px;
-      height: 75px;
-      border: 1px solid rgba(15, 15, 15, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 999px;
-      background: #fff;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .arrow:hover {
-      background: #eee;
-    }
-
-    .project-image {
-      margin-top: 60px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .project-track {
-      display: flex;
-      gap: 20px;
-      transition: transform 0.6s ease-in-out;
-      will-change: transform;
-    }
-
-    .project-img-div {
-      flex: 0 0 calc(50% - 10px);
-      background: #ffffff;
-      padding: 30px;
-      box-shadow: 0px 12px 40px 4px rgba(15, 15, 15, 0.08);
-      border-radius: 10px;
-      opacity: 0;
-      transform: translateX(100%);
-      transition: all 0.6s ease;
-    }
-
-    .project-img-div.active {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .project-img-div h3 {
-      margin-top: 15px;
-      text-transform: capitalize;
-    }
-
-    .widget-category a {
-      color: #555;
-      text-decoration: none;
-    }
-
-    .pro-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #121212;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+            --text-dark: #333;
+            --text-light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            color: var(--text-dark);
+        }
+        
+        .testimonials-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            font-weight: 800;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+        }
+        
+        .rating-card {
+            background: var(--primary-color);
+            color: var(--text-light);
+            border-radius: 20px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .rating-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        }
+        
+        .rating-number {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 0;
+            color: var(--accent-color);
+        }
+        
+        .stars {
+            font-size: 1.8rem;
+            letter-spacing: 3px;
+            margin: 15px 0;
+            color: #ffd700;
+        }
+        
+        .reviews-count {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+        
+        .tagline {
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-top: 20px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card:before {
+            content: """;
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 6rem;
+            font-family: Georgia, serif;
+            color: rgba(0, 0, 0, 0.05);
+            line-height: 1;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .testimonial-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 3px solid var(--accent-color);
+        }
+        
+        .client-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .client-role {
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+        
+        .testimonial-rating {
+            font-size: 1.3rem;
+            color: #ffd700;
+            margin-top: 15px;
+        }
+        
+        .carousel-container {
+            position: relative;
+            min-height: 380px;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        
+        .carousel-track {
+            position: relative;
+            height: 100%;
+        }
+        
+        .carousel-item {
+            position: absolute;
+            width: calc(100% - 40px);
+            top: 0;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0s;
+        }
+        
+        .carousel-item.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .carousel-item.prev {
+            opacity: 1;
+            transform: translateX(-100%);
+        }
+        
+        .carousel-item.next {
+            opacity: 1;
+            transform: translateX(100%);
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 15px;
+        }
+        
+        .control-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .control-btn:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+        }
+        
+        .indicator {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .indicator-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator-dot.active {
+            background: var(--accent-color);
+            transform: scale(1.3);
+        }
+        
+        @media (max-width: 992px) {
+            .rating-card {
+                margin-bottom: 30px;
+            }
+            
+            .section-title {
+                text-align: center;
+            }
+            
+            .controls {
+                margin-top: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .testimonials-section {
+                padding: 20px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .rating-number {
+                font-size: 3rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<section>
-  <div class="section-padding-top-bottom">
-    <div class="container">
-      <div class="projects-title">
-        <div class="section-title-div">
-          <div class="line"></div>
-          <p class="section-title">about Company</p>
+    <section class="testimonials-section">
+        <div class="container">
+            <h1 class="section-title">Testimonials From Our Customers</h1>
+            
+            <div class="row">
+                <!-- Rating Card -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="rating-card">
+                        <div class="d-flex align-items-center">
+                            <div class="rating-number">4.8</div>
+                            <div class="ms-3">
+                                <div class="stars">★★★★★</div>
+                                <div class="reviews-count">(25+ reviews)</div>
+                            </div>
+                        </div>
+                        <p class="tagline">Enhancing top-tier companies with innovative UI design solutions!</p>
+                    </div>
+                </div>
+                
+                <!-- Testimonials Carousel -->
+                <div class="col-lg-8">
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <!-- Testimonial 1 -->
+                            <div class="carousel-item active">
+                                <div class="testimonial-card">
+                                    <p class="testimonial-content">
+                                        Ovanta team quickly understood our business requirements and was proactive and flexible with our ongoing support and complex developments. You can definitely trust them with complex project requirements as they deliver exceptional results. I can only recommend them.
+                                    </p>
+                                    <div class="client-info">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Jenny Bennett" class="avatar">
+                                        <div>
+                                            <div class="client-name">Jenny Bennett</div>
+                                            <div class="client-role">Senior Marketing Manager</div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Testimonial 2 -->
+                            <div class="carousel-item next">
+                                <div class="testimonial-card">
+                                    <p class="testimonial-content">
+                                        Working with Ovanta has been a game-changer for our product. Their team deeply understands requirements and delivers beyond expectations. Their ongoing support for complex developments has been invaluable to our success.
+                                    </p>
+                                    <div class="client-info">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Samuel Clark" class="avatar">
+                                        <div>
+                                            <div class="client-name">Samuel Clark</div>
+                                            <div class="client-role">Product Manager</div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Testimonial 3 -->
+                            <div class="carousel-item">
+                                <div class="testimonial-card">
+                                    <p class="testimonial-content">
+                                        The UI solutions provided by Ovanta have transformed our customer experience. Their innovative approach and attention to detail resulted in a 40% increase in user engagement. Truly a top-tier design team!
+                                    </p>
+                                    <div class="client-info">
+                                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Alex Johnson" class="avatar">
+                                        <div>
+                                            <div class="client-name">Alex Johnson</div>
+                                            <div class="client-role">UX Director</div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-rating">★★★★★</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Testimonial 4 -->
+                            <div class="carousel-item">
+                                <div class="testimonial-card">
+                                    <p class="testimonial-content">
+                                        Ovanta's ability to translate complex requirements into elegant solutions is unmatched. Their team is responsive, professional, and delivered our project ahead of schedule. We've seen a 30% improvement in conversion rates since launch.
+                                    </p>
+                                    <div class="client-info">
+                                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael Rodriguez" class="avatar">
+                                        <div>
+                                            <div class="client-name">Michael Rodriguez</div>
+                                            <div class="client-role">CTO</div>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-rating">★★★★★</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Controls -->
+                    <div class="controls">
+                        <button class="control-btn prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="control-btn next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Indicators -->
+                    <div class="indicator">
+                        <div class="indicator-dot active"></div>
+                        <div class="indicator-dot"></div>
+                        <div class="indicator-dot"></div>
+                        <div class="indicator-dot"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h2>See Our Works in Action</h2>
-        <div class="arrow-div">
-          <div class="arrow" id="prevArrow">
-            <img src="./Assets/images/arrow-left.svg" alt="Left" />
-          </div>
-          <div class="arrow" id="nextArrow">
-            <img src="./Assets/images/arrow-right.svg" alt="Right" />
-          </div>
-        </div>
-      </div>
-      <div class="project-image">
-        <div class="project-track">
-          <div class="project-img-div">
-            <div class="pro-img">
-              <img src="./Assets/images/services/bg.png" alt="" />
-            </div>
-            <div class="-pro-details">
-              <h3>digital printing 1</h3>
-              <div class="widget-category">
-                <a href="#">Branding</a> <span>.</span>
-              </div>
-            </div>
-          </div>
+    </section>
 
-          <div class="project-img-div">
-            <div class="pro-img">
-              <img src="./Assets/images/services/bg.png" alt="" />
-            </div>
-            <div class="-pro-details">
-              <h3>digital printing 2</h3>
-              <div class="widget-category">
-                <a href="#">Branding</a> <span>.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-img-div">
-            <div class="pro-img">
-              <img src="./Assets/images/services/bg.png" alt="" />
-            </div>
-            <div class="-pro-details">
-              <h3>digital printing 3</h3>
-              <div class="widget-category">
-                <a href="#">Branding</a> <span>.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-img-div">
-            <div class="pro-img">
-              <img src="./Assets/images/services/bg.png" alt="" />
-            </div>
-            <div class="-pro-details">
-              <h3>digital printing 4</h3>
-              <div class="widget-category">
-                <a href="#">Branding</a> <span>.</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script>
-  const track = document.querySelector('.project-track');
-  const items = document.querySelectorAll('.project-img-div');
-  const prevBtn = document.getElementById('prevArrow');
-  const nextBtn = document.getElementById('nextArrow');
-
-  let currentIndex = 0;
-  const visibleCount = 2;
-
-  function updateSlider() {
-    items.forEach((item, index) => {
-      item.classList.remove('active');
-      if (index >= currentIndex && index < currentIndex + visibleCount) {
-        item.classList.add('active');
-      }
-    });
-
-    const translateX = -(currentIndex * (100 / visibleCount));
-    track.style.transform = `translateX(${translateX}%)`;
-  }
-
-  prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex -= visibleCount;
-      updateSlider();
-    }
-  });
-
-  nextBtn.addEventListener('click', () => {
-    if (currentIndex + visibleCount < items.length) {
-      currentIndex += visibleCount;
-      updateSlider();
-    }
-  });
-
-  // Initialize on load
-  updateSlider();
-</script>
-
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Elements
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const dots = document.querySelectorAll('.indicator-dot');
+            
+            // State
+            let currentIndex = 0;
+            const totalItems = carouselItems.length;
+            
+            // Initialize carousel
+            function initCarousel() {
+                carouselItems.forEach((item, index) => {
+                    if (index === 0) {
+                        item.classList.add('active');
+                    } else if (index === 1) {
+                        item.classList.add('next');
+                    } else {
+                        item.classList.remove('active', 'prev', 'next');
+                    }
+                });
+                updateDots();
+            }
+            
+            // Update dot indicators
+            function updateDots() {
+                dots.forEach((dot, index) => {
+                    if (index === currentIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Move to specific slide
+            function moveToSlide(newIndex, direction) {
+                // If same slide, do nothing
+                if (newIndex === currentIndex) return;
+                
+                // Get current and new slides
+                const currentSlide = carouselItems[currentIndex];
+                const newSlide = carouselItems[newIndex];
+                
+                // Determine animation direction
+                const isNext = direction === 'next';
+                const fromClass = isNext ? 'next' : 'prev';
+                const toClass = isNext ? 'prev' : 'next';
+                
+                // Set initial positions
+                newSlide.classList.add(fromClass);
+                
+                // Force reflow
+                newSlide.offsetHeight;
+                
+                // Animate
+                gsap.to(currentSlide, {
+                    x: isNext ? '-100%' : '100%',
+                    opacity: 0,
+                    duration: 0.6,
+                    ease: 'power2.out',
+                    onComplete: () => {
+                        currentSlide.classList.remove('active');
+                        currentSlide.style.transform = '';
+                        currentSlide.style.opacity = '';
+                    }
+                });
+                
+                gsap.fromTo(newSlide, 
+                    { x: isNext ? '100%' : '-100%', opacity: 1 },
+                    {
+                        x: '0%',
+                        opacity: 1,
+                        duration: 0.6,
+                        ease: 'power2.out',
+                        onComplete: () => {
+                            newSlide.classList.remove(fromClass);
+                            newSlide.classList.add('active');
+                        }
+                    }
+                );
+                
+                // Update the next/prev slides
+                carouselItems.forEach(item => {
+                    if (item !== currentSlide && item !== newSlide) {
+                        item.classList.remove('active', 'prev', 'next');
+                    }
+                });
+                
+                // Set next slide
+                const nextIndex = (newIndex + 1) % totalItems;
+                carouselItems[nextIndex].classList.add('next');
+                
+                // Set previous slide
+                const prevIndex = (newIndex - 1 + totalItems) % totalItems;
+                carouselItems[prevIndex].classList.add('prev');
+                
+                // Update current index
+                currentIndex = newIndex;
+                updateDots();
+            }
+            
+            // Next slide
+            function nextSlide() {
+                const newIndex = (currentIndex + 1) % totalItems;
+                moveToSlide(newIndex, 'next');
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                const newIndex = (currentIndex - 1 + totalItems) % totalItems;
+                moveToSlide(newIndex, 'prev');
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    if (index !== currentIndex) {
+                        const direction = index > currentIndex ? 'next' : 'prev';
+                        moveToSlide(index, direction);
+                    }
+                });
+            });
+            
+            // Auto-rotate
+            let autoplay = setInterval(nextSlide, 6000);
+            
+            // Pause autoplay on hover
+            const carouselContainer = document.querySelector('.carousel-container');
+            carouselContainer.addEventListener('mouseenter', () => {
+                clearInterval(autoplay);
+            });
+            
+            carouselContainer.addEventListener('mouseleave', () => {
+                autoplay = setInterval(nextSlide, 6000);
+            });
+            
+            // Initialize
+            initCarousel();
+        });
+    </script>
 </body>
 </html>

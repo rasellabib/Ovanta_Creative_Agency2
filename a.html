@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Text Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #64ffda;
+            --accent: #8892b0;
+            --light: #ccd6f6;
+            --dark: #020c1b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: var(--light);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, var(--secondary), var(--light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--accent);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        
+        .circular-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin: 80px auto;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .circular-text-container {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .circular-text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            animation: rotate 25s linear infinite;
+        }
+        
+        .circular-text span {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform-origin: bottom center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .inner-circle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 2px solid rgba(100, 255, 218, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 10;
+            background: rgba(10, 25, 47, 0.7);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 50px rgba(100, 255, 218, 0.1);
+        }
+        
+        .inner-circle h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--secondary);
+            text-align: center;
+        }
+        
+        .inner-circle p {
+            color: var(--accent);
+            text-align: center;
+            max-width: 200px;
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        
+        .center-plus {
+            position: absolute;
+            font-size: 4rem;
+            color: var(--secondary);
+            font-weight: 200;
+            z-index: 20;
+            animation: pulse 2s infinite;
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .btn {
+            background: transparent;
+            border: 1px solid var(--secondary);
+            color: var(--secondary);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn:hover {
+            background: rgba(100, 255, 218, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .circular-text-container {
+                width: 350px;
+                height: 350px;
+            }
+            
+            .inner-circle {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .inner-circle h2 {
+                font-size: 2rem;
+            }
+            
+            .circular-text span {
+                font-size: 1.4rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .circular-text-container {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .inner-circle {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .inner-circle h2 {
+                font-size: 1.5rem;
+            }
+            
+            .circular-text span {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-header">
+            <h1 class="section-title">Circular Text Design</h1>
+            <p class="section-subtitle">A modern implementation of circular text layout with interactive controls</p>
+        </div>
+        
+        <div class="circular-section">
+            <div class="circular-text-container">
+                <div class="circular-text" id="circularText"></div>
+                <div class="inner-circle">
+                    <h2>START</h2>
+                    <p>Begin your new project journey today</p>
+                </div>
+                <div class="center-plus">+</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn" id="startBtn"><i class="fas fa-play"></i> Start Rotation</button>
+            <button class="btn" id="stopBtn"><i class="fas fa-stop"></i> Stop Rotation</button>
+            <button class="btn" id="reverseBtn"><i class="fas fa-sync-alt"></i> Reverse Direction</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = "START A PROJECT ";
+            const circularText = document.getElementById('circularText');
+            const startBtn = document.getElementById('startBtn');
+            const stopBtn = document.getElementById('stopBtn');
+            const reverseBtn = document.getElementById('reverseBtn');
+            
+            let animationDirection = 'normal';
+            let animationInterval = null;
+            
+            // Create circular text
+            for (let i = 0; i < text.length; i++) {
+                const span = document.createElement('span');
+                span.textContent = text[i];
+                span.style.transform = `rotate(${i * (360 / text.length)}deg)`;
+                circularText.appendChild(span);
+            }
+            
+            // Animation functions
+            function startRotation() {
+                circularText.style.animation = `rotate 25s linear infinite ${animationDirection}`;
+            }
+            
+            function stopRotation() {
+                circularText.style.animation = 'none';
+            }
+            
+            function reverseRotation() {
+                animationDirection = animationDirection === 'normal' ? 'reverse' : 'normal';
+                startRotation();
+            }
+            
+            // Event listeners
+            startBtn.addEventListener('click', startRotation);
+            stopBtn.addEventListener('click', stopRotation);
+            reverseBtn.addEventListener('click', reverseRotation);
+            
+            // Start animation on load
+            startRotation();
+        });
+    </script>
+</body>
+</html>

@@ -4,12 +4,12 @@
 
 /* Media Query Variable */
 /*CSS Variable*/
-@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/general-sans");
 :root {
   /*font Variable*/
   --ff-grotesk: "General Sans", sans-serif;
-  --ff-inria-sans: "Inria Sans", sans-serif;
+  --ff-inria-sans: "Inter Sans", sans-serif;
   /*Color Variable*/
   --color-primary-orange: #ff602f;
   --color-black: #19191a;
@@ -71,6 +71,7 @@ img {
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0%;
+  color: rgba(15, 15, 15, 1);
 }
 
 h1,
@@ -86,9 +87,7 @@ h6,
 .h5,
 .h6 {
   margin-bottom: 0;
-  color: var(--color-black);
   font-family: var(--ff-grotesk);
-  font-weight: 500;
 }
 
 h1,
@@ -105,19 +104,37 @@ h2,
   line-height: 106.667%;
   letter-spacing: -1.2px;
   font-weight: 600;
+  line-height: 80px;
+}
+.font-100 {
+  font-size: var(--ff-grotesk);
+  font-size: 100px;
+  line-height: 100%;
+  letter-spacing: -1.2px;
+  font-weight: 600;
 }
 
 h3,
 .h3 {
+  font-weight: 400;
   font-size: 28px;
   line-height: 114.286%;
+  letter-spacing: -0.28px;
+}
+.h3-36 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 46px;
   letter-spacing: -0.28px;
 }
 
 h4,
 .h4 {
+  font-family: var(--ff-grotesk);
+  font-weight: 600;
   font-size: 24px;
-  line-height: 116.667%;
+  line-height: 34px;
+  letter-spacing: 0%;
 }
 
 h5,
@@ -161,6 +178,7 @@ h6,
   h2,
   .h2 {
     font-size: 45px;
+    line-height: 50px;
   }
   h3,
   .h3 {
@@ -179,6 +197,7 @@ h6,
   h2,
   .h2 {
     font-size: 40px;
+    font-weight: 500;
   }
   h5,
   .h5 {
@@ -211,7 +230,6 @@ p {
   font-weight: 500;
   font-style: Medium;
   font-size: 24px;
-  leading-trim: CAP_HEIGHT;
   line-height: 38px;
   letter-spacing: 0%;
 }
@@ -230,13 +248,14 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px white inset !important;
 }
-.uppercase{
+.uppercase {
   text-transform: uppercase;
 }
 /* Common Class */
-.section-title-div {
+.section-title-div-center {
   display: flex;
   align-items: center;
+  color: rgb(15, 15, 15, 1);
   gap: 16px;
   .line {
     height: 2px;
@@ -256,7 +275,31 @@ input:-webkit-autofill:focus {
     .section-title {
       font-size: 16px;
     }
-    
+  }
+}
+.section-title-div {
+  display: flex;
+  align-items: center;
+  color: rgb(15, 15, 15, 1);
+  gap: 16px;
+  .line {
+    height: 2px;
+    width: 50px;
+    background: #000;
+  }
+  .section-title {
+    font-family: var(--ff-inria-sans);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+  @media screen and (max-width: 1399px) {
+    justify-content: center;
+    .section-title {
+      font-size: 16px;
+    }
   }
 }
 
@@ -266,6 +309,10 @@ input:-webkit-autofill:focus {
 
 .section-margin-bottom {
   margin-bottom: 130px;
+}
+
+.section-title-margin-bottom {
+  margin-bottom: 30px;
 }
 
 .section-margin-top-bottom {
@@ -478,7 +525,11 @@ input:-webkit-autofill:focus {
 }
 
 .font-sz-20 {
+  font-family: var(--ff-inria-sans);
+  font-weight: 400;
   font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0%;
 }
 
 .font-sz-40 {

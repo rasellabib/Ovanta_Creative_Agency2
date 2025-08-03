@@ -3,6 +3,8 @@
   background-image: url("../Assets/images/services/bg.png");
   .services-title {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
     justify-content: space-between;
     align-items: center;
     .left-service-title {
@@ -25,13 +27,40 @@
       h2 {
         font-size: 40px;
         color: white;
-        padding: 55px 0;
         border-top: 1px solid rgb(67, 67, 67);
         border-bottom: 1px solid rgb(67, 67, 67);
         transform: all 0.3s ease-in-out;
         &:hover {
           color: transparent; /* Hides the fill color */
           -webkit-text-stroke: 1px rgb(255, 255, 255);
+        }
+      }
+    }
+    @media only screen and (max-width: 1299.98px) {
+      gap: 50px;
+
+      .right-content h2 {
+        font-size: 40px;
+        line-height: 100%;
+        padding: 25px 0;
+      }
+    }
+    @media only screen and (max-width: 991.98px) {
+      display: block;
+      .right-content {
+        margin-top: 55px;
+        h2 {
+          font-size: 35px;
+          line-height: 100%;
+          padding: 55px 0;
+        }
+      }
+    }
+    @media only screen and (max-width: 991.98px) {
+      .right-content {
+        h2 {
+          font-size: 35px;
+          padding: 45px 0;
         }
       }
     }
