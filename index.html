@@ -21,6 +21,112 @@
     <link rel="stylesheet" href="./dist/footer.css" />
   </head>
   <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-md navbar-light bg-light py-3">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./assets/images/navbar/logo.png" alt="Logo" height="24" />
+          </a>
+
+          <!-- Hamburger -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileMenu"
+            aria-controls="mobileMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Desktop Menu -->
+          <div class="collapse navbar-collapse">
+            <ul
+              class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center gap-3"
+            >
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Portfolio</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+              <li class="nav-item">
+                <button
+                  class="btn p-0 border-0 bg-transparent"
+                  aria-label="Search"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M21 21l-4.35-4.35M16.65 16.65A7.5 7.5 0 1 0 3.5 10.5a7.5 7.5 0 0 0 13.15 6.15z"
+                    />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Offcanvas Mobile Menu -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="mobileMenu"
+        aria-labelledby="mobileMenuLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="mobileMenuLabel">Menu</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav gap-3">
+            <li><a class="nav-link" href="#">Home</a></li>
+            <li><a class="nav-link" href="#">Pages</a></li>
+            <li><a class="nav-link" href="#">Portfolio</a></li>
+            <li><a class="nav-link" href="#">Blog</a></li>
+            <li><a class="nav-link" href="#">Contact</a></li>
+            <li>
+              <button
+                class="btn p-0 border-0 bg-transparent mt-2"
+                aria-label="Search"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M21 21l-4.35-4.35M16.65 16.65A7.5 7.5 0 1 0 3.5 10.5a7.5 7.5 0 0 0 13.15 6.15z"
+                  />
+                </svg>
+                <span class="ms-2">Search</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <!-- <header>
       <div class="container">
         <div class="nav-section">
@@ -1144,7 +1250,7 @@
         </div>
       </div>
     </section>
-    <footer>
+    <footer> 
       <div class="footer-bg">
         <div class="bg">
           <div class="container">
@@ -1202,12 +1308,91 @@
                   </div>
                 </div>
               </div>
+              <div class="row gy-4">
+                <!-- Brand Info -->
+                <div class="col-md-6 col-lg-3">
+                  <div class="footer-brand mb-3">
+                    <!-- Replace with your logo -->
+                    <img
+                      src="./assets/images/navbar/logo.png"
+                      alt="Logo"
+                      height="30"
+                      class="mb-3"
+                    />
+                  </div>
+                  <p>
+                    Creative design agency specializes<br />In Innovative visual
+                    solutions
+                  </p>
+                  <a
+                    href="mailto:Info@example.com"
+                    class="text-decoration-underline d-inline-block mt-2"
+                    >Info@example.com</a
+                  >
+                </div>
+                <!-- Quick Links -->
+                <div class="col-md-6 col-lg-3">
+                  <h5 class="fw-bold mb-3">Quick Links</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">About Us</a></li>
+                    <li><a href="#" class="footer-link">Service</a></li>
+                    <li><a href="#" class="footer-link">Portfolio</a></li>
+                    <li><a href="#" class="footer-link">Contact</a></li>
+                  </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-md-6 col-lg-3">
+                  <h5 class="fw-bold mb-3">Support</h5>
+                  <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Style guide</a></li>
+                    <li><a href="#" class="footer-link">License</a></li>
+                    <li><a href="#" class="footer-link">Changelog</a></li>
+                    <li><a href="#" class="footer-link">404 Error</a></li>
+                  </ul>
+                </div>
+                <!-- Contact Info -->
+                <div class="col-md-6 col-lg-3">
+                  <h5 class="fw-bold mb-3">Contact US</h5>
+                  <p class="mb-1">
+                    <strong>Call Us Directly</strong><br />888 456 7890
+                  </p>
+                  <p class="mb-0">
+                    <strong>Location</strong><br />410 Sandtown,<br />California
+                    94001, USA
+                  </p>
+                </div>
+              </div>
+              <!-- Divider -->
+              <hr class="my-4 border-secondary" />
+              <!-- Bottom -->
+              <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+              >
+                <p class="mb-2 mb-md-0">
+                  All rights reserved — 2024 © Hurraytheme
+                </p>
+                <div class="social-icons d-flex gap-2">
+                  <a href="#" class="social-icon"><i class="bi bi-x"></i></a>
+                  <a href="#" class="social-icon"
+                    ><i class="bi bi-instagram"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="bi bi-linkedin"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="bi bi-dribbble"></i
+                  ></a>
+                  <a href="#" class="social-icon"
+                    ><i class="bi bi-behance"></i
+                  ></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </footer>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
