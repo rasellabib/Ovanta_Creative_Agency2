@@ -58,6 +58,11 @@ img {
   text-align: center;
   color: #545454;
 }
+.color-gray{
+  color: rgba(84, 84, 84, 1);
+
+
+}
 .font-normal-18 {
   font-family: var(--ff-inria-sans);
   font-weight: 400;
@@ -71,7 +76,6 @@ img {
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0%;
-  color: rgba(15, 15, 15, 1);
 }
 
 h1,
@@ -113,7 +117,9 @@ h2,
   letter-spacing: -1.2px;
   font-weight: 600;
 }
-
+.h-100{
+  font-size: 90px;
+}
 h3,
 .h3 {
   font-weight: 400;
@@ -224,7 +230,7 @@ body {
   }
 }
 
-p {
+p{
   margin-bottom: 0;
   font-family: var(--ff-inria-sans);
   font-weight: 500;
@@ -233,7 +239,14 @@ p {
   line-height: 38px;
   letter-spacing: 0%;
 }
-
+.p{
+  font-family: var(--ff-inria-sans);
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0%;
+}
 input:focus,
 textarea:focus,
 button:focus {
@@ -336,11 +349,18 @@ input:-webkit-autofill:focus {
   padding-bottom: 130px;
 }
 
+.section-padding-top-bottom-160{
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
 .section-padding-top-bottom {
   padding-top: 130px;
   padding-bottom: 130px;
 }
-
+.row-padding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 .row-padding-top {
   padding-top: 60px;
 }
@@ -425,7 +445,9 @@ input:-webkit-autofill:focus {
 .mt-24 {
   margin-top: 24px;
 }
-
+.mt-30{
+  margin-top: 30px;
+}
 .mt-40 {
   margin-top: 40px;
 }
@@ -445,7 +467,13 @@ input:-webkit-autofill:focus {
 .mb-14 {
   margin-bottom: 14px;
 }
+.mb-100{
+  margin-bottom: 100px;
+}
+.pb-40{
+  padding-bottom: 40px;
 
+}
 @media only screen and (max-width: 1199.98px) {
   .mt-24 {
     margin-top: 20px;
