@@ -19,28 +19,18 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./dist/nav.css" />
-    <link rel="stylesheet" href="./dist/pricing.css" />
-    <link rel="stylesheet" href="./dist/plugin.css" />
-    <link rel="stylesheet" href="./dist/process.css" />
-    <link rel="stylesheet" href="./dist/review.css" />
     <link rel="stylesheet" href="./dist/style.css" />
-    <link rel="stylesheet" href="./dist/services-sec.css" />
-    <link rel="stylesheet" href="./dist/projects.css" />
-    <link rel="stylesheet" href="./dist/QA.css" />
-    <link rel="stylesheet" href="./dist/footer.css" />
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <!-- Navbar -->
+    <!-- <header>
+
       <nav class="navbar navbar-expand-md py-3">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img src="./assets/images/navbar/logo.png" alt="Logo" height="24" />
           </a>
 
-          <!-- Hamburger -->
           <button
             class="navbar-toggler"
             type="button"
@@ -51,7 +41,6 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <!-- Desktop Menu -->
           <div class="collapse navbar-collapse">
             <ul
               class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center gap-3"
@@ -89,7 +78,7 @@
         </div>
       </nav>
 
-      <!-- Offcanvas Mobile Menu -->
+
       <div
         class="offcanvas offcanvas-start"
         tabindex="-1"
@@ -137,7 +126,7 @@
           </ul>
         </div>
       </div>
-    </header>
+    </header> -->
     <!-- <header>
       <div class="container">
         <div class="nav-section">
@@ -283,27 +272,29 @@
     </header> -->
     <!-- hero -->
     <section>
-      <div class="position-relative section-padding-top-bottom">
+      <div class="hero position-relative section-padding-top-bottom">
         <img class="hero-bg" src="./Assets/images/hreobg.png" alt="" />
         <div class="container position-relative">
           <div class="section-padding-top-bottom">
-            <div class="row">
-              <div class="col-md-8">
-                <div class="hero-text">
-                  <h1>Bold Brands Creative Design Studio.</h1>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="right-hero">
-                  <div class="right-hero img">
-                    <img src="./Assets/images/heroicon.png" alt="" />
+            <div class="">
+              <div class="row hero-text-ani">
+                <div class="col-md-9 col-sm-12">
+                  <div class="hero-text animate-me">
+                    <h1>Bold Brands Creative Design Studio.</h1>
                   </div>
-                  <div class="right-content">
-                    <p>
-                      Identify the key barriers that prevent your business from
-                      reaching its full potential. Addressing these issues can
-                      transform your path to success.
-                    </p>
+                </div>
+                <div class="col-md-3">
+                  <div class="right-hero">
+                    <div id="hero-logo" class="moving-img right-hero-img">
+                      <img src="./Assets/images/heroicon.png" alt="" />
+                    </div>
+                    <div class="right-content animate-me">
+                      <p class="animated-text">
+                        Identify the key barriers that prevent your business
+                        from reaching its full potential. Addressing these
+                        issues can transform your path to success.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -315,11 +306,11 @@
     </section>
     <!-- about company -->
     <section>
-      <div class="section-margin-bottom">
-        <div class="container">
+      <div id="hero-down" class="">
+        <div class="container section-padding-bottom">
           <div class="about-company-sec">
             <div class="about-company">
-              <div class="section-title-div section-title-margin-bottom">
+              <div class="section-title-div title1 section-title-margin-bottom">
                 <div class="line"></div>
                 <p class="section-title">about Company</p>
               </div>
@@ -334,30 +325,30 @@
               <div class="row">
                 <div class="col">
                   <div class="text">
-                    <h2>
+                    <h2 class="animated-text">
                       A Full-Service Digital Agency Dedicated to Outstanding
                       Brand Creating Experiences.
                     </h2>
                   </div>
                 </div>
               </div>
-              <div class="row-margin-top">
+              <div id="aboutCompanyImg" class="about-image-div row-margin-top">
                 <div class="row">
                   <div class="col-lg-4 col-md-12">
                     <img
-                      class="w-100 p-5"
+                      class="w-100"
                       src="./Assets/images/about-company/img1.png"
                       alt=""
                     />
                   </div>
                   <div class="col-lg-4 col-md-12">
                     <img
-                      class="w-100 p-5"
+                      class="w-100"
                       src="./Assets/images/about-company/img2.png"
                       alt=""
                     />
                   </div>
-                  <div class="col-lg-4 col-md-12">
+                  <div class="col-lg-4 col-md-12 company-text">
                     <div class="d-flex flex-column align-items-start">
                       <div
                         class="d-flex align-items-center mb-4 client-images-wrapper"
@@ -394,7 +385,7 @@
                         </div>
                       </div>
                       <h4 class="fw-bold mb-3">300+ Happy Clients</h4>
-                      <p class="font-normal-18">
+                      <p class="font-normal-18 animated-text">
                         Identify the key barriers that prevent your business
                         from reaching its full potential. Addressing these
                       </p>
@@ -407,40 +398,40 @@
 
           <div class="companys-logo section-padding-top" id="logoWrapper">
             <div class="logo-track" id="logoTrack">
-              <div class="logo-track-div">
+              <div class="logo-track-div" id="logoTrackDiv">
                 <img src="./Assets/images/about-company/Logo-1.png" alt="" />
               </div>
-              <div class="logo-track-div">
+              <div class="logo-track-div" id="logoTrackDiv">
                 <img src="./Assets/images/about-company/logo-29.png" alt="" />
               </div>
-              <div class="logo-track-div">
+              <div class="logo-track-div" id="logoTrackDiv">
                 <img
                   src="./Assets/images/about-company/logoipsum-256 1.png"
                   alt=""
                 />
               </div>
-              <div class="logo-track-div">
+              <div class="logo-track-div" id="logoTrackDiv">
                 <img src="./Assets/images/about-company/logo-31.png" alt="" />
               </div>
-              <div class="logo-track-div">
+              <div class="logo-track-div" id="logoTrackDiv">
                 <img src="./Assets/images/about-company/logo-64.png" alt="" />
               </div>
-              <div class="logo-track-div">
+              <div class="logo-track-div" id="logoTrackDiv">
                 <img src="./Assets/images/about-company/Logo-1.png" alt="" />
               </div>
-              <div class="logo-track-div">
+              <div class="logo-track-div" id="logoTrackDiv">
                 <img src="./Assets/images/about-company/logo-29.png" alt="" />
               </div>
-              <div class="logo-track-div">
+              <div class="logo-track-div" id="logoTrackDiv">
                 <img
                   src="./Assets/images/about-company/logoipsum-256 1.png"
                   alt=""
                 />
               </div>
-              <div class="logo-track-div">
+              <div class="logo-track-div" id="logoTrackDiv">
                 <img src="./Assets/images/about-company/logo-31.png" alt="" />
               </div>
-              <div class="logo-track-div">
+              <div class="logo-track-div" id="logoTrackDiv">
                 <img src="./Assets/images/about-company/logo-64.png" alt="" />
               </div>
             </div>
@@ -451,15 +442,17 @@
     <!-- our services -->
     <section>
       <div class="section-padding-top-bottom services-sec">
-        <div class="container">
+        <div class="container services-sec-gsap">
           <div class="services-title">
             <div class="left-service-title">
-              <div class="section-title-div section-title-margin-bottom">
+              <div class="section-title-div title2 section-title-margin-bottom">
                 <div class="line bg-white"></div>
-                <p class="section-title">our services</p>
+                <p class="section-title text-white">our services</p>
               </div>
-              <h2>We Build Your Digital Business.</h2>
-              <p class="font-normal-18">
+              <h2 class="services-h2 animated-textW">
+                We Build Your Digital Business.
+              </h2>
+              <p class="font-normal-18 services-p animated-textW">
                 When selecting a web design agency, it's essential to consider
                 its reputation, experience, and the specific needs of your
                 project.
@@ -468,42 +461,50 @@
             <div class="button-white">
               <button type="submit" class="custom-btn">
                 View our works
-                <svg
-                  class="explore-icon"
-                  viewBox="0 0 16 19"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-                  />
-                </svg>
+                <div class="explore-circle">
+                  <svg
+                    class="explore-icon"
+                    viewBox="0 0 16 19"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                    />
+                  </svg>
+                </div>
               </button>
             </div>
           </div>
           <div class="services-content">
-            <div class="left-image">
-              <img src="./Assets/images/services/img.png" alt="" />
-            </div>
-            <div class="right-content">
-              <div class="right-text">
-                <a href="">
-                  <h2 class="service-text">Digital Marketing Strategy</h2>
-                </a>
+            <div class="row">
+              <div class="col-lg-6 col-md-12">
+                <div class="left-image">
+                  <img src="./Assets/images/services/img.png" alt="" />
+                </div>
               </div>
-              <div class="right-text">
-                <a href="">
-                  <h2 class="service-text">Web Design & Development</h2>
-                </a>
-              </div>
-              <div class="right-text">
-                <a href="">
-                  <h2 class="service-text">Branding & Identity</h2>
-                </a>
-              </div>
-              <div class="right-text">
-                <a href="">
-                  <h2 class="service-text">Motion & 3d modeling</h2>
-                </a>
+              <div class="col-lg-6 col-md-12">
+                <div id="service-right-content" class="right-content">
+                  <div class="service-right-text">
+                    <a href="">
+                      <h2 class="service-text">Digital Marketing Strategy</h2>
+                    </a>
+                  </div>
+                  <div class="service-right-text">
+                    <a href="">
+                      <h2 class="service-text">Web Design & Development</h2>
+                    </a>
+                  </div>
+                  <div class="service-right-text">
+                    <a href="">
+                      <h2 class="service-text">Branding & Identity</h2>
+                    </a>
+                  </div>
+                  <div class="service-right-text">
+                    <a href="">
+                      <h2 class="service-text">Motion & 3d modeling</h2>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -513,23 +514,23 @@
     <!-- projects -->
     <section>
       <div class="section-padding-top">
-        <div class="container">
+        <div class="container position-relative">
+          <div class="arrow-div">
+            <div class="arrow" id="prevArrow">
+              <img src="./Assets/images/arrow-left.svg" alt="Left" />
+            </div>
+            <div class="arrow" id="nextArrow">
+              <img src="./Assets/images/arrow-right.svg" alt="Right" />
+            </div>
+          </div>
           <div class="projects-title">
             <div
-              class="section-title-div section-title-div1 section-title-margin-bottom"
+              class="section-title-div title3 section-title-div1 section-title-margin-bottom"
             >
               <div class="line"></div>
               <p class="section-title">Our Projects</p>
             </div>
             <h2>See Our Works in Action</h2>
-            <div class="arrow-div">
-              <div class="arrow" id="prevArrow">
-                <img src="./Assets/images/arrow-left.svg" alt="Left" />
-              </div>
-              <div class="arrow" id="nextArrow">
-                <img src="./Assets/images/arrow-right.svg" alt="Right" />
-              </div>
-            </div>
           </div>
           <div class="project-image">
             <div class="project-track slider-track">
@@ -611,28 +612,25 @@
     <section>
       <div class="process-div section-padding-top-bottom position-relative">
         <div class="">
-          <img
-            class="line-image"
-            src="./Assets/images/PROCESS/line.png"
-            alt=""
-          />
           <div class="container">
             <div class="row">
-              <div class="col-lg-6">
-                <div class="section-title-div section-title-margin-bottom">
+              <div class="col-lg-6 col-md-12 process">
+                <div
+                  class="section-title-div title4 section-title-margin-bottom"
+                >
                   <div class="line"></div>
                   <p class="section-title">our process</p>
                 </div>
                 <div class="process-content">
-                  <h2>How We Help Grow Your Business</h2>
+                  <h2 class="animated-text">How We Help Grow Your Business</h2>
                   <div class="process-section">
                     <div class="process-step">
                       <div class="icon-wrapper gsap-fade">
                         <img src="./Assets/images/PROCESS/logo1.png" alt="" />
                       </div>
                       <div class="content">
-                        <h4>Initiation & Planning</h4>
-                        <p class="font-normal-18">
+                        <h4 class="animated-text">Initiation & Planning</h4>
+                        <p class="font-normal-18 animated-text">
                           Nemo enim ipsam voluptatem quia aut consequuntur on
                           magni dolores eos .
                         </p>
@@ -644,8 +642,8 @@
                         <img src="./Assets/images/PROCESS/logo2.png" alt="" />
                       </div>
                       <div class="content">
-                        <h4>Execution & Development</h4>
-                        <p class="font-normal-18">
+                        <h4 class="animated-text">Execution & Development</h4>
+                        <p class="font-normal-18 animated-text">
                           Nemo enim ipsam voluptatem quia aut consequuntur on
                           magni dolores eos qui r.
                         </p>
@@ -657,8 +655,8 @@
                         <img src="./Assets/images/PROCESS/logo1.png" alt="" />
                       </div>
                       <div class="content">
-                        <h4>Testing & Maintenance</h4>
-                        <p class="font-normal-18">
+                        <h4 class="animated-text">Testing & Maintenance</h4>
+                        <p class="font-normal-18 animated-text">
                           Nemo enim ipsam voluptatem quia aut consequuntur on
                           magni dolores .
                         </p>
@@ -667,24 +665,26 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <img
-                  class="process-img"
-                  src="./Assets/images/PROCESS/img.png"
-                  alt=""
-                />
-              </div>
             </div>
           </div>
+        </div>
+        <div class="process-img">
+          <img
+            class="process-img"
+            src="./Assets/images/PROCESS/img.png"
+            alt=""
+          />
         </div>
       </div>
     </section>
     <!-- Pricing Plan -->
-    <section>
+    <section class="Pricing">
       <div class="section-padding-top-bottom">
         <div class="container">
           <div class="pricing-content">
-            <div class="section-title-div section-title-margin-bottom justify-content-center">
+            <div
+              class="section-title-div title5 section-title-margin-bottom justify-content-center"
+            >
               <div class="line"></div>
               <p class="section-title">our process</p>
             </div>
@@ -869,14 +869,14 @@
         <div class="container">
           <div class="review-title">
             <div class="title">
-              <div class="section-title-div section-title-margin-bottom">
+              <div class="section-title-div title6 section-title-margin-bottom">
                 <div class="line"></div>
-                <p class="section-title">our process</p>
+                <p class="section-title">our reviews</p>
               </div>
               <h2>Testimonials From Our Customers</h2>
             </div>
             <div class="left-right-arrow">
-              <div class="arrow-div" id="prevArrow1">
+              <div class="arrow-divs" id="prevArrow1">
                 <svg
                   width="28"
                   height="28"
@@ -889,7 +889,7 @@
                   />
                 </svg>
               </div>
-              <div class="arrow-div" id="nextArrow1">
+              <div class="arrow-divs" id="nextArrow1">
                 <svg
                   width="28"
                   height="28"
@@ -1006,16 +1006,18 @@
       <div class="container">
         <div class="QA-div">
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-12">
               <div class="title-div">
-                <div class="section-title-div section-title-margin-bottom">
+                <div
+                  class="section-title-div title7 section-title-margin-bottom"
+                >
                   <div class="line"></div>
                   <p class="section-title">our services</p>
                 </div>
-                <h2>We Build Your Digital Business.</h2>
+                <h2 class="animated-text">We Build Your Digital Business.</h2>
               </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-8 col-md-12">
               <div class="accordions">
                 <div
                   class="accordion accordion-flush"
@@ -1031,7 +1033,9 @@
                         aria-expanded="false"
                         aria-controls="flush-collapseOne"
                       >
-                        <h4>What Services Does Your Agency Offer?</h4>
+                        <h4 class="animated-text">
+                          What Services Does Your Agency Offer?
+                        </h4>
                       </button>
                     </h2>
                     <div
@@ -1057,7 +1061,9 @@
                         aria-expanded="false"
                         aria-controls="flush-collapseTwo"
                       >
-                        <h4>How Long Does It Take To See Results?</h4>
+                        <h4 class="animated-text">
+                          How Long Does It Take To See Results?
+                        </h4>
                       </button>
                     </h2>
                     <div
@@ -1084,7 +1090,9 @@
                         aria-expanded="false"
                         aria-controls="flush-collapseThree"
                       >
-                        <h4>Do You Work With Businesses Of All Sizes?</h4>
+                        <h4 class="animated-text">
+                          Do You Work With Businesses Of All Sizes?
+                        </h4>
                       </button>
                     </h2>
                     <div
@@ -1114,7 +1122,9 @@
                         aria-expanded="false"
                         aria-controls="flush-collapseFour"
                       >
-                        <h4>What Industries Do You Specialize In?</h4>
+                        <h4 class="animated-text">
+                          What Industries Do You Specialize In?
+                        </h4>
                       </button>
                     </h2>
                     <div
@@ -1129,128 +1139,6 @@
                         accordion body. Nothing more exciting happening here in
                         terms of content, but just filling up the space to make
                         it look, at least at first glance, a bit more
-                        representative of how this would look in a real-world
-                        application.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingFive">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseFive"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseFive"
-                      >
-                        <h4>What do I need to give you to get started?</h4>
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseFive"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="flush-headingFive"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div class="accordion-body font-sz-20">
-                        Placeholder content for this accordion, which is
-                        intended to demonstrate the class. This is the third
-                        item's accordion body. Nothing more exciting happening
-                        here in terms of content, but just filling up the space
-                        to make it look, at least at first glance, a bit more
-                        representative of how this would look in a real-world
-                        application.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingSix">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseSix"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseSix"
-                      >
-                        <h4>What Sets Your Agency Apart From Others?</h4>
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseSix"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="flush-headingSix"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div class="accordion-body font-sz-20">
-                        Placeholder content for this accordion, which is
-                        intended to demonstrate the class. This is the third
-                        item's accordion body. Nothing more exciting happening
-                        here in terms of content, but just filling up the space
-                        to make it look, at least at first glance, a bit more
-                        representative of how this would look in a real-world
-                        application.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingSeven">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseSeven"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseSeven"
-                      >
-                        <h4>
-                          What is a statement of work in project management?
-                        </h4>
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseSeven"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="flush-headingSeven"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div class="accordion-body font-sz-20">
-                        Placeholder content for this accordion, which is
-                        intended to demonstrate the class. This is the third
-                        item's accordion body. Nothing more exciting happening
-                        here in terms of content, but just filling up the space
-                        to make it look, at least at first glance, a bit more
-                        representative of how this would look in a real-world
-                        application.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingEight">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseEight"
-                        aria-expanded="false"
-                        aria-controls="flush-collapseEight"
-                      >
-                        <h4>How to become an agile project manager?</h4>
-                      </button>
-                    </h2>
-                    <div
-                      id="flush-collapseEight"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="flush-headingEight"
-                      data-bs-parent="#accordionFlushExample"
-                    >
-                      <div class="accordion-body font-sz-20">
-                        Placeholder content for this accordion, which is
-                        intended to demonstrate the class. This is the third
-                        item's accordion body. Nothing more exciting happening
-                        here in terms of content, but just filling up the space
-                        to make it look, at least at first glance, a bit more
                         representative of how this would look in a real-world
                         application.
                       </div>
@@ -1283,40 +1171,6 @@
                       Avanta team quickly understood our business requirements
                       and were proactive and flexible with our ongoing support
                       and developments. You can definitely.
-                    </div>
-                  </div>
-                  <div class="right-bottom-content">
-                    <!-- <span class="text-ring" style="--total:18; --radius:10; --font-size:2">
-                    <span aria-hidden="true">
-                      <span style="--index: 0">s</span>
-                      <span style="--index: 1">t</span>
-                      <span style="--index: 2">a</span>
-                      <span style="--index: 3">r</span>
-                      <span style="--index: 4">t</span>
-                      <span style="--index: 5"></span>
-                      <span style="--index: 6">a</span>
-                      <span style="--index: 7"></span>
-                      <span style="--index: 8">p</span>
-                      <span style="--index: 9">r</span>
-                      <span style="--index: 10">o</span>
-                      <span style="--index: 11">j</span>
-                      <span style="--index: 12">e</span>
-                      <span style="--index: 13">c</span>
-                      <span style="--index: 14">t</span>
-                      <span style="--index: 15">s</span>
-                      <span style="--index: 16">*</span>
-                    </span>
-                   </span> -->
-                    <div class="circle-wrapper">
-                      <div class="circle-text" id="circularText">
-                        START A PROJECT • START A PROJECT • START A PROJECT •
-                      </div>
-                      <div class="center-icon">
-                        <img
-                          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Black_star.png/600px-Black_star.png"
-                          alt="center"
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -1445,10 +1299,15 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/Nav.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script src="./js/gsap.js"></script>
+    <script src="./js/textAnimetionGsap.js"></script>
+    <script src="./js/Nav.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/slider1.js"></script>
     <script src="./js/CircularText.js"></script>
+    <script src="./js/text.js"></script>
   </body>
 </html>

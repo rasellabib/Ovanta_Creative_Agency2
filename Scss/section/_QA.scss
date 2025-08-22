@@ -1,0 +1,27 @@
+.QA-div {
+  .accordions {
+    margin-left: 164px;
+    .accordion-button {
+      padding-top: 37px;
+      padding-bottom: 37px;
+    }
+    .accordion-button:not(.collapsed) {
+      color: black;
+      background: none;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+    }
+    .accordion-body {
+      
+    }
+    @media screen and (max-width: 991px) {
+      margin-left: 0;
+      .accordion-button {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+      
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./gsap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="animate-me" aria-hidden="true">
+          This text has a <a href="https://testlink.com">nested link</a> so we have created a duplicate "screenreader-only" element to preserve the semantics of child elements for screenreaders.
+        </div>
+        <p class="sr-only">
+          This text has a <a href="https://testlink.com">nested link</a> so we have created a duplicate "screenreader-only" element to preserve the semantics of child elements for screenreaders.
+        </p>
+      </div>
+      <script src="./gsap.js"></script>
+</body>
+</html>

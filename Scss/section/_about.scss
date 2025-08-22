@@ -1,0 +1,145 @@
+.bg {
+  background-image: url("/Assets/images/about-company/bg.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+
+  .groho {
+    position: absolute;
+    top: 84px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .up-bg {
+    background: rgba(15, 14, 14, 0.7);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .link-btn {
+      width: max-content;
+      padding: 13px 24px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 100px;
+    }
+    h1 {
+      font-size: 100px;
+    }
+  }
+}
+
+.testimonial-awards-section {
+  .awards-section {
+    .awards-content {
+      span {
+        width: calc(100% / 3);
+        display: flex;
+      }
+    }
+  }
+  .text-gray {
+    color: rgba(84, 84, 84, 1);
+  }
+  .py {
+    padding: 36px 0;
+  }
+  .circular-text-wrap {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+
+    .circle-text {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      transform: rotate(0deg);
+      animation: rotateText 12s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      overflow: hidden;
+      border: 5px solid #406c2d;
+      border-radius: 50%;
+      padding: 1.5rem;
+    }
+
+    .circle-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem; 
+    }
+  }
+
+  .testimonial-slider {
+    .slider-dots {
+      .dot {
+        width: 30px;
+        height: 6px;
+        background: #ccc;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .dot.active {
+        background: #000;
+      }
+    }
+  }
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.team {
+  .card-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+    .card-div {
+      border-radius: 18px;
+      border: none;
+      transition: all 0.3s ease;
+      overflow: hidden;
+      position: relative;
+      .card-content {
+        position: absolute;
+        top: -100%;
+        height: 100%;
+        left: 100%;
+        width: 100%;
+        color: white;
+        background: #000;
+        border-radius: 18px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: all 0.3s ease;
+        display: flex;
+      }
+
+      &:hover {
+        .card-content {
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
