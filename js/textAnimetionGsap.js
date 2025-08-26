@@ -127,7 +127,7 @@ const tl3_0= gsap.timeline({
   scrollTrigger: {
     trigger: ".left-image",
     scroller: "body",
-    start: "top 75%",
+    start: "top 95%",
     toggleActions: "play none none reverse",
     markers: true,
   },

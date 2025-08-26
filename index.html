@@ -23,6 +23,106 @@
     <title>Document</title>
   </head>
   <body>
+    <section>
+      <nav class="fixed-top shadow-lg rounded-pill custom-navbar">
+        <div
+          class="In-nav d-flex justify-content-around align-items-center row"
+        >
+          <!-- Logo -->
+          <div class="col">
+            <a class="navbar-brand p-0" href="/">
+              <img
+                src="./assets/images/logo.svg"
+                alt="labib logo"
+                class="logo-img"
+              />
+            </a>
+          </div>
+          <div class="col d-none d-sm-none d-md-none d-lg-block">
+            <ul class="nav-items">
+              <li class="">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="">
+                <a class="nav-link" href="#projects">Projects</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="d-flex justify-content-end align-items-center gap-3">
+              <!-- Menu toggle -->
+              <button
+                class="btn btn-sm"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasMenu"
+              >
+                <svg
+                  width="52"
+                  height="52"
+                  viewBox="0 0 52 52"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="26"
+                    cy="26"
+                    r="25.5"
+                    fill="white"
+                    stroke="#545454"
+                  />
+                  <path
+                    d="M26 32.9287H14.2998C13.853 32.9288 13.5002 33.2854 13.5 33.7139C13.5 34.1425 13.8529 34.4999 14.2998 34.5H26C26.447 34.5 26.7998 34.1425 26.7998 33.7139C26.7996 33.2853 26.4468 32.9287 26 32.9287ZM37.7002 25.2139H14.2998C13.8529 25.214 13.5 25.5714 13.5 26C13.5 26.4287 13.8529 26.786 14.2998 26.7861H37.7002C38.1471 26.786 38.5 26.4287 38.5 26C38.5 25.5714 38.1471 25.214 37.7002 25.2139ZM31.2002 17.5H14.2998C13.8529 17.5001 13.5 17.8575 13.5 18.2861C13.5002 18.7146 13.853 19.0712 14.2998 19.0713H31.2002C31.647 19.0712 31.9998 18.7146 32 18.2861C32 17.8575 31.6471 17.5001 31.2002 17.5Z"
+                    fill="#545454"
+                    stroke="#545454"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Control buttons -->
+        </div>
+      </nav>
+
+      <!-- Menu Drawer -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title">Navigation</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+          ></button>
+        </div>
+        <div
+          class="offcanvas-body d-flex p-4 flex-column justify-content-between"
+        >
+          <ul class="nav flex-column gap-2">
+            <li><a class="" href="/">Home</a></li>
+            <li><a class="" href="#about">About</a></li>
+            <li><a class="" href="#skills">Skills</a></li>
+            <li><a class="" href="#projects">Projects</a></li>
+            <button class="button">
+              Get In Touch
+              <img
+                class="color-White"
+                src="./assets/images/ButtonLogo1.svg"
+                alt=""
+              />
+            </button>
+          </ul>
+
+          <div class="text-muted small text-center">© 2024 Labib Rasel</div>
+        </div>
+      </div>
+    </section>
     <!-- <header>
 
       <nav class="navbar navbar-expand-md py-3">
@@ -271,7 +371,7 @@
       </div>
     </header> -->
     <!-- hero -->
-    <section>
+    <section class="hero-sec">
       <div class="hero position-relative section-padding-top-bottom">
         <img class="hero-bg" src="./Assets/images/hreobg.png" alt="" />
         <div class="container position-relative">
@@ -286,7 +386,11 @@
                 <div class="col-md-3">
                   <div class="right-hero">
                     <div id="hero-logo" class="moving-img right-hero-img">
-                      <img src="./Assets/images/heroicon.png" alt="" />
+                      <img
+                        class="right-hero-img-logo"
+                        src="./Assets/images/heroicon.png"
+                        alt=""
+                      />
                     </div>
                     <div class="right-content animate-me">
                       <p class="animated-text">

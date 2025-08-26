@@ -65,7 +65,9 @@ a:hover {
   text-decoration: none;
   color: unset;
 }
-
+li {
+  list-style: none;
+}
 .inset-0 {
   inset: 0;
   z-index: 1;

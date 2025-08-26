@@ -8,7 +8,8 @@
     justify-content: space-between;
     @media only screen and (max-width: 1024px) {
       justify-content: center;
-      h2 , p{
+      h2,
+      p {
         text-align: center;
       }
     }
@@ -21,7 +22,7 @@
         margin-top: 30px;
         margin-bottom: 40px;
       }
-      p{
+      p {
         display: block !important;
       }
     }
@@ -34,13 +35,14 @@
     .right-content {
       .service-text {
         line-height: 100%;
+        // transition: all 0.7s ease;
       }
       h2 {
         font-size: 40px;
         color: white;
         border-top: 1px solid rgb(67, 67, 67);
         border-bottom: 1px solid rgb(67, 67, 67);
-        transform: all 0.3s ease-in-out;
+        transition: color 0.5s linear;
         padding: 60px 0;
         margin-bottom: 0;
         &:hover {

@@ -1,3 +1,11 @@
+.hero-sec {
+  .section-padding-top-bottom {
+    @media screen and (max-width: 767.98px) {
+      padding-top: 175px;
+    }
+  }
+}
+
 .hero {
   @media screen and (max-width: 767.98px) {
     .section-padding-top-bottom {
@@ -11,17 +19,25 @@
   right: 0;
   top: 0;
   z-index: -1;
+  @media screen and (max-width: 767.98px) {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .right-hero {
- 
-
   .right-hero-img {
     @media screen and (max-width: 767.98px) {
-      // position: absolute;
+      position: relative;
       display: flex;
       justify-content: center;
-      opacity: 0.5;
+      opacity: 0.3;
+      padding-bottom: 50px;
+      .right-hero-img-logo {
+        position: absolute;
+        top: -330%;
+        left: 0;
+      }
     }
   }
   .right-content {
