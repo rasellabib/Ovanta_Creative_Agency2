@@ -116,7 +116,7 @@ const tl3 = gsap.timeline({
   },
 });
 
-tl3.from(".title2 div, .title2 p, .services-h2, .services-p, .button-white", {
+tl3.from(".title2 div, .title2 p, .services-h2, .services-p, .services-btn", {
   y: 70,
   opacity: 0,
   stagger: 0.1,
@@ -175,7 +175,7 @@ const tl5 = gsap.timeline({
   scrollTrigger: {
     trigger: ".project-image",
     scroller: "body",
-    start: "top 75%",
+    start: "top 85%",
     toggleActions: "play none none reverse",
     markers: true,
   },
@@ -232,7 +232,7 @@ const Pricing = gsap.timeline({
     markers: true,
   },
 });
-Pricing.from(".pricing-content div, .pricing-content h2", {
+Pricing.from(".pricing-content div, .pricing-content h5", {
   y: 70,
   opacity: 0,
   stagger: 0.1,
@@ -243,12 +243,12 @@ const PricingCard = gsap.timeline({
   scrollTrigger: {
     trigger: ".pricing-card",
     scroller: "body",
-    start: "top 60%",
+    start: "top 80%",
     toggleActions: "play none none reverse",
     markers: true,
   },
 });
-PricingCard.from(" .pricing-card, .pricing-card div", {
+PricingCard.from(" .pricing-card, .pricing-card div, price-details", {
   y: 100,
   opacity: 0,
   stagger: 0.1,

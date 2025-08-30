@@ -1,6 +1,7 @@
 .review-sec {
   background-image: url("../Assets/images/review/bg.png");
-  
+  background-size: cover;
+
   @media only screen and (max-width: 991.98px) {
     background-image: none;
   }
@@ -52,7 +53,6 @@
       width: 100%;
       justify-content: space-between;
     }
-    
   }
 }
 
@@ -163,7 +163,7 @@
       height: auto;
       width: 100%;
       padding: 15px;
-      .left-panel{
+      .left-panel {
         padding-left: 20px;
       }
       .right-panel {
@@ -178,14 +178,12 @@
           color: #333;
           line-height: 1.3;
         }
-
       }
     }
     .overflow {
       position: relative;
       left: 0;
       width: 100%;
-
     }
   }
   @media only screen and (max-width: 446.98px) {

@@ -1,6 +1,8 @@
 .services-sec {
   background: hsla(0, 0%, 0%, 0.63);
   background-image: url("../Assets/images/services/bg.png");
+  background-size: cover;
+
   .services-title {
     display: flex;
     flex-wrap: wrap;
@@ -36,18 +38,16 @@
       .service-text {
         line-height: 100%;
         // transition: all 0.7s ease;
-      }
-      h2 {
-        font-size: 40px;
         color: white;
         border-top: 1px solid rgb(67, 67, 67);
         border-bottom: 1px solid rgb(67, 67, 67);
-        transition: color 0.5s linear;
+        transition: all 0.5s ease;
         padding: 60px 0;
         margin-bottom: 0;
         &:hover {
           color: transparent; /* Hides the fill color */
           -webkit-text-stroke: 1px rgb(255, 255, 255);
+          transition: all 0.5s ease;
         }
       }
     }
