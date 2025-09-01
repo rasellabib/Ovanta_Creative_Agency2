@@ -29,42 +29,48 @@
           <div class="logo-section">
             <a class="navbar-brand p-0" href="/">
               <img
-                src="./assets/images/logo.svg"
+                src="./assets/images/mainLogo.png"
                 alt="labib logo"
                 class="logo-img"
               />
             </a>
           </div>
 
-          <div class="nav-item-div nav-paddibg ">
+          <div class="nav-item-div nav-padding">
             <div class="d-flex justify-content-end align-items-center gap-3">
+              <div class="col nav-item-ul">
+                <ul class="nav-items p-18">
+                  <li>
+                    <a class="nav-link" href="/">Home</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="#skills">Skills</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="#projects">Projects</a>
+                  </li>
+                </ul>
+              </div>
               <label class="hamburger">
-                <input type="checkbox" id="menu-toggle" />
-                <svg viewBox="0 0 32 32">
-                  <path
-                    class="line line-top-bottom"
-                    d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-                  ></path>
-                  <path class="line" d="M7 16 27 16"></path>
-                </svg>
-                <div class="col nav-item-ul">
-                  <ul class="nav-items">
-                    <li class="">
-                      <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="">
-                      <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="">
-                      <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="">
-                      <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                  </ul>
+                <div class="hamburger-circle">
+                  <svg
+                    width="22"
+                    height="22"
+                    viewBox="0 0 22 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.6944 1.30556C20.2037 0.814815 19.4167 0.814815 18.9259 1.30556L11 9.23148L3.07407 1.30556C2.58333 0.814815 1.7963 0.814815 1.30556 1.30556C0.814815 1.7963 0.814815 2.58333 1.30556 3.07407L9.23148 11L1.30556 18.9259C0.814815 19.4167 0.814815 20.2037 1.30556 20.6944C1.5463 20.9352 1.87037 21.0648 2.18519 21.0648C2.5 21.0648 2.82407 20.9444 3.06481 20.6944L10.9907 12.7685L18.9167 20.6944C19.1574 20.9352 19.4815 21.0648 19.7963 21.0648C20.1204 21.0648 20.4352 20.9444 20.6759 20.6944C21.1667 20.2037 21.1667 19.4167 20.6759 18.9259L12.7685 11L20.6944 3.07407C21.1852 2.58333 21.1852 1.7963 20.6944 1.30556Z"
+                      fill="#545454"
+                    />
+                  </svg>
                 </div>
               </label>
-              <div class="ps-80 nav-paddibg">
+              <div class="nav-paddibg">
                 <div class="button-black">
                   <button type="submit" class="custom-btn">
                     View our works
@@ -190,16 +196,19 @@
           <div class="section-padding-top-bottom">
             <div class="">
               <div class="row hero-text-ani">
-                <div class="col-md-9 col-sm-12">
+                <div class="col-md-10 col-sm-12">
                   <div class="hero-text animate-me">
                     <h2>Bold Brands Creative Design Studio.</h2>
                   </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-2">
                   <div class="right-hero">
-                    <div id="hero-logo" class="moving-img right-hero-img">
+                    <div
+                      id="hero-logo"
+                      class="moving-img right-hero-img position-relative"
+                    >
                       <img
-                        class="right-hero-img-logo"
+                        class="right-hero-img-logo position-absolute"
                         src="./Assets/images/heroicon.png"
                         alt=""
                       />
@@ -857,134 +866,182 @@
 
     <!-- Review -->
     <section>
-      <div class="review-sec section-padding-top">
-        <div class="container">
-          <div class="review-title">
-            <div class="title">
-              <div class="section-title-div title6 section-title-margin-bottom">
-                <div class="line"></div>
-                <p class="section-title">our reviews</p>
+      <div class="review1">
+        <div class="section-padding-top-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="circle-div">
+                  <img src="./Assets/images/CircleText.webp" alt="" />
+                </div>
               </div>
-              <h5>Testimonials From Our Customers</h5>
-            </div>
-            <div class="left-right-arrow">
-              <div class="arrow-divs" id="prevArrow1">
-                <svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 28 28"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.8418 6.57541L4.242 13.1752C4.02328 13.394 3.90042 13.6907 3.90042 14.0001C3.90042 14.3094 4.02328 14.6061 4.242 14.8249L10.8418 21.4247C11.0619 21.6373 11.3566 21.7549 11.6625 21.7522C11.9684 21.7495 12.261 21.6268 12.4773 21.4105C12.6936 21.1942 12.8163 20.9016 12.819 20.5957C12.8216 20.2898 12.704 19.9951 12.4915 19.7751L7.88317 15.1667H23.3333C23.6428 15.1667 23.9395 15.0438 24.1583 14.825C24.3771 14.6062 24.5 14.3095 24.5 14.0001C24.5 13.6907 24.3771 13.3939 24.1583 13.1751C23.9395 12.9563 23.6428 12.8334 23.3333 12.8334H7.88317L12.4915 8.22508C12.6029 8.11745 12.6918 7.98872 12.753 7.84638C12.8141 7.70404 12.8463 7.55095 12.8476 7.39604C12.849 7.24113 12.8195 7.08751 12.7608 6.94413C12.7021 6.80075 12.6155 6.67049 12.506 6.56095C12.3964 6.45141 12.2662 6.36478 12.1228 6.30612C11.9794 6.24746 11.8258 6.21794 11.6709 6.21928C11.516 6.22063 11.3629 6.25281 11.2205 6.31396C11.0782 6.3751 10.9495 6.46398 10.8418 6.57541Z"
-                  />
-                </svg>
-              </div>
-              <div class="arrow-divs" id="nextArrow1">
-                <svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 28 28"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clip-path="url(#clip0_989_410)">
-                    <path
-                      d="M17.1582 6.57541L23.758 13.1752C23.9767 13.394 24.0996 13.6907 24.0996 14.0001C24.0996 14.3094 23.9767 14.6061 23.758 14.8249L17.1582 21.4247C16.9381 21.6373 16.6434 21.7549 16.3375 21.7522C16.0316 21.7495 15.739 21.6268 15.5227 21.4105C15.3064 21.1942 15.1837 20.9016 15.181 20.5957C15.1784 20.2898 15.296 19.9951 15.5085 19.7751L20.1168 15.1667H4.66667C4.35725 15.1667 4.0605 15.0438 3.84171 14.825C3.62292 14.6062 3.5 14.3095 3.5 14.0001C3.5 13.6907 3.62292 13.3939 3.84171 13.1751C4.0605 12.9563 4.35725 12.8334 4.66667 12.8334H20.1168L15.5085 8.22508C15.3971 8.11745 15.3082 7.98872 15.247 7.84638C15.1859 7.70404 15.1537 7.55095 15.1524 7.39604C15.151 7.24113 15.1805 7.08751 15.2392 6.94413C15.2979 6.80075 15.3845 6.67049 15.494 6.56095C15.6036 6.45141 15.7338 6.36478 15.8772 6.30612C16.0206 6.24746 16.1742 6.21794 16.3291 6.21928C16.484 6.22063 16.6371 6.25281 16.7795 6.31396C16.9218 6.3751 17.0505 6.46398 17.1582 6.57541Z"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_989_410">
-                      <rect width="28" height="28" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="position-relative row-padding-top">
-            <div class="review-cards-sec section-padding-bottom">
-              <div class="total-rate-card-up">
-                <div class="total-rate-card">
-                  <div class="text-center">
-                    <h1 class="font-100">4.8</h1>
-                    <span>
-                      <img src="./Assets/images/review/star.svg" alt="" />
-                      <img src="./Assets/images/review/star.svg" alt="" /><img
-                        src="./Assets/images/review/star.svg"
-                        alt=""
-                      /><img src="./Assets/images/review/star.svg" alt="" /><img
-                        src="./Assets/images/review/star.svg"
-                        alt=""
-                      />
-                    </span>
-                    <p class="font-normal-20">(25+ reviews)</p>
-                  </div>
-                  <div class="text-center">
-                    <h3 class="text-white p-28">
-                      Enhancing top-tier companies with innovative top-tier
-                      companies with with UI design solutions!
-                    </h3>
+              <div class="col-lg-9">
+                <div class="review1-content-div">
+                  <div class="d-flex">
+                    <!-- Left: carousel display -->
+                    <div class="flex-grow-1 w-100 position-relative">
+                      <div id="carousel" class="carousel-stage no-select">
+                        <div id="slides" class="slides">
+                          <!-- Slide 1 -->
+                          <div class="slide">
+                            <p class="quote-text p-40">
+                              “Ovanta team quickly understood our requirements
+                              and were proactive and flexible with support and
+                              ongoing complex developments. You definitely trust
+                              them for complex project requirements as they are
+                              top-notch in their field and recommend it.”
+                            </p>
+                            <div
+                              class="d-flex align-items-center review-profile"
+                            >
+                              <img
+                                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop"
+                                alt="avatar"
+                                class="rounded-circle"
+                                style="
+                                  width: 80px;
+                                  height: 80px;
+                                  object-fit: cover;
+                                "
+                              />
+                              <div class="review-profile-text">
+                                <div class="p-36">Menny Bennett</div>
+                                <div class="p-18">Senior Marketing Manager</div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Slide 2 -->
+                          <div class="slide">
+                            <p class="quote-text p-40">
+                              “Ovanta team quickly understood our requirements
+                              and were proactive and flexible with support and
+                              ongoing complex developments. You defini.”
+                            </p>
+                            <div
+                              class="d-flex align-items-center review-profile"
+                            >
+                              <img
+                                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop"
+                                alt="avatar"
+                                class="rounded-circle"
+                                style="
+                                  width: 80px;
+                                  height: 80px;
+                                  object-fit: cover;
+                                "
+                              />
+                              <div class="review-profile-text">
+                                <div class="p-36">Menny Bennett</div>
+                                <div class="p-18">Senior Marketing Manager</div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Slide 3 -->
+                          <div class="slide">
+                            <p class="quote-text p-40">
+                              “Ovanta team quickly understood our requirements
+                              and were.”
+                            </p>
+                            <div
+                              class="d-flex align-items-center review-profile"
+                            >
+                              <img
+                                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop"
+                                alt="avatar"
+                                class="rounded-circle"
+                                style="
+                                  width: 80px;
+                                  height: 80px;
+                                  object-fit: cover;
+                                "
+                              />
+                              <div class="review-profile-text">
+                                <div class="p-36">Menny Bennett</div>
+                                <div class="p-18">Senior Marketing Manager</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /slides -->
+                      </div>
+                      <div class="pill-track-div">
+                        <!-- pill track (like your red-mark area) -->
+                        <div class="w-100" style="max-width: 280px">
+                          <div id="pillTrack" class="pill-track">
+                            <div
+                              id="pillIndicator"
+                              class="pill-indicator"
+                              style="width: 40px"
+                            ></div>
+                          </div>
+                        </div>
+                        <!-- small dot nav -->
+                        <div id="dots" class="mt-2 d-flex gap-2"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="overflow">
-                <div class="testimonial slider-track1">
-                  <div class="testimonial-card slider1">
-                    <div class="left-panel">
-                      <p class="p-36">Jenny Bennett</p>
-                      <p class="p-18">Senior Marketing Manager</p>
-                    </div>
-                    <div></div>
-                    <div class="right-panel">
-                      <div class="quote">“</div>
-                      <p class="text">
-                        “Ovanta team quickly understo business requirements and
-                        proactive and flexible with our ongoing support and
-                        complex developments. You can definitely trust them
-                        complex project requirements as they are can only
-                        recommend it.”
-                      </p>
-                      <div class="stars">★★★★★</div>
-                    </div>
-                  </div>
-                  <div class="testimonial-card slider1">
-                    <div class="left-panel">
-                      <p class="p-36">Jenny Bennett</p>
-                      <p class="p-18">Senior Marketing Manager</p>
-                    </div>
-                    <div></div>
-                    <div class="right-panel">
-                      <div class="quote">“</div>
-                      <p class="text">
-                        “Ovanta team quickly understo business requirements and
-                        proactive and flexible with our ongoing support and
-                        complex developments. You can definitely trust them
-                        complex project requirements as they are can only
-                        recommend it.”
-                      </p>
-                      <div class="stars">★★★★★</div>
-                    </div>
-                  </div>
-                  <div class="testimonial-card slider1">
-                    <div class="left-panel">
-                      <p class="p-36">Jenny Bennett</p>
-                      <p class="p-18">Senior Marketing Manager</p>
-                    </div>
-                    <div></div>
-                    <div class="right-panel">
-                      <div class="quote">“</div>
-                      <p class="text">
-                        “Ovanta team quickly understo business requirements and
-                        proactive and flexible with our ongoing support and
-                        complex developments. You can definitely trust them
-                        complex project requirements as they are can only
-                        recommend it.”
-                      </p>
-                      <div class="stars">★★★★★</div>
-                    </div>
-                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- award -->
+    <section>
+      <div class="row-padding-top section-padding-bottom awards-bg">
+        <div class="container">
+          <div class="award">
+            <p class="p-36">Awards</p>
+            <div class="mt-40">
+              <hr class="m-0 border-secondary" />
+              <div class="awards-div padding-tb-36 row">
+                <div class="award-title col-md-5">
+                  <p class="p-24">Winner - Best eCommerce Websites</p>
+                </div>
+                <div class="award-years col-md-3 text-center">
+                  <p class="p-20 forest fw-400">2020</p>
+                </div>
+                <div class="award-world col-md-4 text-end">
+                  <p class="p-20 forest fw-400">NY. America</p>
+                </div>
+              </div>
+              <hr class="m-0 border-secondary" />
+              <div class="awards-div padding-tb-36 row">
+                <div class="award-title col-md-5">
+                  <p class="p-24">
+                    Awarded - Top Creative Agency in United State
+                  </p>
+                </div>
+                <div class="award-years col-md-3 text-center">
+                  <p class="p-20 forest fw-400">2020</p>
+                </div>
+                <div class="award-world col-md-4 text-end">
+                  <p class="p-20 forest fw-400">NY. America</p>
+                </div>
+              </div>
+              <hr class="m-0 border-secondary" />
+              <div class="awards-div padding-tb-36 row">
+                <div class="award-title col-md-5">
+                  <p class="p-24">Mentioned - Honorable Mentioned</p>
+                </div>
+                <div class="award-years col-md-3 text-center">
+                  <p class="p-20 forest fw-400">2020</p>
+                </div>
+                <div class="award-world col-md-4 text-end">
+                  <p class="p-20 forest fw-400">NY. America</p>
+                </div>
+              </div>
+              <hr class="m-0 border-secondary" />
+              <div class="awards-div padding-tb-36 row">
+                <div class="award-title col-md-5">
+                  <p class="p-24">Winner - Featured App Design of the Week</p>
+                </div>
+                <div class="award-years col-md-3 text-center">
+                  <p class="p-20 forest fw-400">2020</p>
+                </div>
+                <div class="award-world col-md-4 text-end">
+                  <p class="p-20 forest fw-400">NY. America</p>
                 </div>
               </div>
             </div>
@@ -1165,7 +1222,13 @@
                       and developments. You can definitely.
                     </div>
                   </div>
-                  <img src="./Assets/images/footer/goltext.webp" alt="" />
+                  <div class="w-100 d-flex justify-content-center mt-40">
+                    <img
+                      class="rotation"
+                      src="./Assets/images/footer/goltext.webp"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
               <hr class="mb-100 mt-130 border-secondary" />
@@ -1292,5 +1355,6 @@
     <script src="./js/slider1.js"></script>
     <script src="./js/CircularText.js"></script>
     <script src="./js/text.js"></script>
+    <script src="./js/home/Testimonial.js"></script>
   </body>
 </html>

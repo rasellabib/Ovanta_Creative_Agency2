@@ -1,0 +1,213 @@
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+.Inter {
+  font-family: "Inter Sans", sans-serif;
+  color: var(--color-black-forest);
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+a:focus {
+  outline: 0 solid;
+}
+a:hover {
+  text-decoration: none;
+  color: unset;
+}
+li {
+  list-style: none;
+}
+.inset-0 {
+  inset: 0;
+  z-index: 1;
+}
+.line-height-0 {
+  line-height: 1;
+}
+
+figure {
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.background-image,
+[data-bg-src] {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.section-middle {
+  margin: 0 auto;
+}
+
+.bg_color_offwhite {
+  background-color: #f6f6f6;
+}
+
+.bg_color_black {
+  background-color: var(--color-black);
+}
+
+.text_color_orange {
+  color: var(--color-primary-orange);
+  font-weight: 600;
+}
+
+.z-index-one {
+  z-index: 1 !important;
+}
+
+.z-index-minus-one {
+  z-index: -1 !important;
+}
+
+.section-middle {
+  margin: 0 auto;
+}
+
+.ft_object {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.max_wd_content {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.border-top-white {
+  border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.border-bottom-white {
+  border-bottom: 1px solid #39393a;
+}
+
+.border-top {
+  border-top: 1px solid #dfdfdf !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #dfdfdf !important;
+}
+
+.animated-text {
+  display: inline-block;
+}
+.forest {
+  color: var(--color-black-forest);
+}
+.fw-400 {
+  font-weight: 400;
+}
+.padding-tb-36 {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.animated-text span {
+  display: inline-block;
+  opacity: 1;
+  color: rgb(174, 174, 174);
+  transition: color 220ms ease, opacity 220ms ease, transform 220ms ease;
+  transform: translateY(4px);
+  white-space: pre;
+}
+
+.animated-text span.visible {
+  opacity: 1;
+  color: rgb(0, 0, 0);
+  transform: translateY(0);
+}
+
+.animated-textW {
+  display: block;
+}
+
+.animated-textW span {
+  display: inline-block;
+  opacity: 1;
+  color: rgb(181, 166, 166);
+  transition: color 220ms ease, opacity 220ms ease, transform 220ms ease;
+  transform: translateY(4px);
+  white-space: pre;
+}
+
+.animated-textW span.visible {
+  opacity: 1;
+  color: rgb(255, 255, 255);
+  transform: translateY(0);
+}
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: var(--color-black);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preloader .spinner-wrap {
+  width: 180px;
+  height: 180px;
+  position: relative;
+}
+.preloader .spinner-wrap .preloader-logo {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.preloader .spinner-wrap .spinner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-top: 3px solid var(--color-primary-orange);
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
