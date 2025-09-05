@@ -16,6 +16,10 @@
   --color-white: #ffffff;
   --color-black-forest: rgba(84, 84, 84, 1);
 }
+.body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 .color-gray {
   color: rgba(84, 84, 84, 1);
@@ -172,8 +176,12 @@ h6,
   font-size: 36px;
   // line-height: 46px;
   letter-spacing: -1%;
+  @media screen and (max-width: 767.98px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
-.ps-80{
+.ps-80 {
   padding-left: 80px;
 }
 .p-40 {
@@ -189,6 +197,10 @@ h6,
   font-size: 50px;
   line-height: 1;
   letter-spacing: -1%;
+  @media screen and (max-width: 767.98px) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 @media only screen and (max-width: 1399.98px) {
   h1,
@@ -217,8 +229,9 @@ h6,
   }
   h2,
   .h2 {
-    font-size: 40px;
-    line-height: 50px;
+    text-align: center;
+    font-size: 75px;
+    line-height: 78px;
   }
   h3,
   .h3 {
@@ -228,6 +241,11 @@ h6,
   .h4 {
     font-size: 22px;
   }
+  h5,
+  .h5 {
+    font-size: 40px;
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 767.98px) {
   h1,
@@ -236,14 +254,14 @@ h6,
   }
   h2,
   .h2 {
-    font-size: 30px;
-    font-weight: 500;
+    font-size: 50px;
     line-height: 50px;
     text-align: center;
   }
   h5,
   .h5 {
-    font-size: 17px;
+    font-size: 35px;
+    text-align: center;
   }
 }
 html {
@@ -284,8 +302,6 @@ p {
 }
 
 /* Common Class */
-
-
 
 .font-weight-400 {
   font-weight: 400;
@@ -351,21 +367,22 @@ body::-webkit-scrollbar-thumb {
 /*Back to Top btn End*/
 @media (min-width: 100px) {
   .container.custom-container {
-    max-width: 540px;
+    max-width: 990px;
     margin-right: auto;
     margin-left: auto;
   }
 }
 @media (min-width: 768px) {
   .container.custom-container {
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
   }
 }
-@media (min-width: 992px) {
-  .container.custom-container {
+@media (min-width: 992px) { 
+  .container {
     margin-left: calc((100% - 970px) / 2);
-    width: auto;
+    width: 90% !important;
     min-width: auto;
     max-width: inherit;
   }
@@ -375,12 +392,11 @@ body::-webkit-scrollbar-thumb {
   }
 }
 @media (min-width: 1200px) {
-  .container.custom-container {
+  .container {
     margin-left: calc((100% - 1143px) / 2);
     width: auto;
     min-width: auto;
     max-width: inherit;
-    background: #000;
   }
   .container.custom-container.left-align {
     margin-right: calc((100% - 1143px) / 2);
@@ -415,7 +431,7 @@ body::-webkit-scrollbar-thumb {
   .container-sm,
   .container-xl,
   .container-xxl {
-    max-width: 1604px;
+    max-width: 1638px;
     margin: auto;
   }
   .container.container-ex-large,
@@ -485,12 +501,12 @@ body::-webkit-scrollbar-thumb {
 .button-black {
   background-color: var(--color-black);
   border: none;
-  padding: 10px 18px;
+  padding: 10px 15px;
   border-radius: 30px;
-
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease;
-
+  display: flex;
+  p {
+    color: var(--color-white);
+  }
   .custom-btn {
     align-items: center;
     color: white;
@@ -498,8 +514,14 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     gap: 6px;
     background-color: var(--color-black);
-
+    flex-direction: row;
+    transition: flex-direction 0.9s ease;
     border: none;
+    &:hover {
+      display: flex;
+      flex-direction: row-reverse;
+      transition: flex-direction 0.7s ease;
+    }
     .explore-circle {
       height: 40px;
       width: 40px;
@@ -514,7 +536,7 @@ body::-webkit-scrollbar-thumb {
         height: 20.2px;
         fill: rgb(0, 0, 0);
         transform: rotate(45deg);
-        transition: transform 0.3s ease; // smooth icon animation
+        transition: all 0.3s ease; // smooth icon animation
       }
     }
 
@@ -528,14 +550,13 @@ body::-webkit-scrollbar-thumb {
     }
   }
 
-  &:hover {
-    transform: translateY(-2px) scale(1.04);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.384);
-  }
+  // &:hover {
+  //   transform: translateY(-2px) scale(1.04);
+  //   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.384);
+  // }
 }
 
-
-.rotation{
+.rotation {
   animation: rotation 20s infinite linear;
 }
 @keyframes rotation {

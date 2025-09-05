@@ -104,12 +104,14 @@
 }
 
 .logo-track-div {
-  width: 240px !important;
+  width: 267px !important;
   height: 240px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   transition: transform 0.3s ease;
   filter: grayscale(100%);
   background-color: #fff;
@@ -117,6 +119,9 @@
     width: 140px !important;
     height: 140px;
   }
+}
+.logo-track-div:last-child {
+  border-right: 1px solid #ccc;
 }
 
 .logo-track-div img {

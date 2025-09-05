@@ -1,106 +1,130 @@
-$primary-color: #000000;
-$secondary-color: #f5f5f5;
-$background-color: #ffffff;
-$font-base: "General Sans", sans-serif;
-$header-font: 100px;
-$font-size-base: 16px;
-$button-radius: 20rem;
-$font-size-sm: 16px;
-$font-size-md: 14px;
-$font-size-lg: 20px;
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: transparent;
-  backdrop-filter: blur(5px);
-  border-bottom: 1px solid #ddd;
-  margin-top: 2%;
-  font-size: $font-size-base;
-}
-
-.logo-img {
-  width: 100px;
-  object-fit: contain;
-}
-
-// common css  ===========================
-
-.custom-navbar2,
 .custom-navbar {
+  position: fixed;
   top: 30px;
   left: 0;
-  width: 100%;
   z-index: 1000;
-  // background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  margin: 0 auto;
+  transition: all 0.9s ease;
 }
-.custom-navbar2 {
-  background: rgba(255, 0, 0, 0);
-  backdrop-filter: blur(0px);
-  border: none;
-  .logo-section {
-    padding: 10px 30px;
-  }
-}
-.In-nav {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ---------- Nav Wrapper ---------- */
 
-  box-sizing: border-box;
-  font-size: $font-size-md;
-  @media (max-width: 767px) {
-    gap: 10px;
-  }
-}
-.nav-items {
+/* ---------- Nav Container ---------- */
+.nav-wrap {
+  width: 60%;
   display: flex;
+  justify-content: end;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
-  margin: 0 auto;
-  font-size: $font-size-md;
-}
-.offcanvas {
-  background-color: transparent;
-  color: $secondary-color;
-  padding: 20px;
-  width: 250px;
-  backdrop-filter: blur(10px);
-  font-size: $font-size-md;
-  border-left: #ffffff 2px solid !important;
-  border-radius: 15px;
-  box-shadow: 0 1px 100px rgba(0, 0, 0, 1);
-}
-.nav-padding {
-  padding: 10px 20px;
-  background-color: #ffffff;
-  box-shadow: 0 1px 100px rgba(0, 0, 0, 0.1);
-  border-radius: 50px;
-}
-.nav-item-ul {
-  display: block;
-  padding-right: 50px;
-  @media (max-width: 991px) {
+  pointer-events: none;
+  @media (max-width: 767.9px) {
     display: none;
   }
 }
-
-/* From Uiverse.io by JulanDeAlb */
-.hamburger {
-  cursor: pointer;
+.nav-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px black;
+  border-radius: 50px;
+  padding: 14px;
 }
-.hamburger-circle {
-  height: 44px;
-  width: 44px;
-  border: 2px solid #000;
+.outer {
+  width: 320px;
+  max-width: calc(100% - 32px);
+  height: 84px;
+  border-radius: 44px;
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.2s;
+  pointer-events: auto;
+}
+
+/* ---------- Menu Area ---------- */
+.menu-area {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+  padding-left: 18px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu-items {
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+.menu-items li {
+  font-weight: 700;
+  font-size: 20px;
+  color: #111;
+  cursor: pointer;
+  transform: translateX(36px);
+  opacity: 0;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* ---------- Right Side Controls ---------- */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Plus Toggle Button */
+.toggle-btn {
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  border: 4px solid rgba(0, 0, 0, 0.08);
+  background: var(--white);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Let's Talk Button */
+.talk {
+  background: #0f0f0f;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 30px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-left: 6px;
+  flex-shrink: 0;
+  transform: scale(0.95);
+}
+
+svg.icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .outer {
+    height: 72px;
+    border-radius: 36px;
+  }
+  .menu-items li {
+    font-size: 16px;
+  }
+}
+@media (max-width: 620px) {
+  .menu-items {
+    display: none;
+  }
 }

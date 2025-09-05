@@ -24,7 +24,7 @@
   </head>
   <body>
     <section>
-      <nav class="fixed-top container rounded-pill custom-navbar2">
+      <nav class="fixed-top container rounded-pill custom-navbar">
         <div class="In-nav d-flex justify-content-between align-items-center">
           <div class="logo-section">
             <a class="navbar-brand p-0" href="/">
@@ -36,61 +36,61 @@
             </a>
           </div>
 
-          <div class="nav-item-div nav-padding">
-            <div class="d-flex justify-content-end align-items-center gap-3">
-              <div class="col nav-item-ul">
-                <ul class="nav-items p-18">
-                  <li>
-                    <a class="nav-link" href="/">Home</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#about">About</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#skills">Skills</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#projects">Portfolio</a>
-                  </li><li>
-                    <a class="nav-link" href="#projects">Blog</a>
-                  </li>
-                  <li>
-                    <a class="nav-link" href="#projects">Projects</a>
-                  </li>
-                </ul>
-              </div>
-              <label class="hamburger">
-                <div class="hamburger-circle">
-                  <svg
-                    width="22"
-                    height="22"
-                    viewBox="0 0 22 22"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20.6944 1.30556C20.2037 0.814815 19.4167 0.814815 18.9259 1.30556L11 9.23148L3.07407 1.30556C2.58333 0.814815 1.7963 0.814815 1.30556 1.30556C0.814815 1.7963 0.814815 2.58333 1.30556 3.07407L9.23148 11L1.30556 18.9259C0.814815 19.4167 0.814815 20.2037 1.30556 20.6944C1.5463 20.9352 1.87037 21.0648 2.18519 21.0648C2.5 21.0648 2.82407 20.9444 3.06481 20.6944L10.9907 12.7685L18.9167 20.6944C19.1574 20.9352 19.4815 21.0648 19.7963 21.0648C20.1204 21.0648 20.4352 20.9444 20.6759 20.6944C21.1667 20.2037 21.1667 19.4167 20.6759 18.9259L12.7685 11L20.6944 3.07407C21.1852 2.58333 21.1852 1.7963 20.6944 1.30556Z"
-                      fill="#545454"
-                    />
-                  </svg>
+          <div class="nav-wrap">
+            <div class="outer" id="outer">
+              <div class="nav-inner">
+                <div class="menu-area" id="menuArea">
+                  <ul class="menu-items" id="menuItems">
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Pages</li>
+                    <li>Portfolio</li>
+                    <li>Blog</li>
+                    <li>Contact</li>
+                  </ul>
                 </div>
-              </label>
-              <div class="nav-paddibg">
-                <div class="button-black">
-                  <button type="submit" class="custom-btn">
-                    View our works
-                    <div class="explore-circle">
-                      <svg
-                        class="explore-icon"
-                        viewBox="0 0 16 19"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-                        />
-                      </svg>
-                    </div>
-                  </button>
+
+                <div class="controls">
+                  <!-- Plus toggle (always visible) -->
+                  <div
+                    class="toggle-btn"
+                    id="toggleBtn"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Toggle menu"
+                  >
+                    <svg
+                      class="icon plus"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M12 5v14M5 12h14"
+                        stroke="#333"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill="none"
+                      />
+                    </svg>
+                  </div>
+                  <!-- Let's Talk Button -->
+                  <div class="button-black services-btn">
+                    <button type="submit" class="custom-btn">
+                      <div>Let's Talk</div>
+                      <div class="explore-circle">
+                        <svg
+                          class="explore-icon"
+                          viewBox="0 0 16 19"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                          />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -198,35 +198,33 @@
       <div class="hero position-relative section-padding-top-bottom">
         <img class="hero-bg" src="./Assets/images/hreobg.png" alt="" />
         <div class="container position-relative">
-          <div class="section-padding-top-bottom">
-            <div class="">
-              <div class="row hero-text-ani">
-                <div class="col-md-10 col-sm-12">
-                  <div class="hero-text animate-me">
-                    <h2>Bold Brands Creative Design Studio.</h2>
-                  </div>
-                </div>
-                <div class="col-md-2">
-                  <div class="right-hero">
+          <div class="section-padding-top-bottom position-sec">
+            <div class="right-hero">
+              <div>
+                <div class="row hero-text-ani position-relative">
+                  <div class="col-lg-10 col-md-12">
                     <div
                       id="hero-logo"
-                      class="moving-img right-hero-img position-relative"
+                      class="moving-img right-hero-img position-absolute"
                     >
                       <img
-                        class="right-hero-img-logo position-absolute"
+                        class="right-hero-img-logo"
                         src="./Assets/images/heroicon.png"
                         alt=""
                       />
                     </div>
-                    <div class="right-content animate-me">
-                      <p class="animated-text">
-                        Identify the key barriers that prevent your business
-                        from reaching its full potential. Addressing these
-                        issues can transform your path to success.
-                      </p>
+                    <div class="hero-text animate-me">
+                      <h2>Bold Brands Creative Design Studio.</h2>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="right-content animate-me">
+                <p class="animated-text">
+                  Identify the key barriers that prevent your business from
+                  reaching its full potential. Addressing these issues can
+                  transform your path to success.
+                </p>
               </div>
             </div>
           </div>
@@ -349,10 +347,10 @@
               <div class="logo-track-div" id="logoTrackDiv">
                 <img src="./Assets/images/about-company/Logo-1.png" alt="" />
               </div>
-              <div class="logo-track-div" id="logoTrackDiv">
+              <!-- <div class="logo-track-div" id="logoTrackDiv">
                 <img src="./Assets/images/about-company/logo-29.png" alt="" />
-              </div>
-              <div class="logo-track-div" id="logoTrackDiv">
+              </div> -->
+              <!-- <div class="logo-track-div" id="logoTrackDiv">
                 <img
                   src="./Assets/images/about-company/logoipsum-256 1.png"
                   alt=""
@@ -363,7 +361,7 @@
               </div>
               <div class="logo-track-div" id="logoTrackDiv">
                 <img src="./Assets/images/about-company/logo-64.png" alt="" />
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -379,8 +377,12 @@
                 <div class="line bg-white"></div>
                 <p class="section-title text-white">our services</p>
               </div>
-              <h5 class="services-h2">We Build Your Digital Business.</h5>
-              <p class="p-18 services-p">
+              <div class="row">
+                <div class="col-lg-9 col-md-12">
+                  <h5 class="services-h2">We Build Your Digital Business.</h5>
+                </div>
+              </div>
+              <p class="p-20 services-p mt-40">
                 When selecting a web design agency, it's essential to consider
                 its reputation, experience, and the specific needs of your
                 project.
@@ -628,7 +630,15 @@
                   <div class="process-section">
                     <div class="process-step">
                       <div class="icon-wrapper gsap-fade">
-                        <img src="./Assets/images/PROCESS/logo1.png" alt="" />
+                        <div class="icon-wrapper-in">
+                          <div class="process-logo">
+                            <img
+                              src="./Assets/images/PROCESS/logo1.png"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="vertical-line"></div>
                       </div>
                       <div class="content">
                         <p class="p-24 line-height-0">Initiation & Planning</p>
@@ -641,7 +651,15 @@
 
                     <div class="process-step">
                       <div class="icon-wrapper gsap-fade">
-                        <img src="./Assets/images/PROCESS/logo2.png" alt="" />
+                        <div class="icon-wrapper-in">
+                          <div class="process-logo">
+                            <img
+                              src="./Assets/images/PROCESS/logo2.png"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="vertical-line"></div>
                       </div>
                       <div class="content">
                         <p class="p-24 line-height-0">
@@ -656,7 +674,14 @@
 
                     <div class="process-step">
                       <div class="icon-wrapper gsap-fade">
-                        <img src="./Assets/images/PROCESS/logo1.png" alt="" />
+                        <div class="icon-wrapper-in">
+                          <div class="process-logo">
+                            <img
+                              src="./Assets/images/PROCESS/logo1.png"
+                              alt=""
+                            />
+                          </div>
+                        </div>
                       </div>
                       <div class="content">
                         <p class="p-24 line-height-0">Testing & Maintenance</p>
@@ -1014,7 +1039,7 @@
               <hr class="m-0 border-secondary" />
               <div class="awards-div padding-tb-36 row">
                 <div class="award-title col-md-5">
-                  <p class="p-24">
+                  <p class="p-24" data-color="#ce1515">
                     Awarded - Top Creative Agency in United State
                   </p>
                 </div>

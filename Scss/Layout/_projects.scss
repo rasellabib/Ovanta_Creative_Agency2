@@ -78,6 +78,9 @@
         object-fit: cover;
         border-radius: 10px;
       }
+      @media screen and (max-width: 767.98px) {
+        height: 270px;
+      }
     }
   }
   @media screen and (max-width: 991.98px) {
@@ -129,4 +132,15 @@
   border: 1px solid #000;
   border-radius: 50px;
   transform: rotate(315deg);
+}
+
+.project-img-div {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.6s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
