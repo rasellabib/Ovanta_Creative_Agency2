@@ -81,3 +81,20 @@
     text-align: center;
   }
 }
+
+// text change
+.rotating-text {
+  .static-word {
+    margin-right: 0.8rem;
+  }
+
+  .dynamic-word {
+    display: inline-block;
+
+    .char {
+      display: inline-block;
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+}

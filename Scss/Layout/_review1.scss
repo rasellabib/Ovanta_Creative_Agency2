@@ -3,6 +3,15 @@
 
   .review1-content-div {
     margin-left: 100px;
+    @media screen and (max-width: 991.98px) {
+      margin-left: 0;
+      margin-top: 40px;
+    }
+  }
+  .circle-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -20,7 +29,6 @@
   flex: 0 0 100%;
   box-sizing: border-box;
   cursor: pointer;
-
 }
 .review-profile {
   gap: 20px;
@@ -28,6 +36,9 @@
   .review-profile-text {
     .p-36 {
       margin-bottom: 24px;
+      @media screen and (max-width: 991.98px) {
+        margin-bottom: 16px;
+      }
     }
   }
 }

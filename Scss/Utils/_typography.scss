@@ -162,6 +162,10 @@ h6,
   font-size: 24px;
   line-height: 1.4;
   letter-spacing: 0%;
+  @media screen and (max-width: 991.98px) {
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 .p-28 {
   font-family: var(--ff-General);
@@ -176,11 +180,12 @@ h6,
   font-size: 36px;
   // line-height: 46px;
   letter-spacing: -1%;
-  @media screen and (max-width: 767.98px) {
-    font-size: 20px;
-    line-height: 28px;
+  @media screen and (max-width: 991.98px) {
+    font-size: 25px;
+    line-height: 30px;
   }
 }
+
 .ps-80 {
   padding-left: 80px;
 }
@@ -190,6 +195,10 @@ h6,
   font-size: 40px;
   line-height: 54px;
   letter-spacing: -1%;
+  @media screen and (max-width: 991.98px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 .p-50 {
   font-family: var(--ff-General);
@@ -379,7 +388,7 @@ body::-webkit-scrollbar-thumb {
     margin-left: auto;
   }
 }
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
   .container {
     margin-left: calc((100% - 970px) / 2);
     width: 90% !important;

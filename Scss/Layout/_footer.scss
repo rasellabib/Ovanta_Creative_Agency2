@@ -7,14 +7,23 @@
       display: flex;
       gap: 43px;
       color: var(--color-white);
+      @media screen and (max-width: 991.98px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+      }
       .left-content {
         span {
           margin-left: 274px;
           font-weight: 500;
+          @media screen and (max-width: 761.98px) {
+            margin-left: 0;
+            
+          }
         }
       }
       .right-content {
-        width: max-content;
         .right-top-content {
           display: flex;
           gap: 16px;
@@ -24,6 +33,11 @@
             font-weight: 400;
             font-size: 20px;
             line-height: 32px;
+            @media screen and (max-width: 761.98px) {
+              font-size: 16px;
+              line-height: 24px;
+              margin-left: 0;
+            }
           }
         }
         .right-bottom-content {

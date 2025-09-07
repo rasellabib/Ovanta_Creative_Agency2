@@ -62,12 +62,13 @@ h4 {
   top: 0;
   right: 0;
   height: 100%;
-  @media screen and (max-width: 991.98px) {
+  @media screen and (max-width: 1024px) {
     position: relative;
     border-radius: 20px;
     margin-top: 30px;
     padding: 30px;
   }
+
 }
 
 .process-content {
