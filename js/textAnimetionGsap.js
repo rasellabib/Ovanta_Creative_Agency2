@@ -83,28 +83,28 @@ tl2.from(
     y: 100,
     opacity: 0,
     stagger: 0,
-    duration: 1,
+    duration: 0.5,
   }
 );
 
-const tl1 = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#logoTrack",
-    scroller: "body",
-    start: "top 85%",
-    toggleActions: "play none none reverse",
-    // markers: true,
-  },
-});
-tl1.from("#logoTrackDiv, .logoTrackDiv", {
-  opacity: 0,
-  stagger: 0.2,
-});
-tl1.from(".logoTrackDiv", {
-  y: -100,
-  opacity: 0,
-  stagger: 0.2,
-});
+// const tl1 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: "#logoTrack",
+//     scroller: "body",
+//     start: "top 85%",
+//     toggleActions: "play none none reverse",
+//     // markers: true,
+//   },
+// });
+// tl1.from("#logoTrackDiv, .logoTrackDiv", {
+//   opacity: 0,
+//   stagger: 0.2,
+// });
+// tl1.from(".logoTrackDiv", {
+//   y: -100,
+//   opacity: 0,
+//   stagger: 0.2,
+// });
 
 const tl3 = gsap.timeline({
   scrollTrigger: {
