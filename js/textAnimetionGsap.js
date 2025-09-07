@@ -56,7 +56,7 @@ document.fonts.ready.then(() => {
     //   scroller: "body",
     //   start: "top 90%",
     //   toggleActions: "play none none reverse",
-    //   markers: true,
+      // markers: true,
     // },
   });
   tll.from(".hero-image", {
@@ -74,7 +74,7 @@ const tl2 = gsap.timeline({
     scroller: "body",
     start: "top 75%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 tl2.from(
@@ -112,7 +112,7 @@ const tl3 = gsap.timeline({
     scroller: "body",
     start: "top 85%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -129,7 +129,7 @@ const tl3_0 = gsap.timeline({
     scroller: "body",
     start: "top 95%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 tl3_0.from(".left-image", {
@@ -144,7 +144,7 @@ const tl3_1 = gsap.timeline({
     scroller: "body",
     start: "top 75%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 tl3_1.from(".service-right-text, .service-right-text a", {
@@ -163,7 +163,7 @@ const process = gsap.timeline({
     scroller: "body",
     start: "top 75%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 process.from(".process, .process-img", {
@@ -180,7 +180,7 @@ const Pricing = gsap.timeline({
     scroller: "body",
     start: "top 75%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 Pricing.from(".pricing-content div, .pricing-content h5", {
@@ -196,7 +196,7 @@ const PricingCard = gsap.timeline({
     scroller: "body",
     start: "top 80%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 PricingCard.from(" .pricing-card", {
@@ -213,7 +213,7 @@ const review = gsap.timeline({
     scroller: "body",
     start: "top 60%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 review.from(" .circle-div", {
@@ -228,7 +228,7 @@ const review1 = gsap.timeline({
     scroller: "body",
     start: "top 60%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 review1.from(" .review1-content-div", {
