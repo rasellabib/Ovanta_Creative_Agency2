@@ -68,40 +68,47 @@
   margin-top: 130px;
   margin-bottom: 130px;
 }
-
-.row-margin-top {
-  margin-top: 60px;
-}
-
-.row-margin-bottom {
-  margin-bottom: 60px;
-}
-
-.section-padding-top {
+.section-pbt {
   padding-top: 130px;
-}
-
-.section-padding-bottom {
   padding-bottom: 130px;
 }
 
-.section-padding-top-bottom-160 {
+.row-mt {
+  margin-top: 60px;
+}
+
+.row-mb {
+  margin-bottom: 60px;
+}
+
+.section-pt {
+  padding-top: 130px;
+}
+
+.section-pb {
+  padding-bottom: 130px;
+}
+
+.section-ptb-160 {
   padding-top: 160px;
   padding-bottom: 160px;
 }
-.section-padding-top-bottom {
+.section-pt-bottom {
   padding-top: 130px;
+  padding-bottom: 130px;
+}
+.row-pb-130 {
   padding-bottom: 130px;
 }
 .row-padding {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.row-padding-top {
+.row-pt {
   padding-top: 60px;
 }
 
-.row-padding-bottom {
+.row-pb {
   padding-bottom: 60px;
 }
 
@@ -116,26 +123,26 @@
     margin-top: 80px;
     margin-bottom: 80px;
   }
-  .row-margin-top {
+  .row-mt {
     margin-top: 45px;
   }
-  .row-margin-bottom {
+  .row-mb {
     margin-bottom: 45px;
   }
-  .section-padding-top {
+  .section-pt {
     padding-top: 80px;
   }
-  .section-padding-bottom {
+  .section-pb {
     padding-bottom: 80px;
   }
-  .section-padding-top-bottom {
+  .section-pt-bottom {
     padding-top: 80px;
     padding-bottom: 80px;
   }
-  .row-padding-top {
+  .row-pt {
     padding-top: 45px;
   }
-  .row-padding-bottom {
+  .row-pb {
     padding-bottom: 45px;
   }
 }
@@ -150,35 +157,35 @@
     margin-top: 65px;
     margin-bottom: 65px;
   }
-  .row-margin-top {
+  .row-mt {
     margin-top: 35px;
   }
-  .row-margin-bottom {
+  .row-mb {
     margin-bottom: 35px;
   }
-  .section-padding-top {
+  .section-pt {
     padding-top: 65px;
   }
-  .section-padding-bottom {
+  .section-pb {
     padding-bottom: 65px;
   }
-  .section-padding-top-bottom {
+  .section-pt-bottom {
     padding-top: 65px;
     padding-bottom: 65px;
   }
-  .row-padding-top {
+  .row-pt {
     padding-top: 45px;
   }
-  .row-padding-bottom {
+  .row-pb {
     padding-bottom: 35px;
   }
 }
 @media only screen and (max-width: 991.98px) and (max-width: 767.98px) {
-  .row-padding-bottom.extend {
+  .row-pb.extend {
     padding-bottom: 0px;
   }
 }
-.mr-20{
+.mr-20 {
   margin-right: 20px;
 }
 .mt-24 {
@@ -203,15 +210,24 @@
 .mb-28 {
   margin-bottom: 28px;
 }
+.mb-30 {
+  margin-bottom: 30px;
+}
 .mb-32 {
   margin-bottom: 32px;
 }
 .mb-40 {
   margin-bottom: 40px;
 }
+.mb-50 {
+  margin-bottom: 50px;
+}
 
 .mb-14 {
   margin-bottom: 14px;
+}
+.pt-30 {
+  padding-top: 30px;
 }
 .mb-100 {
   margin-bottom: 100px;
@@ -244,4 +260,10 @@
   .mb-40 {
     margin-bottom: 30px;
   }
+}
+.line-white {
+  height: 2px;
+  width: 40px;
+  background: #ffffff;
+  margin-right: 16px;
 }
