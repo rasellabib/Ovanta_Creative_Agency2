@@ -1,0 +1,207 @@
+.button-btn {
+  position: relative;
+  overflow: hidden;
+  background: #000000; /* gray-50 */
+  backdrop-filter: blur(6px);
+  transition: color 0.3s ease;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 8px 7px 30px;
+  border-radius: 30px;
+  gap: 8px;
+  color: white;
+  border: 2px solid #000000; /* gray-700 */
+}
+
+.button-btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #ffffff; /* emerald-500 */
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.7s ease;
+  z-index: -1;
+}
+
+.button-btn:hover {
+  color: #000000; /* white text on hover */
+  border: 2px solid #000000; /* gray-700 */
+  background: #000;
+}
+
+.button-btn:hover::before {
+  left: 0;
+  transform: scale(3);
+}
+
+.arrow-icon {
+  width: 36px;
+  height: 36px;
+  padding: 0.5rem;
+  border: 1px solid #374151; /* gray-700 */
+  border-radius: 50%;
+  transform: rotate(45deg);
+  transition: all 0.3s linear;
+  background: #f9fafb;
+}
+
+.arrow-icon path {
+  fill: #1f2937; /* gray-800 */
+  transition: fill 0.3s ease;
+}
+
+.button-btn:hover .arrow-icon {
+  rotate: 45deg;
+  border: none;
+  border: 1px solid #ffffff; /* gray-700 */
+  background: #000;
+}
+
+.button-btn:hover .arrow-icon path {
+  fill: #ffffff; /* gray-800 */
+}
+
+.btn-bg-none {
+  background: rgb(255, 255, 255);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  transition: color 0.3s ease;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 8px 7px 30px;
+  border-radius: 30px;
+  gap: 8px;
+  color: rgb(0, 0, 0);
+  border: 2px solid #000000; /* gray-700 */
+}
+
+.btn-bg-none:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #000000; /* emerald-500 */
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.7s ease;
+  z-index: -1;
+}
+.btn-bg-none:hover {
+  color: #ffffff; /* white text on hover */
+  border: 2px solid #000000; /* gray-700 */
+  background: #ffffff;
+}
+
+.btn-bg-none:hover::before {
+  left: 0;
+  transform: scale(3);
+}
+
+.arrow-icon {
+  width: 36px;
+  height: 36px;
+  padding: 0.5rem;
+  border: 1px solid #374151; /* gray-700 */
+  border-radius: 50%;
+  transform: rotate(45deg);
+  transition: all 0.3s linear;
+  background: #000000;
+}
+
+.arrow-icon path {
+  fill: #ffffff; /* gray-800 */
+  transition: fill 0.3s ease;
+}
+
+.btn-bg-none:hover .arrow-icon {
+  rotate: 45deg;
+  border: none;
+  border: 1px solid #dfdfdf; /* gray-700 */
+  background: #ffffff;
+}
+
+.btn-bg-none:hover .arrow-icon path {
+  fill: #000000; /* gray-800 */
+}
+
+
+
+.btn-bg-white {
+    background: rgb(247, 247, 247);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+    transition: color 0.3s ease;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 8px 7px 30px;
+    border-radius: 30px;
+    gap: 8px;
+    color: rgb(0, 0, 0);
+    border: 2px solid #ffffff; /* gray-700 */
+  }
+  
+  .btn-bg-white:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #000000; /* emerald-500 */
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.7s ease;
+    z-index: -1;
+  }
+  .btn-bg-white:hover {
+    color: #ffffff; /* white text on hover */
+    border: 2px solid #ffffff; /* gray-700 */
+    background: #ffffff;
+  }
+  
+  .btn-bg-white:hover::before {
+    left: 0;
+    transform: scale(3);
+  }
+  
+  .arrow-icon {
+    width: 36px;
+    height: 36px;
+    padding: 0.5rem;
+    border: 1px solid #374151; /* gray-700 */
+    border-radius: 50%;
+    transform: rotate(45deg);
+    transition: all 0.3s linear;
+    background: #f9fafb;
+  }
+  
+  .arrow-icon path {
+    fill: #1f2937; /* gray-800 */
+    transition: fill 0.3s ease;
+  }
+  
+  .btn-bg-white:hover .arrow-icon {
+    rotate: 45deg;
+    border: none;
+    border: 1px solid #ffffff; /* gray-700 */
+    background: #000000;
+  }
+  
+  .btn-bg-white:hover .arrow-icon path {
+    fill: #ffffff; /* gray-800 */
+  }
+  

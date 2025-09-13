@@ -15,10 +15,17 @@
   --color-black: #19191a;
   --color-white: #ffffff;
   --color-black-forest: rgba(84, 84, 84, 1);
+  --bg-secondary: rgba(245, 245, 245, 1);
 }
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.blk-forest {
+  color: var(--color-black-forest);
+}
+.bg-gray {
+  background: var(--bg-secondary);
 }
 
 .color-gray {
@@ -101,6 +108,9 @@ h4,
   line-height: 1.71;
   letter-spacing: -2%;
   font-family: var(--ff-General);
+  @media screen and (max-width: 991.98px) {
+    font-size: 80px;
+  }
 }
 
 h5,
@@ -127,6 +137,10 @@ h6,
   line-height: 1.1;
   letter-spacing: -2%;
   text-transform: capitalize;
+  @media screen and (max-width: 991.98px) {
+    font-size: 80px;
+    
+  }
 }
 .font-100 {
   font-size: var(--ff-General);
@@ -165,6 +179,7 @@ h6,
   line-height: 1.44;
   letter-spacing: 0%;
 }
+
 .p-20 {
   font-family: var(--ff-Inter-sans);
   font-weight: 400;
