@@ -940,6 +940,9 @@
   @media screen and (max-width: 1024px) {
     gap: 50px;
   }
+  @media screen and (max-width: 768.99px) {
+    flex-direction: column;
+  }
 }
 
 /* left avatars */
