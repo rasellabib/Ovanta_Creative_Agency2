@@ -1,167 +1,197 @@
- <!-- =====feedback section start ==== -->
-    <!-- <section class="feedback-section padding-left-right padding-top-bottom">
-      <div class="user-list">
-        <div class="user-img active" data-index="0">
-          <img
-            src="https://randomuser.me/api/portraits/women/1.jpg"
-            alt="User 1"
-          />
-        </div>
-        <div class="user-img" data-index="1">
-          <img
-            src="https://randomuser.me/api/portraits/men/2.jpg"
-            alt="User 2"
-          />
-        </div>
-        <div class="user-img" data-index="2">
-          <img
-            src="https://randomuser.me/api/portraits/women/3.jpg"
-            alt="User 3"
-          />
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Testimonial Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f0f0f;
+      --muted:#bfbfbf;
+      --accent:#fff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Poppins',sans-serif;background:#0b0b0b;color:var(--accent)}
+
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:60px 80px;
+      background: radial-gradient(at 10% 10%, rgba(255,255,255,0.02), transparent 10%), #0b0b0b;
+      background-image: url('Screenshot 2025-09-14 at 10.06.52\u2009AM.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .testimonial{
+      width:100%;
+      max-width:1400px;
+      display:grid;
+      grid-template-columns: 160px 1fr;
+      gap:40px;
+      align-items:center;
+      padding:40px 60px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
+      border-radius:6px;
+    }
+
+    /* left avatars */
+    .clients{
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
+    }
+
+    .pill{
+      width:120px;
+      background:rgba(0,0,0,0.55);
+      border-radius:80px;
+      padding:22px 10px;
+      display:flex;
+      flex-direction:column;
+      gap:26px;
+      align-items:center;
+      position:relative;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6), inset 0 3px 10px rgba(255,255,255,0.02);
+    }
+
+    .avatar{
+      width:64px;height:64px;border-radius:50%;overflow:hidden;cursor:pointer;border:4px solid rgba(255,255,255,0.03);transition:transform .28s,box-shadow .28s,opacity .28s;
+      display:block;
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .avatar.active{transform:scale(1.08);box-shadow:0 8px 24px rgba(0,0,0,0.6);opacity:1}
+    .avatar.inactive{opacity:0.65}
+
+    /* arrow */
+    .arrow{
+      position:absolute;
+      left:120px; /* sits between pill and content */
+      width:0;height:0;
+      border-top:14px solid transparent;
+      border-bottom:14px solid transparent;
+      border-left:20px solid #ffffff;
+      transform:translateX(-10px);
+      transition:top .28s;
+      filter:drop-shadow(0 4px 10px rgba(0,0,0,0.6));
+    }
+
+    /* right content */
+    .content{
+      padding:10px 40px 30px 40px;
+    }
+    .kicker{display:flex;align-items:center;gap:14px;color:var(--muted);font-weight:600;font-size:13px;letter-spacing:2px}
+    .kicker::before{content:'';width:48px;height:2px;background:linear-gradient(90deg,#fff,rgba(255,255,255,0.15));display:inline-block}
+    h1{font-size:64px;margin:8px 0 18px;line-height:0.95}
+    blockquote{font-size:20px;line-height:1.8;color:#e6e6e6;margin:28px 0 36px;max-width:920px}
+
+    .divider{height:1px;background:rgba(255,255,255,0.06);margin:10px 0 24px}
+    .author{font-size:28px;font-weight:700}
+    .role{color:var(--muted);margin-top:6px}
+
+    /* responsive */
+    @media(max-width:900px){
+      .testimonial{grid-template-columns:80px 1fr;padding:24px}
+      h1{font-size:40px}
+      .pill{padding:18px}
+      .avatar{width:54px;height:54px}
+      .arrow{left:88px}
+    }
+    @media(max-width:600px){
+      .wrap{padding:30px}
+      .testimonial{grid-template-columns:1fr;padding:20px;gap:20px}
+      .clients{order:2;justify-content:center}
+      .arrow{display:none}
+      h1{font-size:28px}
+      blockquote{font-size:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="testimonial">
+      <div class="clients">
+        <div class="pill" id="pill">
+          <div class="avatar" data-index="0"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&auto=format&fit=crop" alt="client 1"></div>
+          <div class="avatar" data-index="1"><img src="https://images.unsplash.com/photo-1545996124-1f7a1f6a6f6a?w=800&q=80&auto=format&fit=crop" alt="client 2"></div>
+          <div class="avatar" data-index="2"><img src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?w=800&q=80&auto=format&fit=crop" alt="client 3"></div>
+          <div class="arrow" id="arrow"></div>
         </div>
       </div>
 
-      <div class="feedback-content">
-        
-        <div class="feedback-card active" data-index="0">
-          <p class="text-uppercase p-other">Testimonial</p>
-          <h2 class="feedback-card-text">Clients Feedback</h2>
-          <p class="feedback-text">
-            "Craincy exceeded our expectations, delivering a stunning design
-            that truly reflects our brand’s essence. Their creativity and
-            professionalism made a lasting impact."
-          </p>
-          <p class="feedback-author">Jenny Bennett</p>
-          <p class="feedback-position">Senior Marketing Manager</p>
-        </div>
-
-        
-        <div class="feedback-card" data-index="1">
-          <p class="text-uppercase p-other">Testimonial</p>
-          <h2>Clients Feedback</h2>
-          <p class="feedback-text">
-            "The team at Craincy were phenomenal. The branding and visuals they
-            delivered were beyond what we imagined. Highly recommend them."
-          </p>
-          <p class="feedback-author">Liam Carter</p>
-          <p class="feedback-position">Creative Director</p>
-        </div>
-
-
-        <div class="feedback-card" data-index="2">
-          <p class="text-uppercase p-other">Testimonial</p>
-          <h2>Clients Feedback</h2>
-          <p class="feedback-text">
-            "Working with Craincy was a game changer. Their process is so
-            refined, and their attention to detail is world-class."
-          </p>
-          <p class="feedback-author">Sophia Turner</p>
-          <p class="feedback-position">CEO, VisionCore</p>
-        </div>
+      <div class="content">
+        <div class="kicker">TESTIMONIAL</div>
+        <h1>Clients Feedback</h1>
+        <blockquote id="quote">"Craincy exceeded our expectations, delivering a stunning design that truly reflects our brand’s essence. Their creativity and professionalism made a lasting impact. They create stunning architectural concepts that capture the essence of the community and its surroundings, blending aesthetics with functionality."</blockquote>
+        <div class="divider"></div>
+        <div class="author" id="author">Jenny Bennett</div>
+        <div class="role" id="role">Senior Marketing Manager</div>
       </div>
-    </section> -->
-    <!-- =====feedback section end ==== -->
+    </section>
+  </div>
 
+  <script>
+    const testimonials = [
+      {
+        name: 'Jenny Bennett',
+        role: 'Senior Marketing Manager',
+        quote: '"Craincy exceeded our expectations, delivering a stunning design that truly reflects our brand’s essence. Their creativity and professionalism made a lasting impact. They create stunning architectural concepts that capture the essence of the community and its surroundings, blending aesthetics with functionality."'
+      },
+      {
+        name: 'Liam Parker',
+        role: 'Product Designer',
+        quote: '"Working with this team was a pleasure. They translated our vague idea into a clean, scalable design system. Communication was clear and timely, and final delivery surpassed expectations."'
+      },
+      {
+        name: 'Sofia Turner',
+        role: 'CEO, BrightCo',
+        quote: '"A highly professional studio — they drove the project with care, delivered on time, and brought smart design decisions that improved our conversion metrics significantly."'
+      }
+    ];
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Scroll Velocity Text</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-      <style>
-        body {
-          height: 300vh; /* scroll করার জন্য লম্বা height */
-          background: #604646;
-          color: #fff;
-          overflow-x: hidden;
-          margin-top: 1220px;
-        }
-        .parallax-row {
-          position: relative;
-          overflow: hidden;
-          white-space: nowrap;
-          margin: 4rem 0;
-          background: #000;
-        }
-        .scroller {
-          display: inline-flex;
-          white-space: nowrap;
-          font-weight: 700;
-          font-size: 3rem;
-          letter-spacing: -0.02em;
-          text-shadow: 0 6px 18px rgba(0,0,0,0.5);
-          will-change: transform;
-          transition: transform 0.3s ease-out;
-        }
-        .scroller span {
-          flex-shrink: 0;
-          padding: 0 2rem;
-        }
-      </style>
-    </head>
-    <body>
-    
-      <div class="container">
-        <div class="parallax-row" data-velocity="0.3" data-copies="6">
-          <div class="scroller"></div>
-        </div>
-      </div>
-    
-      <script>
-        const texts = ["React Bits", "Scroll Down"];
-        const rows = document.querySelectorAll('.parallax-row');
-    
-        rows.forEach((row, i) => {
-          const scroller = row.querySelector('.scroller');
-          const copies = parseInt(row.dataset.copies) || 6;
-    
-          for (let j = 0; j < copies; j++) {
-            const span = document.createElement('span');
-            span.textContent = texts[i % texts.length];
-            scroller.appendChild(span);
-          }
-        });
-    
-        let lastScrollY = window.scrollY;
-        let offset = new Array(rows.length).fill(0);
-    
-        function animate() {
-          const currentScrollY = window.scrollY;
-          const delta = currentScrollY - lastScrollY; // scroll velocity
-          lastScrollY = currentScrollY;
-    
-          // উইন্ডো height এর 70% হিসাব করা
-          const scrollLimit = document.documentElement.scrollHeight - window.innerHeight;
-          const scrollPercentage = (currentScrollY / scrollLimit) * 100;
-    
-          rows.forEach((row, i) => {
-            const speed = parseFloat(row.dataset.velocity);
-            const scroller = row.querySelector('.scroller');
-    
-            if (scrollPercentage < 70) {
-              // 70% এর নিচে থাকলে অ্যানিমেশন চালু
-              offset[i] += delta * speed;
-    
-              // wrap effect
-              const totalWidth = scroller.scrollWidth / (parseInt(row.dataset.copies) || 6);
-              if (offset[i] > totalWidth) offset[i] -= totalWidth;
-              if (offset[i] < -totalWidth) offset[i] += totalWidth;
-    
-              scroller.style.transform = `translateX(${offset[i]}px)`;
-            } else {
-              // 70% এর বেশি হলে অ্যানিমেশন বন্ধ হবে এবং টেক্সট রিসেট হবে
-              offset[i] = 0;
-              scroller.style.transform = `translateX(0px)`;
-            }
-          });
-    
-          requestAnimationFrame(animate);
-        }
-    
-        animate();
-      </script>
-    </body>
-    </html>
-    
+    const avatars = Array.from(document.querySelectorAll('.avatar'));
+    const quoteEl = document.getElementById('quote');
+    const authorEl = document.getElementById('author');
+    const roleEl = document.getElementById('role');
+    const arrow = document.getElementById('arrow');
+    const pill = document.getElementById('pill');
+
+    let active = 0;
+
+    function setActive(i, animate=true){
+      active = i;
+      avatars.forEach(a=>{a.classList.remove('active');a.classList.remove('inactive')});
+      avatars.forEach((a,idx)=>{ if(idx!==i) a.classList.add('inactive') });
+      avatars[i].classList.add('active');
+
+      // update content
+      quoteEl.textContent = testimonials[i].quote;
+      authorEl.textContent = testimonials[i].name;
+      roleEl.textContent = testimonials[i].role;
+
+      // position arrow vertically near active avatar
+      const avatarRect = avatars[i].getBoundingClientRect();
+      const pillRect = pill.getBoundingClientRect();
+      const top = avatarRect.top - pillRect.top + (avatarRect.height/2) - (arrow.offsetHeight/2);
+      arrow.style.top = `${top}px`;
+    }
+
+    avatars.forEach(av=>{
+      av.addEventListener('click', (e)=>{
+        const i = Number(av.getAttribute('data-index'));
+        setActive(i);
+      })
+    });
+
+    // initial
+    window.addEventListener('load', ()=>{
+      setActive(0);
+      // ensure arrow repositions on resize
+      window.addEventListener('resize', ()=>setActive(active));
+    });
+  </script>
+</body>
+</html>

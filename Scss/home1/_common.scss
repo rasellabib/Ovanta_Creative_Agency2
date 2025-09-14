@@ -166,8 +166,17 @@
   border-right: gray solid 1px;
   border-top: gray solid 1px;
   border-bottom: gray solid 1px;
-  @media screen and (max-width: 767px) {
-    padding: 20px 30px;
+  @media screen and (max-width: 1024px) {
+    padding: 50px 30px;
+    img {
+      width: 80px;
+    }
+  }
+  @media screen and (max-width: 767.99px) {
+    padding: 30px 20px;
+    img {
+      width: 50px;
+    }
   }
 }
 .LogoImage:first-child {
@@ -521,7 +530,6 @@
   color: white;
   height: 700px;
   background-size: fit;
-  position: relative;
 }
 .black-bg {
   background: rgba(0, 0, 0, 0.5);
@@ -529,10 +537,17 @@
 }
 .social-div {
   position: absolute;
-  bottom: 0;
+  bottom: -90px;
   left: 0;
   width: 100%;
-  background: transparent;
+  @media screen and (max-width: 767.98px) {
+    position: relative;
+  }
+  .position-relative {
+    @media screen and (max-width: 767.98px) {
+      flex-direction: column;
+    }
+  }
 }
 
 .dock {
@@ -541,6 +556,11 @@
   display: flex;
   border: rgba(255, 255, 255, 0.1) 1px solid;
   position: relative;
+  background: #000000;
+  justify-content: space-between;
+  @media screen and (max-width: 767.98px) {
+    height: 50px;
+  }
 }
 .dock div {
   font-size: 20px;
@@ -548,11 +568,15 @@
   align-content: center;
   text-align: center;
   width: 194px;
-  background: #ff0000;
+  cursor: pointer;
+  transition: all 0.4s ease;
   &:hover {
     background: #ffffff;
     color: black;
-    cursor: pointer;
+  }
+  @media screen and (max-width: 767.98px) {
+    width: auto;
+    font-size: 15px;
   }
 }
 .dock div :first-child {
@@ -588,6 +612,9 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  @media screen and (max-width: 767.98px) {
+    position: relative;
+  }
 }
 .subscribe-card {
   background: rgb(255, 255, 255);
@@ -626,7 +653,7 @@
 }
 .contact-section {
   text-align: center;
-  padding: 63px 20px 122px;
+  padding: 153px 20px 122px;
   background: #000;
   color: white;
 }
@@ -640,14 +667,16 @@
   font-weight: 600;
   margin-bottom: 40px;
 }
-.nav-links a {
-  color: white;
-  margin: 0 15px;
+.nav-link {
   text-decoration: none;
-  font-weight: 600;
+  transition: all 0.6s ease;
+  &:hover {
+    scale: 1.2;
+    color: rgb(197, 185, 185);
+  }
 }
-.nav-links a:hover {
-  color: #bbbbbb;
+.nav-sm-none {
+  display: none !important;
 }
 .footer-bottom {
   color: white;
@@ -671,7 +700,7 @@
   .contact-section h2 {
     font-size: 32px;
   }
-  .nav-links a {
+  .nav-link {
     display: block;
     margin: 10px 0;
   }
@@ -743,6 +772,9 @@
 .project-cards-grid .col-md-6:nth-child(2),
 .project-cards-grid .col-md-6:nth-child(4) {
   padding-top: 400px;
+  @media screen and (max-width: 767.98px) {
+    padding-top: 0;
+  }
 }
 
 /* single card */
@@ -850,8 +882,6 @@
   justify-content: end;
 }
 
-
-
 .parallax-row {
   position: relative;
   overflow: hidden;
@@ -864,10 +894,169 @@
   font-weight: 700;
   font-size: 3rem;
   letter-spacing: -0.02em;
-  text-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
   will-change: transform;
 }
 .scroller span {
   flex-shrink: 0;
   padding: 0 2rem;
+}
+
+.title {
+  @media screen and (max-width: 767.99px) {
+    justify-content: center;
+  }
+}
+.services-title {
+  justify-content: space-between;
+  @media screen and (max-width: 767.99px) {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/Assets/images/home1/images/reviewbg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  transition: all 0.6s ease-in-out;
+}
+.testimonial-div {
+  width: 100%;
+  background: rgba(15, 15, 15, 0.9);
+}
+
+.testimonial {
+  width: 100%;
+  display: flex;
+  gap: 172px;
+  align-items: center;
+  padding: 40px 60px;
+  border-radius: 6px;
+  @media screen and (max-width: 1024px) {
+    gap: 50px;
+  }
+}
+
+/* left avatars */
+.clients {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.pill {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 122px;
+  padding: 54px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6),
+    inset 0 3px 10px rgba(255, 255, 255, 0.02);
+  @media screen and (max-width: 767.98px) {
+    padding: 40px;
+  }
+  @media screen and (max-width: 767.98px) {
+    flex-direction: row;
+  }
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  border: 4px solid rgba(255, 255, 255, 0.03);
+  transition: transform 0.28s, box-shadow 0.28s, opacity 0.28s;
+  display: block;
+  @media screen and (max-width: 1024px) {
+    width: 80px;
+    height: 80px;
+  }
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.avatar.active {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  opacity: 1;
+}
+.avatar.inactive {
+  opacity: 0.65;
+}
+
+/* arrow */
+.arrow {
+  position: absolute;
+  left: 25px; /* sits between pill and content */
+  width: 0;
+  height: 0;
+  transform: translateX(-10px);
+  transition: top 0.28s;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6));
+}
+
+/* right content */
+.content {
+  padding: 10px 40px 30px 40px;
+}
+blockquote {
+  margin-bottom: 44px;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.reviewLogo {
+}
+/* responsive */
+@media (max-width: 900px) {
+  .testimonial {
+    grid-template-columns: 80px 1fr;
+    padding: 24px;
+  }
+  h1 {
+    font-size: 40px;
+  }
+
+  .avatar {
+    width: 54px;
+    height: 54px;
+  }
+  .arrow {
+    left: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .testimonial {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 20px;
+  }
+  .clients {
+    order: 2;
+    justify-content: center;
+  }
+  .arrow {
+    display: none;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  blockquote {
+    font-size: 16px;
+  }
 }

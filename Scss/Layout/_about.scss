@@ -117,6 +117,8 @@
       transition: all 0.3s ease;
       overflow: hidden;
       position: relative;
+      height: 470px;
+      width: 380px;
       .card-content {
         position: absolute;
         top: 100%;
@@ -150,3 +152,4 @@
     }
   }
 }
+

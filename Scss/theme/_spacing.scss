@@ -80,6 +80,9 @@
 .row-mb {
   margin-bottom: 50px;
 }
+.row-g-24 {
+  row-gap: 24px;
+}
 
 .section-pt {
   padding-top: 130px;
@@ -233,7 +236,9 @@
 .mb-50 {
   margin-bottom: 50px;
 }
-
+.mb-60 {
+  margin-bottom: 60px;
+}
 .mb-14 {
   margin-bottom: 14px;
 }
@@ -245,9 +250,15 @@
 }
 .pe-108 {
   padding-right: 108px;
+  @media screen and (max-width: 1024.98px) {
+    padding-right: 0;
+  }
 }
 .ps-108 {
   padding-left: 108px;
+  @media screen and (max-width: 1024.98px) {
+    padding-left: 0;
+  }
 }
 .mb-100 {
   margin-bottom: 100px;
@@ -322,4 +333,15 @@
 
 hr {
   border-color: #333;
+}
+.sm-text-center {
+  @media screen and (max-width: 767.98px) {
+    text-align: center;
+  }
+}
+.justify-sm-center{
+  @media screen and (max-width: 767.98px) {
+    display: flex;
+    justify-content: center;
+  }
 }

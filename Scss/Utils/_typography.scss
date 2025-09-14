@@ -129,6 +129,9 @@ h6,
   font-size: 50px;
   line-height: 1.2;
   letter-spacing: -1%;
+  @media screen and (max-width: 767.99px) {
+    font-size: 35px;
+  }
 }
 .h-110 {
   font-family: var(--ff-General);
@@ -137,9 +140,8 @@ h6,
   line-height: 1.1;
   letter-spacing: -2%;
   text-transform: capitalize;
-  @media screen and (max-width: 991.98px) {
+  @media screen and (max-width: 1024px) {
     font-size: 80px;
-    
   }
 }
 .font-100 {
@@ -178,6 +180,9 @@ h6,
   font-size: 18px;
   line-height: 1.44;
   letter-spacing: 0%;
+  @media screen and (max-width: 1024px) {
+    font-size: 15px;
+  }
 }
 
 .p-20 {
@@ -186,6 +191,9 @@ h6,
   font-size: 20px;
   line-height: 1.6;
   letter-spacing: 0%;
+  @media screen and (max-width: 768.99px) {
+    font-size: 15px;
+  }
 }
 .p-24 {
   font-family: var(--ff-General);
@@ -204,6 +212,12 @@ h6,
   font-size: 28px;
   line-height: 1.42;
   letter-spacing: 0%;
+  @media screen and (max-width: 1024px) {
+    font-size: 23px;
+  }
+  @media screen and (max-width: 767.99px) {
+    font-size: 20px;
+  }
 }
 .p-36 {
   font-family: var(--ff-General);
@@ -267,6 +281,12 @@ h6,
   h3,
   .h3 {
     font-size: 26px;
+  }
+}
+@media only screen and (max-width: 991.98px) {
+  h5,
+  .h5 {
+    font-size: 50px;
   }
 }
 @media only screen and (max-width: 991.98px) {
@@ -413,14 +433,14 @@ body::-webkit-scrollbar-thumb {
 
 /*Back to Top btn End*/
 @media (min-width: 100px) {
-  .container.custom-container {
+  .container {
     max-width: 990px;
     margin-right: auto;
     margin-left: auto;
   }
 }
 @media (min-width: 768px) {
-  .container.custom-container {
+  .container {
     width: 90%;
     margin-right: auto;
     margin-left: auto;
@@ -433,7 +453,7 @@ body::-webkit-scrollbar-thumb {
     min-width: auto;
     max-width: inherit;
   }
-  .container.custom-container.left-align {
+  .container {
     margin-right: calc((100% - 970px) / 2);
     margin-left: auto;
   }
@@ -445,21 +465,19 @@ body::-webkit-scrollbar-thumb {
     min-width: auto;
     max-width: inherit;
   }
-  .container.custom-container.left-align {
+  .container {
     margin-right: calc((100% - 1143px) / 2);
     margin-left: auto;
   }
 }
 @media (min-width: 1400px) {
-  .container.custom-container {
+  .container {
     margin-left: calc((100% - 1366px) / 2);
     width: auto;
     min-width: auto;
     max-width: inherit;
   }
-  .container,
-  .custom-container,
-  .left-align {
+  .container {
     margin-right: calc((100% - 1366px) / 2);
   }
 }
