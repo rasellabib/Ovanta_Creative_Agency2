@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .section-title-div-center {
   display: flex;
   align-items: center;
@@ -339,9 +344,100 @@ hr {
     text-align: center;
   }
 }
-.justify-sm-center{
+.justify-sm-center {
   @media screen and (max-width: 767.98px) {
     display: flex;
     justify-content: center;
+  }
+}
+
+/*Back to Top btn End*/
+@media (min-width: 100px) {
+  .container,
+  .container1 {
+    max-width: 990px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    margin-left: calc((100% - 970px) / 2);
+    width: 90% !important;
+    min-width: auto;
+    max-width: inherit;
+  }
+  .container {
+    margin-right: calc((100% - 970px) / 2);
+    margin-left: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    margin-left: calc((100% - 1143px) / 2);
+    width: auto;
+    min-width: auto;
+    max-width: inherit;
+  }
+  .container {
+    margin-right: calc((100% - 1143px) / 2);
+    margin-left: auto;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    margin-left: calc((100% - 1366px) / 2);
+    width: auto;
+    min-width: auto;
+    max-width: inherit;
+  }
+  .container {
+    margin-right: calc((100% - 1366px) / 2);
+  }
+}
+.structa_screenfix_right {
+  margin-right: calc((-100vw + 100%) / 2);
+}
+
+.structa_screenfix_left {
+  margin-left: calc((-100vw + 100%) / 2);
+}
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1638px;
+    margin: auto;
+  }
+  .container.container-ex-large,
+  .container-lg.container-ex-large,
+  .container-md.container-ex-large,
+  .container-sm.container-ex-large,
+  .container-xl.container-ex-large,
+  .container-xxl.container-ex-large {
+    max-width: 1660px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+.container1 {
+  max-width: 1604px;
+  margin: auto;
+}
+@media (min-width: 1400px) {
+  .container1 {
+    max-width: 1604px;
+    margin: auto;
   }
 }

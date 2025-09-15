@@ -669,7 +669,7 @@
 }
 .nav-link {
   text-decoration: none;
-  transition: all 0.6s ease;
+  transition: all 0.4s ease;
   &:hover {
     scale: 1.2;
     color: rgb(197, 185, 185);
@@ -884,7 +884,7 @@
 
 .parallax-row {
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   white-space: nowrap;
   margin: 4rem 0;
 }
@@ -894,7 +894,7 @@
   font-weight: 700;
   font-size: 3rem;
   letter-spacing: -0.02em;
-  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  // text-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
   will-change: transform;
 }
 .scroller span {

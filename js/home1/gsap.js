@@ -2,8 +2,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 var tl = gsap.timeline();
 
-// var chars = heroContent1.lines;
-// var heroContent2 = heroContent2.lines;
 
 tl.from("nav", {
   duration: 0.3,
@@ -30,21 +28,6 @@ tl.from(".hero-button", {
   y: 40,
   opacity: 0,
   ease: "power2.out",
-});
-
-const tl1 = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#scroll1",
-    scroller: "body",
-    start: "top 65%",
-    toggleActions: "play none none reverse",
-    // markers: true,
-  },
-});
-tl1.from("#LogoImage div", {
-  y: 100,
-  opacity: 0,
-  stagger: 0.2,
 });
 
 const tl2 = gsap.timeline({
@@ -100,18 +83,15 @@ document.querySelectorAll(".menu-item").forEach((item) => {
 
 const tl3 = gsap.timeline({
   scrollTrigger: {
-    trigger: "#team-section",
+    trigger: "#our-services",
     scroller: "body",
     start: "top 65%",
     toggleActions: "play none none reverse",
-    // markers: true,
+    markers: true,
   },
 });
-tl3.from(
-  "#team-section, #team-section #imagediv, #team-section #imagediv #inimagediv1",
-  {
-    y: 100,
-    opacity: 0,
-    stagger: 0.2,
-  }
-);
+tl3.from(".services-div #services1, .services-items", {
+  y: 100,
+  opacity: 0,
+  stagger: 0.2,
+});
