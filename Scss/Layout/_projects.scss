@@ -46,13 +46,11 @@
         gap: 60px;
         @media screen and (max-width: 767.98px) {
           gap: 30px;
-          
         }
       }
     }
     @media only screen and (max-width: 991.98px) {
       flex: 0 0 calc(100% - 19px);
-      
     }
 
     &.active {
@@ -73,6 +71,9 @@
         color: #555;
         text-decoration: none;
         line-height: 1;
+      }
+      @media screen and (max-width: 767.98px) {
+        gap: 4px;
       }
     }
 
@@ -120,6 +121,10 @@
     background: #fff;
     cursor: pointer;
     transition: background 0.3s;
+    @media screen and (max-width: 991.98px) {
+      width: 50px;
+      height: 50px;
+    }
 
     &:hover {
       background: #eee;

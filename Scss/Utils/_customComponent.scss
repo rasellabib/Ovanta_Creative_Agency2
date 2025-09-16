@@ -184,11 +184,11 @@
   border-radius: 50%;
   transform: rotate(45deg);
   transition: all 0.3s linear;
-  background: #f9fafb;
+  background: #000000;
 }
 
 .arrow-icon path {
-  fill: #1f2937; /* gray-800 */
+  fill: #ffffff; /* gray-800 */
   transition: fill 0.3s ease;
 }
 
@@ -196,9 +196,18 @@
   rotate: 45deg;
   border: none;
   border: 1px solid #ffffff; /* gray-700 */
-  background: #000000;
+  background: #ffffff;
 }
 
 .btn-bg-white:hover .arrow-icon path {
-  fill: #ffffff; /* gray-800 */
+  fill: #000000; /* gray-800 */
+}
+
+.social-icon {
+  transition: all 0.8s ease;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #000;
+  }
 }

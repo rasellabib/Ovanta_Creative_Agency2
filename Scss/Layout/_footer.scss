@@ -19,7 +19,6 @@
           font-weight: 500;
           @media screen and (max-width: 761.98px) {
             margin-left: 0;
-            
           }
         }
       }
@@ -124,3 +123,8 @@
   }
 }
 
+.footer-content div:nth-child(2) {
+  div {
+    margin-left: -24px;
+  }
+}

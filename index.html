@@ -1064,7 +1064,7 @@
                             </div>
                           </div>
                           <!-- small dot nav -->
-                          <div id="dots" class="mt-2 d-flex gap-2"></div>
+                          <!-- <div id="dots" class="mt-2 d-flex gap-2"></div> -->
                         </div>
                       </div>
                     </div>
@@ -1324,57 +1324,89 @@
                   </div>
                 </div>
                 <hr class="mb-100 mt-130 border-secondary" />
-                <div class="row gy-4 text-white">
+                <div class="row gy-4 text-white footer-content">
                   <!-- Brand Info -->
-                  <div class="col-md-6 col-lg-5">
-                    <div class="footer-brand mb-3">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="footer-brand mb-24">
                       <!-- Replace with your logo -->
-                      <img
-                        src="./assets/images/navbar/logo.png"
-                        alt="Logo"
-                        height="30"
-                        class="mb-3"
-                      />
+                      <svg
+                        width="193"
+                        height="44"
+                        viewBox="0 0 193 44"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M24.2395 7.35468C24.2395 3.15141 24.2395 1.04978 22.8529 0.261666C21.4663 -0.526447 19.6175 0.52437 15.9199 2.626L13.2469 4.1453C9.54925 6.24693 7.70045 7.29774 7.70045 8.87397C7.70045 10.4502 9.54925 11.501 13.2469 13.6026L15.9199 15.1219C19.6175 17.2236 21.4663 18.2744 22.8529 17.4863C24.2395 16.6982 24.2395 14.5965 24.2395 10.3933V7.35468Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M11.9863 15.752C8.28868 13.6504 6.43988 12.5996 5.05327 13.3877C3.66667 14.1758 3.66667 16.2774 3.66667 20.4807V23.5193C3.66667 27.7226 3.66667 29.8242 5.05327 30.6123C6.43988 31.4004 8.28868 30.3496 11.9863 28.248L14.6593 26.7287C18.3569 24.627 20.2057 23.5762 20.2057 22C20.2057 20.4238 18.3569 19.373 14.6593 17.2713L11.9863 15.752Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M13.2469 30.3974C9.54925 32.499 7.70044 33.5498 7.70044 35.126C7.70044 36.7022 9.54925 37.7531 13.2469 39.8547L15.9199 41.374C19.6175 43.4756 21.4663 44.5264 22.8529 43.7383C24.2395 42.9502 24.2395 40.8486 24.2395 36.6453V33.6067C24.2395 29.4035 24.2395 27.3018 22.8529 26.5137C21.4663 25.7256 19.6175 26.7764 15.9199 28.8781L13.2469 30.3974Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M26.7606 36.6453C26.7606 40.8485 26.7606 42.9501 28.1472 43.7383C29.5338 44.5264 31.3826 43.4756 35.0802 41.3739L37.7532 39.8547C41.4508 37.753 43.2996 36.7022 43.2996 35.126C43.2996 33.5498 41.4508 32.499 37.7532 30.3973L35.0802 28.8781C31.3826 26.7764 29.5338 25.7256 28.1472 26.5137C26.7606 27.3019 26.7606 29.4035 26.7606 33.6068V36.6453Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M39.0137 28.2479C42.7113 30.3496 44.5601 31.4004 45.9467 30.6123C47.3333 29.8241 47.3333 27.7225 47.3333 23.5192V20.4807C47.3333 16.2775 47.3333 14.1759 45.9467 13.3877C44.5601 12.5996 42.7113 13.6504 39.0137 15.7521L36.3408 17.2713C32.6432 19.373 30.7943 20.4238 30.7943 22C30.7943 23.5762 32.6432 24.627 36.3408 26.7287L39.0137 28.2479Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M37.7532 13.6027C41.4508 11.501 43.2996 10.4502 43.2996 8.874C43.2996 7.29777 41.4508 6.24696 37.7532 4.14532L35.0802 2.62608C31.3826 0.524444 29.5338 -0.526372 28.1472 0.26174C26.7606 1.04985 26.7606 3.15148 26.7606 7.35475V10.3932C26.7606 14.5965 26.7606 16.6981 28.1472 17.4863C29.5338 18.2744 31.3826 17.2235 35.0802 15.1219L37.7532 13.6027Z"
+                          fill="white"
+                        />
+                        <path
+                          d="M83.0427 38L80.6667 31.224H68.3907L65.9707 38H59.2387L71.1187 6.40799H78.4227L90.2147 38H83.0427ZM74.5947 13.712L70.2827 25.9H78.8187L74.5947 13.712ZM112.938 14.504L104.314 38H97.6256L88.9576 14.504H95.5576L101.146 31.048L106.778 14.504H112.938ZM125.013 38.396C117.973 38.396 113.265 33.512 113.265 26.164C113.265 19.168 118.149 14.064 124.925 14.064C132.361 14.064 137.289 20.092 136.189 27.748H119.513C119.909 31.576 121.757 33.688 124.881 33.688C127.565 33.688 129.369 32.368 130.073 30.036H136.145C134.825 35.36 130.733 38.396 125.013 38.396ZM124.793 18.552C121.933 18.552 120.129 20.4 119.601 23.876H129.721C129.545 20.62 127.697 18.552 124.793 18.552ZM146.401 26.604V38H140.285V14.504H145.917V19.036C147.633 16.044 151.285 14.24 155.069 14.24V20.576C149.877 20.18 146.401 21.412 146.401 26.604ZM165.33 9.048C165.33 11.116 163.658 12.656 161.238 12.656C158.862 12.656 157.19 11.116 157.19 9.048C157.19 6.892 158.862 5.352 161.238 5.352C163.658 5.352 165.33 6.892 165.33 9.048ZM164.362 38H158.246V14.504H164.362V38ZM174.425 38H167.605L175.525 26.032L168.133 14.504H175.173L179.969 22.6L184.809 14.504H191.233L183.929 26.252L191.805 38H184.853L179.573 29.552L174.425 38Z"
+                          fill="white"
+                        />
+                      </svg>
                     </div>
                     <p class="p-20 mr-20">
-                      Creative design agency specializes In Innovative visual
-                      solutions. Creative design agency
+                      Creative design agency specializes <br />
+                      In Innovative visual solutions.
                     </p>
                     <a
                       href="mailto:Info@example.com"
-                      class="text-decoration-underline d-inline-block mt-2"
+                      class="text-decoration-underline d-inline-block mt-28"
                       >Info@example.com</a
                     >
                   </div>
                   <!-- Quick Links -->
-                  <div class="col-md-6 col-lg-2">
-                    <h4 class="mb-28 p-24 line-height-0">Quick Links</h4>
-                    <ul class="list-unstyled">
-                      <li class="mb-12">
-                        <a href="#" class="footer-link p-18 line-height-0"
-                          >About Us</a
-                        >
-                      </li>
-                      <li class="mb-12">
-                        <a href="#" class="footer-link p-18 line-height-0"
-                          >Service</a
-                        >
-                      </li>
-                      <li class="mb-12">
-                        <a href="#" class="footer-link p-18 line-height-0"
-                          >Portfolio</a
-                        >
-                      </li>
-                      <li class="mb-12">
-                        <a href="#" class="footer-link p-18 line-height-0"
-                          >Contact</a
-                        >
-                      </li>
-                    </ul>
+                  <div class="col-md-6 col-lg-2 offset-lg-1 offset-0">
+                    <div>
+                      <h4 class="mb-28 p-24 line-height-0">Quick Links</h4>
+                      <ul class="list-unstyled">
+                        <li class="mb-12">
+                          <a href="#" class="footer-link p-18 line-height-0"
+                            >About Us</a
+                          >
+                        </li>
+                        <li class="mb-12">
+                          <a href="#" class="footer-link p-18 line-height-0"
+                            >Service</a
+                          >
+                        </li>
+                        <li class="mb-12">
+                          <a href="#" class="footer-link p-18 line-height-0"
+                            >Portfolio</a
+                          >
+                        </li>
+                        <li class="mb-12">
+                          <a href="#" class="footer-link p-18 line-height-0"
+                            >Contact</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
                   </div>
 
                   <!-- Support -->
-                  <div class="col-md-6 col-lg-2 offset-1">
+                  <div class="col-md-6 col-lg-2">
                     <h4 class="mb-28 p-24 line-height-0">Support</h4>
                     <ul class="list-unstyled">
                       <li class="mb-12">
@@ -1400,7 +1432,7 @@
                     </ul>
                   </div>
                   <!-- Contact Info -->
-                  <div class="col-md-6 col-lg-2">
+                  <div class="col-md-6 col-lg-3">
                     <h4 class="mb-3 p-24 line-height-0">Contact US</h4>
                     <p class="mb-1 p-20 line-height-0">
                       <span class="color-white-50">Call Us Directly</span
@@ -1416,7 +1448,7 @@
                 <hr class="mb-32 mt-110 border-secondary" />
                 <!-- Bottom -->
                 <div
-                  class="d-flex flex-column flex-md-row justify-content-between align-items-center text-white"
+                  class="d-flex flex-column flex-md-row justify-content-between align-items-center text-white mb-30"
                 >
                   <p class="mb-2 mb-md-0 p-20">
                     All rights reserved — 2024 © Hurraytheme
