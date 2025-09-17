@@ -1,0 +1,90 @@
+.Expert-bg {
+  background: rgb(240, 240, 240);
+  background-image: url("/Assets/images/Home2/expart/expartbg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .expert-right-div {
+    display: flex;
+    row-gap: 28px;
+    flex-direction: column;
+    .Expert-right {
+      background: rgb(255, 255, 255);
+      border-radius: 100px 0 0 100px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      .hover-img {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        color: white;
+        .hover-img {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .Expert-right-items {
+          .logo {
+            circle {
+              fill: #ffffff !important;
+            }
+            path {
+              fill: #000000 !important;
+            }
+          }
+          .expart-arrow-btn {
+            circle {
+              fill: #ffffff !important;
+            }
+            path {
+              fill: #000000 !important;
+            }
+          }
+        }
+      }
+      .Expert-right-items {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding: 28px;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        .logo {
+          width: 80px;
+          height: 80px;
+          transition: all 0.3s ease;
+
+          circle {
+            fill: #000 !important;
+          }
+          path {
+            fill: #fff !important;
+          }
+        }
+        .expert-content {
+          transition: all 0.3s ease;
+
+          margin-left: 100px;
+          margin-right: 47px;
+        }
+        .expart-arrow-btn {
+          width: 60px;
+          height: 60px;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}

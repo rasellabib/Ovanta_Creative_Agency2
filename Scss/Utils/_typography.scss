@@ -155,8 +155,12 @@ h6,
     line-height: 60px;
   }
 }
-.h-100 {
+.h-90 {
+  font-family: var(--ff-General);
+  font-weight: 600;
   font-size: 90px;
+  line-height: 1;
+  letter-spacing: -1%;
 }
 .p-14 {
   font-family: var(--ff-Inter-sans);
@@ -431,7 +435,6 @@ body::-webkit-scrollbar-thumb {
   ============= Preloader CSS END ================
     */
 
-
 .button-white {
   background-color: var(--color-white);
   color: var(--color-black);
@@ -553,4 +556,8 @@ body::-webkit-scrollbar-thumb {
   to {
     transform: rotate(360deg);
   }
+}
+
+.line-height-0 {
+  line-height: 0 !important;
 }

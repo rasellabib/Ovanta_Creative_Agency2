@@ -214,6 +214,9 @@
 .mt-14 {
   margin-top: 14px;
 }
+.pt-32 {
+  padding-top: 32px;
+}
 .mb-12 {
   margin-bottom: 12px;
 }
@@ -249,6 +252,9 @@
 }
 .pt-30 {
   padding-top: 30px;
+}
+.pt-8 {
+  padding-top: 8px;
 }
 .pe-40 {
   padding-right: 40px;
@@ -439,5 +445,18 @@ hr {
   .container1 {
     max-width: 1604px;
     margin: auto;
+  }
+}
+.container-1332 {
+  max-width: 1332px;
+  margin: auto;
+  @media screen and (max-width: 1399.98px) {
+    max-width: 95%;
+  }
+  @media screen and (max-width: 767.98px) {
+    max-width: 90%;
+  }
+  @media screen and (max-width: 575.98px) {
+    max-width: 100%;
   }
 }
