@@ -1,0 +1,33 @@
+.success {
+  .success-bg {
+    width: 100%;
+    height: 691px;
+    background-image: url("/Assets/images/Home2/success/bg.png");
+    background-size: cover;
+    color: white;
+    @media only screen and (max-width: 991.98px) {
+      background-image: none;
+    }
+    .success-title-sec {
+      .row {
+        .btn-div {
+          width: fit-content;
+          //   text-decoration: underline;
+          border-bottom: 2px solid #ffffff;
+        }
+      }
+    }
+  }
+  .success-img-div {
+    margin-top: -328px;
+    .success-img {
+      margin-top: 60px;
+      img {
+        height: 700px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 18px;
+      }
+    }
+  }
+}
