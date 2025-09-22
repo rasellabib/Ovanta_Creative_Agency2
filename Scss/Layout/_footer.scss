@@ -19,7 +19,6 @@
           font-weight: 500;
           @media screen and (max-width: 761.98px) {
             margin-left: 0;
-            
           }
         }
       }
@@ -124,3 +123,9 @@
   }
 }
 
+.footer-contact {
+  margin-top: 12px;
+  p {
+    margin-top: 10px;
+  }
+}

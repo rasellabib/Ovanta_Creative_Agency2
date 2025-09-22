@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: #4a6de5;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .intro {
+            padding: 25px 30px 10px;
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.7;
+            background: #f8f9fa;
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+            margin: 10px 0;
+        }
+        
+        h2 {
+            padding: 20px 30px 15px;
+            color: #4a6de5;
+            font-size: 1.8rem;
+        }
+        
+        .accordion {
+            padding: 0 30px 30px;
+        }
+        
+        .accordion-item {
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eaeaea;
+        }
+        
+        .accordion-header {
+            padding: 18px 20px;
+            background: #f8f9fa;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+        
+        .accordion-header:hover {
+            background: #edf1fc;
+        }
+        
+        .accordion-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .accordion-toggle {
+            width: 28px;
+            height: 28px;
+            background: #4a6de5;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: all 0.3s ease;
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        .accordion-toggle::before,
+        .accordion-toggle::after {
+            content: '';
+            position: absolute;
+            background: white;
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-toggle::before {
+            width: 12px;
+            height: 2px;
+        }
+        
+        .accordion-toggle::after {
+            width: 2px;
+            height: 12px;
+        }
+        
+        .accordion-item.active .accordion-toggle::after {
+            transform: rotate(90deg);
+            opacity: 0;
+        }
+        
+        .accordion-item.active .accordion-toggle {
+            background: #ff6b6b;
+            transform: rotate(45deg);
+        }
+        
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: white;
+        }
+        
+        .accordion-item.active .accordion-content {
+            max-height: 300px;
+            padding: 20px;
+        }
+        
+        .accordion-text {
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .accordion-title {
+                font-size: 1rem;
+            }
+            
+            .accordion-header {
+                padding: 15px;
+            }
+            
+            .intro, header, .accordion {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Frequently Asked Questions</h1>
+        </header>
+        
+        <div class="intro">
+            <p>Find answers to common questions about our design process, project timeline, and what to expect when working with us.</p>
+            <div class="divider"></div>
+        </div>
+        
+        <h2>What happens after the design is ready & I approve it?</h2>
+        
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="accordion-title">How long does the development process take?</div>
+                    <div class="accordion-toggle"></div>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-text">The development timeline varies based on project complexity. Typically, it takes between 2-4 weeks after design approval. We'll provide a detailed timeline after reviewing your approved designs.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="accordion-title">Will you handle the website deployment?</div>
+                    <div class="accordion-toggle"></div>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-text">Yes, we handle all aspects of deployment. We'll ensure your website is properly set up on your hosting platform, perform thorough testing, and make sure everything is working perfectly before going live.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="accordion-title">Do you provide post-launch support?</div>
+                    <div class="accordion-toggle"></div>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-text">Absolutely! We offer 30 days of complimentary support after launch to address any issues. After that, we have various maintenance plans you can choose from to ensure your website continues to perform optimally.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="accordion-title">Can I make changes after approval?</div>
+                    <div class="accordion-toggle"></div>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-text">Minor changes are possible, but significant alterations after approval may incur additional costs and delay the timeline. We encourage thorough review during the design phase to avoid this situation.</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="accordion-title">What if I need additional features later?</div>
+                    <div class="accordion-toggle"></div>
+                </div>
+                <div class="accordion-content">
+                    <p class="accordion-text">We're happy to help with future enhancements! We can discuss additional features and provide a separate quote for implementing them after your website is live.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement;
+                accordionItem.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

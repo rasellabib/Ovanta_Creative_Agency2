@@ -16,13 +16,13 @@
     justify-content: center;
     box-sizing: border-box;
   }
-  .nav-items {
-    display: flex;
-    // align-items: center;
-    justify-content: center;
-    gap: 50px;
-    margin: 0 auto;
-  }
+}
+.nav-items {
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 0 auto;
 }
 
 .offcanvas {
