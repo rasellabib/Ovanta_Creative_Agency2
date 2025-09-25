@@ -1,91 +1,189 @@
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button
-        class="accordion-button"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseOne"
-        aria-expanded="true"
-        aria-controls="collapseOne"
-      >
-        Accordion Item #1
-      </button>
-    </h2>
-    <div
-      id="collapseOne"
-      class="accordion-collapse collapse show"
-      data-bs-parent="#accordionExample"
-    >
-      <div class="accordion-body">
-        <strong>This is the first item’s accordion body.</strong> It is shown by
-        default, until the collapse plugin adds the appropriate classes that we
-        use to style each element. These classes control the overall appearance,
-        as well as the showing and hiding via CSS transitions. You can modify
-        any of this with custom CSS or overriding our default variables. It’s
-        also worth noting that just about any HTML can go within the
-        <code>.accordion-body</code>, though the transition does limit overflow.
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pill Navigation (expand from right)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #808080;
+        --pill-bg: #ffffff;
+        --accent: #0a0a0a;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+      }
+
+      .page {
+        min-height: 100vh;
+        background: var(--bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+      }
+
+      .nav-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end; /* right align */
+      }
+
+      .nav-pill {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: var(--pill-bg);
+        border-radius: 999px;
+        padding: 10px 16px;
+        box-shadow: 0 6px 0 rgba(0, 0, 0, 0.05);
+        transition: width 0.4s ease;
+        width: 256px; /* collapsed width */
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+        justify-content: flex-end;
+      }
+
+      /* expanded */
+      .nav-pill.expanded {
+        width: 80%; /* expand width */
+      }
+
+      /* nav items hidden initially */
+      .nav-items {
+        display: flex;
+        gap: 28px;
+        align-items: center;
+        position: absolute;
+        right: 120px; /* appear before buttons */
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(40px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+      .nav-pill.expanded .nav-items {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+      }
+
+      .nav-items a {
+        text-decoration: none;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      /* toggle button */
+      .menu-toggle {
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        background: transparent;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        flex: 0 0 46px;
+      }
+      .nav-pill.expanded .menu-toggle {
+        transform: rotate(45deg);
+      }
+
+      /* Let's Talk */
+      .contact-pill {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        white-space: nowrap;
+        flex: 0 0 auto;
+      }
+      .contact-pill .arrow {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="nav-wrap">
+        <nav class="nav-pill" id="mainNav">
+          <div class="nav-items" id="navItems">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+          </div>
+
+          <!-- right side buttons -->
+          <button class="menu-toggle" id="toggleBtn" aria-expanded="false">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 5v14M5 12h14"
+                stroke="#111"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+
+          <button class="contact-pill">
+            Let's Talk
+            <span class="arrow">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14M12 5l7 7-7 7"
+                  stroke="#fff"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+          </button>
+        </nav>
       </div>
     </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseTwo"
-        aria-expanded="false"
-        aria-controls="collapseTwo"
-      >
-        Accordion Item #2
-      </button>
-    </h2>
-    <div
-      id="collapseTwo"
-      class="accordion-collapse collapse"
-      data-bs-parent="#accordionExample"
-    >
-      <div class="accordion-body">
-        <strong>This is the second item’s accordion body.</strong> It is hidden
-        by default, until the collapse plugin adds the appropriate classes that
-        we use to style each element. These classes control the overall
-        appearance, as well as the showing and hiding via CSS transitions. You
-        can modify any of this with custom CSS or overriding our default
-        variables. It’s also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit
-        overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button
-        class="accordion-button collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#collapseThree"
-        aria-expanded="false"
-        aria-controls="collapseThree"
-      >
-        Accordion Item #3
-      </button>
-    </h2>
-    <div
-      id="collapseThree"
-      class="accordion-collapse collapse"
-      data-bs-parent="#accordionExample"
-    >
-      <div class="accordion-body">
-        <strong>This is the third item’s accordion body.</strong> It is hidden
-        by default, until the collapse plugin adds the appropriate classes that
-        we use to style each element. These classes control the overall
-        appearance, as well as the showing and hiding via CSS transitions. You
-        can modify any of this with custom CSS or overriding our default
-        variables. It’s also worth noting that just about any HTML can go within
-        the <code>.accordion-body</code>, though the transition does limit
-        overflow.
-      </div>
-    </div>
-  </div>
-</div>
+
+    <script>
+      const nav = document.getElementById("mainNav");
+      const toggle = document.getElementById("toggleBtn");
+
+      toggle.addEventListener("click", () => {
+        nav.classList.toggle("expanded");
+        const expanded = nav.classList.contains("expanded");
+        toggle.setAttribute("aria-expanded", expanded);
+      });
+    </script>
+  </body>
+</html>

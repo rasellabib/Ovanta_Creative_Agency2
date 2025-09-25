@@ -20,7 +20,7 @@
   overflow: hidden;
   position: relative;
   @media screen and (max-width: 1199.99px) {
-    padding: 30px 10px 130px 10px;
+    padding: 30px 30px 130px 20px;
   }
 
   .project-track {
@@ -113,7 +113,10 @@
   justify-content: space-between;
   margin: auto;
   z-index: 99;
-
+  @media screen and (max-width: 1199.98px) {
+    width: 100%;
+    left: 50%;
+  }
   @media screen and (max-width: 767.98px) {
     width: 100%;
     top: 40%;

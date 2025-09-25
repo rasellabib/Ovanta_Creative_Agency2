@@ -123,6 +123,9 @@ h5,
   line-height: 1.14;
   letter-spacing: -1%;
   font-weight: 600;
+  @media screen and (max-width: 1440px) {
+    font-size: 65px;
+  }
 }
 
 h6,

@@ -116,12 +116,15 @@ const tl3 = gsap.timeline({
   },
 });
 
-tl3.from(".title2 div, .title2 p, .services-h2, .services-p, .services-btn", {
-  y: 70,
-  opacity: 0,
-  stagger: 0.1,
-  duration: 0.5,
-});
+tl3.from(
+  ".title2 div, .title2 p, .services-h2, .services-p, .services-title button",
+  {
+    y: 70,
+    opacity: 0,
+    stagger: 0.1,
+    duration: 0.5,
+  }
+);
 
 const tl3_0 = gsap.timeline({
   scrollTrigger: {
@@ -166,7 +169,7 @@ const projectTitle = gsap.timeline({
 projectTitle.from(" .projects-title, .arrow-div, .project-image", {
   y: 100,
   opacity: 0,
-  stagger: 0,
+  stagger: 0.1,
   duration: 1,
 });
 // const project = gsap.timeline({
@@ -279,4 +282,67 @@ review1.from(" .review1-content-div", {
   opacity: 0,
   stagger: 0,
   duration: 0.8,
+});
+
+const award = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".award",
+    scroller: "body",
+    start: "top 75%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+award.from(" .award .title, .award .mt-40", {
+  x: 100,
+  opacity: 0,
+  stagger: 0,
+  duration: 1,
+});
+
+const QA = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".qa-section ",
+    scroller: "body",
+    start: "top 80%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+QA.from(" .qa-section .title-div, .qa-section .accordions", {
+  y: 100,
+  opacity: 0,
+  stagger: 0,
+  duration: 1,
+});
+const blogsImg = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".blogs ",
+    scroller: "body",
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+blogsImg.from(".blogs .blog-card", {
+  y: 100,
+  opacity: 0,
+  stagger: 0,
+  duration: 1,
+});
+
+const blogs = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".blogs ",
+    scroller: "body",
+    start: "top 60%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+blogs.from(".blogs .h-300px, .blogs .blog-content", {
+  y: 100,
+  opacity: 0,
+  stagger: 0,
+  duration: 1,
 });

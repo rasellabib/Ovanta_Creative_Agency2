@@ -497,3 +497,9 @@ hr {
     max-width: 100%;
   }
 }
+
+.m-sm-auto {
+  @media screen and (max-width: 575.98px) {
+    margin: auto;
+  }
+}

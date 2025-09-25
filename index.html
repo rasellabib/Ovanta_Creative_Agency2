@@ -52,7 +52,7 @@
     <div id="app" aria-hidden="true" class="position-reletive gradual-section">
       <div id="cursor"></div>
       <section>
-        <nav class="fixed-top container rounded-pill custom-navbar">
+        <nav class="fixed-top container rounded-pill nav1">
           <div class="In-nav d-flex justify-content-between align-items-center">
             <div class="logo-section">
               <a class="navbar-brand p-0" href="/">
@@ -63,75 +63,62 @@
                 />
               </a>
             </div>
-
             <div class="nav-wrap">
-              <div class="outer" id="outer">
-                <div class="nav-inner">
-                  <div class="menu-area" id="menuArea">
-                    <ul class="menu-items" id="menuItems">
-                      <li>Home</li>
-                      <li>
-                        <a href="./home 1/home1.html"> Home2 </a>
-                      </li>
-                      <li>
-                        <a href="/Home2/index.html">Home 3</a>
-                      </li>
-                      <li>
-                        <a href="/Pages/AboutUs.html"> About Us </a>
-                      </li>
-                      <li>
-                        <a href="/Pages/Faqs.html"> faq</a>
-                      </li>
-                      <li>
-                        <a href="/Pages/OurTeam.html"> team </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="controls">
-                    <!-- Plus toggle (always visible) -->
-                    <div
-                      class="toggle-btn"
-                      id="toggleBtn"
-                      role="button"
-                      tabindex="0"
-                      aria-label="Toggle menu"
-                    >
-                      <svg
-                        class="icon plus"
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M12 5v14M5 12h14"
-                          stroke="#333"
-                          stroke-width="2.2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          fill="none"
-                        />
-                      </svg>
-                    </div>
-                    <!-- Let's Talk Button -->
-                    <div class="button-black">
-                      <button type="submit" class="custom-btn">
-                        <div>Let's Talk</div>
-                        <div class="explore-circle">
-                          <svg
-                            class="explore-icon"
-                            viewBox="0 0 16 19"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-                            />
-                          </svg>
-                        </div>
-                      </button>
+              <nav class="nav-pill" id="mainNav">
+                <div class="nav-items" id="navItems">
+                  <div class="home" href="#">
+                    Home
+                    <div class="homes-div">
+                      <a href="index.html"> home 1 </a>
+                      <a href="/home 1/home1.html"> home 2 </a>
+                      <a href="/Home2/index.html"> home 3 </a>
                     </div>
                   </div>
+                  <a href="#">About</a>
+                  <a href="#">Services</a>
+                  <a href="#">Portfolio</a>
+                  <a href="#">Blog</a>
+                  <a href="#">Contact</a>
                 </div>
-              </div>
+
+                <!-- right side buttons -->
+                <button
+                  class="menu-toggle"
+                  id="toggleBtn"
+                  aria-expanded="false"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 5v14M5 12h14"
+                      stroke="#111"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <div class="contact-pill">
+                  <button type="submit" class="button-btn btn m-sm-auto">
+                    <p class="p-18 fw-bold">Let's Talk</p>
+                    <svg
+                      class="arrow-icon"
+                      viewBox="0 0 16 19"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </nav>
             </div>
           </div>
         </nav>
@@ -434,22 +421,18 @@
                   project.
                 </p>
               </div>
-              <div class="button-white services-btn">
-                <button type="submit" class="custom-btn">
-                  View our works
-                  <div class="explore-circle">
-                    <svg
-                      class="explore-icon"
-                      viewBox="0 0 16 19"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-                      />
-                    </svg>
-                  </div>
-                </button>
-              </div>
+              <button type="submit" class="btn-bg-white">
+                <p class="p-18 fw-bold">View Works</p>
+                <svg
+                  class="arrow-icon"
+                  viewBox="0 0 16 19"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                  ></path>
+                </svg>
+              </button>
             </div>
             <div class="services-content">
               <div class="row">
@@ -837,7 +820,7 @@
             </div>
             <div class="pricing-card-div row-mt">
               <div class="row">
-                <div class="col-lg-6 col-md-6 col-xl-4">
+                <div class="col-xxl-4 col-lg-6 col-md-12">
                   <div class="pricing-card">
                     <div class="card-top">
                       <svg
@@ -926,7 +909,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-xl-4">
+                <div class="col-xxl-4 col-lg-6 col-md-12">
                   <div class="pricing-card">
                     <div class="card-top">
                       <svg
@@ -1015,7 +998,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-xl-4">
+                <div class="col-xxl-4 col-lg-6 col-md-12">
                   <div class="pricing-card">
                     <div class="card-top">
                       <svg
@@ -1250,7 +1233,7 @@
         <div class="row-pt section-pb awards-bg">
           <div class="container">
             <div class="award">
-              <p class="p-36">Awards</p>
+              <p class="p-36 title">Awards</p>
               <div class="mt-40">
                 <div class="awards-div align-items-center padding-tb-36 row">
                   <div class="award-title col-md-5">
@@ -1259,7 +1242,7 @@
                   <div class="award-years col-md-3 text-center">
                     <p class="p-20 forest fw-400">2020</p>
                   </div>
-                  <div class="award-world col-md-4 text-end">
+                  <div class="award-world col-md-4">
                     <p class="p-20 forest fw-400">NY. America</p>
                   </div>
                 </div>
@@ -1272,7 +1255,7 @@
                   <div class="award-years col-md-3 text-center">
                     <p class="p-20 forest fw-400">2020</p>
                   </div>
-                  <div class="award-world col-md-4 text-end">
+                  <div class="award-world col-md-4">
                     <p class="p-20 forest fw-400">NY. America</p>
                   </div>
                 </div>
@@ -1283,7 +1266,7 @@
                   <div class="award-years col-md-3 text-center">
                     <p class="p-20 forest fw-400">2020</p>
                   </div>
-                  <div class="award-world col-md-4 text-end">
+                  <div class="award-world col-md-4">
                     <p class="p-20 forest fw-400">NY. America</p>
                   </div>
                 </div>
@@ -1294,7 +1277,7 @@
                   <div class="award-years col-md-3 text-center">
                     <p class="p-20 forest fw-400">2020</p>
                   </div>
-                  <div class="award-world col-md-4 text-end">
+                  <div class="award-world col-md-4">
                     <p class="p-20 forest fw-400">NY. America</p>
                   </div>
                 </div>
@@ -1315,7 +1298,7 @@
                     class="section-title-div title7 section-title-margin-bottom"
                   >
                     <div class="line"></div>
-                    <p class="section-title">our services</p>
+                    <p class="section-title">Question</p>
                   </div>
                   <h5>Questions and answers</h5>
                 </div>
@@ -1475,24 +1458,26 @@
                         We are digital agency that help businesses of develop
                         immersive and engaging user experience.
                       </p>
-                      <button type="submit" class="button-btn btn">
-                        <p class="p-18 fw-bold">Get in Touch</p>
-                        <svg
-                          class="arrow-icon"
-                          viewBox="0 0 16 19"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-                          ></path>
-                        </svg>
-                      </button>
+                      <div class="mb-15">
+                        <button type="submit" class="button-btn btn m-sm-auto">
+                          <p class="p-18 fw-bold">See All Blogs</p>
+                          <svg
+                            class="arrow-icon"
+                            viewBox="0 0 16 19"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                            ></path>
+                          </svg>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-xxl-7">
                   <div class="row">
-                    <div class="col-xl-6">
+                    <div class="col-lg-6 col-md-12">
                       <div class="blog-card">
                         <div class="blog-card-img">
                           <img src="/Assets/images/bolgs/img.jpg" alt="" />
@@ -1520,7 +1505,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-xl-6">
+                    <div class="col-lg-6 col-md-12">
                       <div class="blog-card">
                         <div class="blog-card-img">
                           <img src="/Assets/images/bolgs/img1.jpg" alt="" />
@@ -1562,32 +1547,39 @@
             <div class="container">
               <div class="section-pt row-pb">
                 <div class="footer-top-content">
-                  <div class="left-content">
-                    <h1>
-                      Let’s Work
-                      <br />
-                      <span> Together </span>
-                    </h1>
-                  </div>
-                  <div class="right-content">
-                    <div class="right-top-content">
-                      <div>
-                        <div class="line-white"></div>
-                      </div>
-                      <div>
-                        <p class="paragrap">
-                          Avanta team quickly understood our business
-                          requirements and were proactive and flexible with our
-                          ongoing support and developments. You can definitely.
-                        </p>
+                  <div class="row">
+                    <div class="col-xxl-7">
+                      <div class="left-content">
+                        <h1>
+                          Let’s Work
+                          <br />
+                        </h1>
+                        <h1 class="text-end font-weight-500">Together</h1>
                       </div>
                     </div>
-                    <div class="w-100 d-flex justify-content-center mt-40">
-                      <img
-                        class="rotation"
-                        src="./Assets/images/footer/goltext.webp"
-                        alt=""
-                      />
+                    <div class="col-xxl-5">
+                      <div class="right-content">
+                        <div class="right-top-content">
+                          <div>
+                            <div class="line-white"></div>
+                          </div>
+                          <div>
+                            <p class="paragrap">
+                              Avanta team quickly understood our business
+                              requirements and were proactive and flexible with
+                              our ongoing support and developments. You can
+                              definitely.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="w-100 d-flex justify-content-center mt-40">
+                          <img
+                            class="rotation"
+                            src="./Assets/images/footer/goltext.webp"
+                            alt=""
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1604,10 +1596,14 @@
                         class="mb-3"
                       />
                     </div>
-                    <p class="p-20 mr-20">
-                      Creative design agency specializes In Innovative visual
-                      solutions. Creative design agency
-                    </p>
+                    <div class="row">
+                      <div class="col-9">
+                        <p class="p-20 mr-20">
+                          Creative design agency specializes In Innovative
+                          visual solutions. Creative design agency
+                        </p>
+                      </div>
+                    </div>
                     <a
                       href="mailto:Info@example.com"
                       class="text-decoration-underline d-inline-block mt-2"
@@ -1677,7 +1673,7 @@
                       <p class="p-20">
                         <span class="color-white-50">Location</span>
                       </p>
-                      <p class="p-b">410 Sandtown, California 94001, USA</p>
+                      <p class="p-20">410 Sandtown, California 94001, USA</p>
                     </div>
                   </div>
                 </div>

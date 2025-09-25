@@ -1,11 +1,20 @@
 .awards-bg {
   background: rgba(245, 245, 245, 1);
-  .awards-div{
+  .awards-div {
     transition: all 0.3s ease-in-out;
-    &:hover{
+    &:hover {
       background: rgba(33, 33, 33, 0.15);
       padding-left: 30px;
       padding-right: 30px;
+    }
+    .award-world {
+      text-align: end;
+      @media screen and (max-width: 767.99px) {
+        text-align: center;
+      }
+    }
+    @media screen and (max-width: 767.99px) {
+      text-align: center;
     }
   }
 }

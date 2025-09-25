@@ -45,7 +45,7 @@
         padding: 60px 0;
         margin-bottom: 0;
         @media only screen and (max-width: 1420px) {
-          font-size: 45px;
+          font-size: 35px;
         }
         &:hover {
           color: transparent; /* Hides the fill color */
@@ -53,9 +53,10 @@
           transition: all 0.5s ease;
         }
       }
-      .service-text:last-child {
-        border-bottom: 1px solid rgb(67, 67, 67);
-      }
+    }
+    .right-content,
+    .service-text:nth-child(4) {
+      border-bottom: 1px solid rgb(67, 67, 67);
     }
     @media only screen and (max-width: 1299.98px) {
       gap: 50px;
