@@ -1,18 +1,21 @@
 .process-div {
   background: rgb(245, 245, 245);
   position: relative;
+  .process {
+    padding-right: 30px;
+  }
 }
 
 .process-section {
   max-width: 680px;
   border-radius: 8px;
-  padding-top: 50px;
+  padding-top: 35px;
 }
 
 .process-step {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   position: relative;
 }
 
@@ -62,13 +65,19 @@ h4 {
   top: 0;
   right: 0;
   height: 100%;
-  @media screen and (max-width: 1024px) {
+  width: 50%;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  @media screen and (max-width: 1199.99px) {
     position: relative;
     border-radius: 20px;
     margin-top: 30px;
     padding: 30px;
+    width: 100%;
   }
-
 }
 
 .process-content {

@@ -13,23 +13,49 @@
     row-gap: 24px;
   }
   .pricing-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding-top: 50px;
-    background: white;
-    border: 1px solid rgba(84, 84, 84, 0.5);
+    padding: 50px 48px;
+    background: #f5f5f5;
     border-radius: 18px;
-    .pricing-card-title {
-      padding-left: 48px;
 
+    &:hover {
+      .pricing-card-svg {
+        fill: #FEC107 !important;
+      }
+    }
+    .card-top {
+      position: absolute;
+      top: 0;
+      right: -1px;
+      .pricing-card-svg {
+        transition: all 0.6s ease;
+
+        position: relative;
+        fill: rgb(255, 255, 255);
+      }
+    }
+    .discount {
+      position: absolute;
+      top: 10px;
+      right: 15px;
       p {
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 8px;
+        }
+      }
+    }
+    .pricing-card-title {
+      .p-18 {
         padding-top: 10px;
         color: rgba(84, 84, 84, 0.71);
       }
     }
     .price {
-      padding-left: 48px;
       h2 span {
         font-weight: 400;
         font-size: 18px;
@@ -39,13 +65,9 @@
       }
     }
     .price-details {
-      padding: 30px 48px 50px 48px;
       border-radius: 18px;
-      border: 1px solid rgba(84, 84, 84, 0.5);
-      background: rgba(245, 245, 245, 1);
       @media screen and (max-width: 991.98px) {
         padding: 10px 14px 20px 14px;
-        
       }
       ul {
         padding: 0;
@@ -83,4 +105,12 @@
       }
     }
   }
+}
+
+.folder-shape {
+  width: 516px;
+  height: 662px;
+  background-color: #fbbc04; /* ছবির মতো হলুদ রঙ */
+  border-radius: 20px;
+  position: relative;
 }

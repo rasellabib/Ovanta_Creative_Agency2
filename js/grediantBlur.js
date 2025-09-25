@@ -67,11 +67,11 @@ const CURVE_FUNCTIONS = {
   createGradualBlur({
     targetSelector: ".gradual-section",
     position: "bottom",
-    height: "6rem",
-    strength: 2,
-    divCount: 5,
+    height: "30px",
+    strength: 1,
+    divCount: 20,
     exponential: true,
-    opacity: 1,
+    opacity: 0.9,
     curve: "bezier",
   });
   

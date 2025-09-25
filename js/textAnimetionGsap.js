@@ -56,7 +56,7 @@ document.fonts.ready.then(() => {
     //   scroller: "body",
     //   start: "top 90%",
     //   toggleActions: "play none none reverse",
-      // markers: true,
+    // markers: true,
     // },
   });
   tll.from(".hero-image", {
@@ -93,7 +93,7 @@ tl2.from(
 //     scroller: "body",
 //     start: "top 85%",
 //     toggleActions: "play none none reverse",
-//     // markers: true,
+// markers: true,
 //   },
 // });
 // tl1.from("#logoTrackDiv, .logoTrackDiv", {
@@ -154,23 +154,65 @@ tl3_1.from(".service-right-text, .service-right-text a", {
   duration: 0.8,
 });
 
-
-
+const projectTitle = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".project-image",
+    scroller: "body",
+    start: "top 80%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+projectTitle.from(" .projects-title, .arrow-div, .project-image", {
+  y: 100,
+  opacity: 0,
+  stagger: 0,
+  duration: 1,
+});
+// const project = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".project-image",
+//     scroller: "body",
+//     start: "top 70%",
+//     toggleActions: "play none none reverse",
+// markers: true,
+//   },
+// });
+// project.from(" .project-image", {
+//   y: 100,
+//   opacity: 0,
+//   stagger: 0,
+//   duration: 0.8,
+// });
 
 const process = gsap.timeline({
   scrollTrigger: {
     trigger: ".process-main",
     scroller: "body",
-    start: "top 75%",
+    start: "top 70%",
     toggleActions: "play none none reverse",
     // markers: true,
   },
 });
-process.from(".process, .process-img", {
-  x: -70,
+process.from(".process-main", {
+  y: 80,
   opacity: 0,
-  stagger: 0,
-  duration: 0.5,
+  duration: 0.9,
+});
+const processImg = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".process-main",
+    scroller: "body",
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+processImg.from(".process-img", {
+  y: 0,
+  opacity: 0,
+  stagger: 1,
+  duration: 1,
 });
 
 // Pricing===============
@@ -183,7 +225,7 @@ const Pricing = gsap.timeline({
     // markers: true,
   },
 });
-Pricing.from(".pricing-content div, .pricing-content h5", {
+Pricing.from(".pricing-content", {
   y: 70,
   opacity: 0,
   stagger: 0.1,
@@ -222,6 +264,7 @@ review.from(" .circle-div", {
   stagger: 0,
   duration: 0.8,
 });
+
 const review1 = gsap.timeline({
   scrollTrigger: {
     trigger: ".review1",

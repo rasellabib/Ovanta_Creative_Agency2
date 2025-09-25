@@ -104,7 +104,7 @@
 }
 
 .logo-track-div {
-  width: 267px !important;
+  width: 250px !important;
   height: 240px;
   display: flex;
   align-items: center;
@@ -119,6 +119,15 @@
     width: 135px !important;
     height: 140px;
   }
+  img {
+    opacity: 0.5;
+    transition: all 0.7s ease;
+  }
+  &:hover {
+    img {
+      opacity: 1;
+    }
+  }
 }
 .logo-track-div:last-child {
   border-right: 1px solid #ccc;
@@ -130,7 +139,7 @@
   object-fit: contain;
 }
 
-.logo-track-div:hover {
-  filter: grayscale(0%);
-  border: 1px solid #ccc;
-}
+// .logo-track-div:hover {
+//   filter: grayscale(0%);
+//   border: 1px solid #ccc;
+// }
