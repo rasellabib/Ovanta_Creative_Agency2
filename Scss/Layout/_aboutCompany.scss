@@ -90,34 +90,26 @@
 }
 
 .companys-logo {
-  overflow: hidden;
   white-space: nowrap;
   position: relative;
   width: 100%;
+  padding: 0 10px;
 }
 
 .logo-track {
-  display: inline-flex;
-  white-space: nowrap;
-  align-items: center;
-  padding-bottom: 10px;
+  border: 1px solid #ccc;
 }
 
 .logo-track-div {
-  width: 250px !important;
-  height: 240px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-left: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
   transition: transform 0.3s ease;
   filter: grayscale(100%);
   background-color: #fff;
+  padding: 98px 0;
   @media screen and (max-width: 790px) {
-    width: 135px !important;
-    height: 140px;
   }
   img {
     opacity: 0.5;
@@ -128,9 +120,6 @@
       opacity: 1;
     }
   }
-}
-.logo-track-div:last-child {
-  border-right: 1px solid #ccc;
 }
 
 .logo-track-div img {

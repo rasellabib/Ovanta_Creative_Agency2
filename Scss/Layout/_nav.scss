@@ -3,9 +3,17 @@
   width: 100%;
 }
 .nav-wrap {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: flex-end; /* right align */
+  .dropdown{
+    .btn{
+      border: none !important;
+    }
+  }
+  .btn.show {
+    border: none;
+  }
 }
 
 .nav-pill {

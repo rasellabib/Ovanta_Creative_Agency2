@@ -3,7 +3,7 @@ const texts = ["Design", "Arts", "!"]; // পরিবর্তনশীল অ�
 
 const container = document.querySelector(".rotating-text");
 
-let currentIndex = 0;
+let currentIndex1 = 0;
 let rotationInterval = 2000; // ms
 let staggerDuration = 0.03; // sec per character
 
@@ -59,13 +59,13 @@ function animateOut(callback) {
 
 function showNextText() {
   animateOut(() => {
-    currentIndex = (currentIndex + 1) % texts.length;
-    splitText(staticWord, texts[currentIndex]);
+    currentIndex1 = (currentIndex1 + 1) % texts.length;
+    splitText(staticWord, texts[currentIndex1]);
     animateIn();
   });
 }
 
 // Init first text
-splitText(staticWord, texts[currentIndex]);
+splitText(staticWord, texts[currentIndex1]);
 animateIn();
 setInterval(showNextText, rotationInterval);

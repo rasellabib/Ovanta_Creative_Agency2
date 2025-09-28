@@ -48,6 +48,10 @@
   width: 272px;
   right: 20px;
   bottom: 36px;
+  @media screen and (max-width: 1199.99px) {
+    left: 101px;
+    bottom: -50px;
+  }
 }
 .pill-track {
   height: 8px;

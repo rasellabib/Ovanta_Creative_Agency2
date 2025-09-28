@@ -871,7 +871,7 @@
 }
 .avatar.active {
   transform: scale(1.08);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  border: 4px solid rgba(255, 255, 255, 0.921);
   opacity: 1;
 }
 .avatar.inactive {
@@ -894,6 +894,7 @@
   padding: 10px 40px 30px 40px;
 }
 blockquote {
+  min-height: 200px;
   margin-bottom: 44px;
 }
 
