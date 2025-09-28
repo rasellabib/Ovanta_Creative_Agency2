@@ -1,5 +1,5 @@
 const staticWord = "Creative"; // স্থায়ী শব্দ
-const texts = ["Design", "Arts", "Agency", "!"]; // পরিবর্তনশীল অংশ
+const texts = ["Design", "Arts", "!"]; // পরিবর্তনশীল অংশ
 
 const container = document.querySelector(".rotating-text");
 
