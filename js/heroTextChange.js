@@ -20,7 +20,7 @@ function splitText(staticPart, dynamicPart) {
   const dynamicSpan = document.createElement("span");
   dynamicSpan.classList.add("dynamic-word");
 
-  dynamicPart.split("").forEach(char => {
+  dynamicPart.split("").forEach((char) => {
     const charSpan = document.createElement("span");
     charSpan.textContent = char;
     charSpan.classList.add("char");
@@ -40,7 +40,7 @@ function animateIn() {
       opacity: 1,
       duration: 0.6,
       ease: "power3.out",
-      stagger: staggerDuration
+      stagger: staggerDuration,
     }
   );
 }
@@ -53,7 +53,7 @@ function animateOut(callback) {
     duration: 0.6,
     ease: "power3.in",
     stagger: staggerDuration,
-    onComplete: callback
+    onComplete: callback,
   });
 }
 

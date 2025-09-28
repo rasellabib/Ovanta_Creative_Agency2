@@ -35,18 +35,21 @@
   .Blog-items {
     .row {
       .col-xxl-5 {
-        @media screen and (min-width: 767.99px) {
-          padding: 0 26px 0 0;
+        padding: 0 26px 0 0;
+        @media screen and (max-width: 767.99px) {
+          padding: 0;
         }
       }
       .col-xxl-7 {
-        @media screen and (min-width: 767.99px) {
-          padding: 0 26px 0 0;
+        padding: 0 26px 0 0;
+        @media screen and (max-width: 767.99px) {
+          padding: 0;
         }
         .row {
           .col-lg-6 {
-            @media screen and (min-width: 767.99px) {
-              padding: 0 26px 0 0;
+            padding: 0 26px 0 0;
+            @media screen and (max-width: 767.99px) {
+              padding: 0;
             }
           }
         }
@@ -60,7 +63,7 @@
             img {
               height: 100%;
               width: 100%;
-              background-size: cover;
+              object-fit: cover;
               background-position: center;
               border-radius: 16px;
             }
