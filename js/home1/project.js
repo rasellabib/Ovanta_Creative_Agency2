@@ -9,12 +9,32 @@ cards.forEach((card, i) => {
   const rotateFrom = i % 2 === 0 ? 3 : -3;
   const xFrom = i % 2 === 0 ? 20 : -20;
 
+  gsap.fromTo(
+    card,
+    { y: 80, opacity: 0, scale: 0.98, rotation: rotateFrom, x: xFrom },
+    {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      rotation: 0,
+      x: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: card,
+        start: "top 85%",
+        end: "top 40%",
+        toggleActions: "play none none reverse",
+        // markers:true
+      },
+    }
+  );
+
   // image parallax inside card
   const img = card.querySelector("img");
   if (img) {
     gsap.to(img, {
       ease: "none",
-
       scrollTrigger: {
         trigger: card,
         start: "top bottom",
@@ -45,19 +65,3 @@ gsap.fromTo(
     },
   }
 );
-
-const card_gsap = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".project-card",
-    scroller: "body",
-    start: "top 65%",
-    toggleActions: "play none none reverse",
-    markers: true,
-  },
-});
-card_gsap.from(".project-card", {
-  y: 100,
-  stagger: 1,
-  opacity: 0,
-  direction: 0.8,
-});
