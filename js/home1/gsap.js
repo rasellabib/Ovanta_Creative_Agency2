@@ -109,3 +109,16 @@ team.from(".title-section", {
   opacity: 0,
   stagger: 0.2,
 });
+const teamCard = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".card-section",
+    scroller: "body",
+    start: "top 55%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+teamCard.from(".card-section .card-div", {
+  y: 100,
+  opacity: 0,
+});
