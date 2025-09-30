@@ -346,3 +346,19 @@ blogs.from(".blogs .h-300px, .blogs .blog-content", {
   stagger: 0,
   duration: 1,
 });
+
+// const footer = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: "footer ",
+//     scroller: "body",
+//     start: "top 60%",
+//     toggleActions: "play none none reverse",
+//     markers: true,
+//   },
+// });
+// footer.from(".footer-bg .bg", {
+//   x: -100,
+//   opacity: 0,
+//   stagger: 0,
+//   duration: 0.41,
+// });

@@ -35,7 +35,7 @@ const Business = gsap.timeline({
     scroller: "body",
     start: "top 58%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -50,7 +50,7 @@ const BusinessContent = gsap.timeline({
     scroller: "body",
     start: "top 85%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -65,7 +65,7 @@ const BusinessImgR = gsap.timeline({
     scroller: "body",
     start: "top 58%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -80,7 +80,7 @@ const BusinessImgL = gsap.timeline({
     scroller: "body",
     start: "top 58%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -96,7 +96,7 @@ BusinessImgL.from(".businesses-left-bottom img", {
 //     scroller: "body",
 //     start: "top 70%",
 //     toggleActions: "play none none reverse",
-//     markers: true,
+// markers: true,
 //   },
 // });
 
@@ -113,7 +113,7 @@ const ExpertTitle = gsap.timeline({
     scroller: "body",
     start: "top 70%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -129,12 +129,286 @@ const ExpertR = gsap.timeline({
     scroller: "body",
     start: "top 70%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 
 ExpertR.from(".expert-right-div ", {
-  x: 20,
+  x: 50,
   opacity: 0,
   duration: 0.8,
+});
+const chose = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".chose",
+    scroller: "body",
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+chose.from(".chose .title-section", {
+  x: 50,
+  opacity: 0,
+  duration: 0.8,
+});
+const choseDiv = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".chose-div",
+    scroller: "body",
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+choseDiv.from(".chose-div, .chose-div .chose-content-div", {
+  x: 50,
+  stagger: 0.3,
+  opacity: 0,
+  duration: 0.8,
+});
+const choseDivImg = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".chose-div",
+    scroller: "body",
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+choseDivImg.from(".chose-img-div .chose-img, .chose-img-div .position-imgs ", {
+  x: 50,
+  y: 50,
+  stagger: 0.3,
+  opacity: 0,
+  duration: 0.8,
+});
+const success = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".success",
+    scroller: "body",
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+success.from(".success-bg", {
+  x: 50,
+  y: 100,
+  stagger: 0.3,
+  opacity: 0,
+  duration: 0.8,
+});
+
+const successTitle = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".success-bg",
+    scroller: "body",
+    start: "top 75%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+successTitle.from(".success-title-sec", {
+  y: 100,
+  stagger: 0.3,
+  opacity: 0,
+  duration: 0.8,
+});
+const successImg = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".success-img-div",
+    scroller: "body",
+    start: "top 65%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+successImg.from(".success-img", {
+  x: -100,
+  opacity: 0,
+  duration: 0.8,
+});
+
+const successImg1 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".success-img1",
+    scroller: "body",
+    start: "top 75%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+successImg1.from(".success-img1", {
+  x: -100,
+  opacity: 0,
+  duration: 0.8,
+});
+
+const successImg2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".success-img1",
+    scroller: "body",
+    start: "top 75%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+successImg2.from(".success-img2", {
+  x: 100,
+  opacity: 0,
+  duration: 0.8,
+});
+const successImg3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".success-img3",
+    scroller: "body",
+    start: "top 75%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+successImg3.from(".success-img3", {
+  y: 100,
+  opacity: 0,
+  duration: 0.8,
+});
+
+const reviewSec = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".review-sec",
+    scroller: "body",
+    start: "top 75%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+reviewSec.from(".review-title .title", {
+  y: 100,
+  opacity: 0,
+  // stagger: 0.1,
+  duration: 0.8,
+});
+const reviewSecArrow = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".review-title",
+    scroller: "body",
+    start: "top 75%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+reviewSecArrow.from(".review-title .left-right-arrow", {
+  y: 100,
+  opacity: 0,
+  duration: 0.8,
+});
+
+const reviewCard = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".review-cards-sec",
+    scroller: "body",
+    start: "top 80%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+reviewCard.from(".total-rate-card-up", {
+  x: -100,
+  y: 50,
+  opacity: 0,
+  duration: 0.9,
+});
+
+const reviewCards = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".testimonial",
+    scroller: "body",
+    start: "top 80%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+reviewCards.from(".testimonial-card", {
+  x: 100,
+  y: 50,
+  opacity: 0,
+  duration: 0.9,
+});
+
+const NewsBlogs = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".NewsBlogs",
+    scroller: "body",
+    start: "top 60%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+
+reviewCards.from(".NewsBlogs .NewsBlogs-title", {
+  x: 100,
+  opacity: 0,
+  duration: 0.9,
+});
+
+const NewsBlogsCard0 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".card-div",
+    scroller: "body",
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+NewsBlogsCard0.from(".card-div .blogs-card0", {
+  x: -100,
+  opacity: 0,
+  duration: 0.9,
+});
+
+const NewsBlogsCard1 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".card-div",
+    scroller: "body",
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+
+NewsBlogsCard1.from(".card-div .blogs-card1", {
+  y: 100,
+  opacity: 0,
+  duration: 0.9,
+});
+
+const NewsBlogsCard2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".blogs-card2",
+    scroller: "body",
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+
+NewsBlogsCard2.from(".card-div .blogs-card2", {
+  x: 100,
+  opacity: 0,
+  duration: 0.9,
 });
