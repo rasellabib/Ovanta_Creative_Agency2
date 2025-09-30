@@ -37,30 +37,20 @@ gsap.registerPlugin(ScrollTrigger);
 var tl = gsap.timeline();
 
 tl.from("nav", {
-  duration: 0.3,
   y: -100,
   opacity: 0,
   ease: "power2.out",
   //   scale: 0.4,
+  duration: 0.8,
 });
 
-tl.from("#hero-content", {
+tl.from("#hero-content, #hero-content2, .hero-button, .hero-logo", {
   y: 100,
   opacity: 0,
   duration: 0.3,
   ease: "power3",
-});
-tl.from("#hero-content2 ", {
-  y: 100,
-  opacity: 0,
-  duration: 0.2,
-  ease: "power3",
-});
-tl.from(".hero-button", {
-  duration: 0.2,
-  y: 40,
-  opacity: 0,
-  ease: "power2.out",
+  stagger: 0,
+  duration: 0.8,
 });
 
 const tl2 = gsap.timeline({
@@ -76,7 +66,7 @@ tl2.from(".hero-down", {
   y: 100,
   opacity: 0,
   stagger: 0.1,
-  duration: 0.6,
+  duration: 0.8,
 });
 
 const tl3 = gsap.timeline({
@@ -105,20 +95,101 @@ const team = gsap.timeline({
 });
 team.from(".title-section", {
   y: 100,
-  x: 100,
+  x: 40,
   opacity: 0,
   stagger: 0.2,
+  duration: 0.8,
 });
+
 const teamCard = gsap.timeline({
   scrollTrigger: {
-    trigger: ".card-section",
+    trigger: ".team",
     scroller: "body",
-    start: "top 55%",
+    start: "top 58%",
     toggleActions: "play none none reverse",
     markers: true,
   },
 });
-teamCard.from(".card-section .card-div", {
+teamCard.from(".card-section", {
+  y: 100,
+  x: -40,
+  opacity: 0,
+  stagger: 0.2,
+  duration: 0.8,
+});
+
+const testimonialDiv = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".testimonial-div",
+    scroller: "body",
+    start: "top 58%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+testimonialDiv.from(".testimonial-div", {
+  opacity: 0,
+});
+const testimonialClients = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".testimonial",
+    scroller: "body",
+    start: "top 58%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+testimonialClients.from(".clients", {
+  y: 100,
+  x: -40,
+  opacity: 0,
+  stagger: 0.2,
+});
+const testimonialContent = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".testimonial",
+    scroller: "body",
+    start: "top 58%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+testimonialContent.from(".content .testimonialTitle, .content .blockquote", {
+  y: 100,
+  x: 40,
+  opacity: 0,
+  stagger: 0.2,
+});
+
+const OurBlogs = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".OurBlogs",
+    scroller: "body",
+    start: "top 58%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+OurBlogs.from(".OurBlogs .OurBlogsTittle, .OurBlogs .btn-bg-none", {
+  y: 100,
+  x: 40,
+  opacity: 0,
+  stagger: 0.2,
+});
+
+const OurBlogsRow = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".blog-entry",
+    scroller: "body",
+    start: "top 58%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+
+OurBlogsRow.from(".blog-entry", {
   y: 100,
   opacity: 0,
+  // stagger: 0.4,
+  duration: 1,
 });

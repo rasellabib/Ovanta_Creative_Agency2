@@ -11,7 +11,7 @@ cards.forEach((card, i) => {
 
   gsap.fromTo(
     card,
-    { y: 80, opacity: 0, scale: 0.98, rotation: rotateFrom, x: xFrom },
+    { y: 100, opacity: 0, scale: 0.98, x: 0 },
     {
       y: 0,
       opacity: 1,
@@ -25,7 +25,7 @@ cards.forEach((card, i) => {
         start: "top 85%",
         end: "top 40%",
         toggleActions: "play none none reverse",
-        // markers:true
+        markers: true,
       },
     }
   );
