@@ -4,7 +4,7 @@ const portfolioContent = gsap.timeline({
     scroller: "body",
     start: "top 75%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 portfolioContent.from(".portfolio-content h5, .portfolio-title", {
@@ -19,7 +19,7 @@ const portfolioImg = gsap.timeline({
     scroller: "body",
     start: "top 80%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 portfolioImg.from(".portfolio-img img", {
@@ -34,7 +34,7 @@ const Challenge = gsap.timeline({
     scroller: "body",
     start: "top 80%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 Challenge.from(".Challenge p", {
@@ -49,7 +49,7 @@ const FinalResult = gsap.timeline({
     scroller: "body",
     start: "top 80%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 FinalResult.from(".FinalResult p", {
@@ -64,7 +64,7 @@ const portfolioCard = gsap.timeline({
     scroller: "body",
     start: "top 70%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 portfolioCard.from(".portfolio-card", {
@@ -80,7 +80,7 @@ const NeedHelp = gsap.timeline({
     scroller: "body",
     start: "top 70%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 NeedHelp.from(".Need-Helps", {
@@ -96,7 +96,7 @@ const DownDiv = gsap.timeline({
     scroller: "body",
     start: "top 70%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 DownDiv.from(".Down-div", {

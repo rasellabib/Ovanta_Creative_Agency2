@@ -25,7 +25,7 @@ cards.forEach((card, i) => {
         start: "top 85%",
         end: "top 40%",
         toggleActions: "play none none reverse",
-        markers: true,
+        // markers: true,
       },
     }
   );
