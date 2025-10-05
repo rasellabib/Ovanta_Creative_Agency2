@@ -1,3 +1,5 @@
+gsap.registerPlugin(ScrollTrigger);
+
 var nav = gsap.timeline();
 var pageTitle = gsap.timeline();
 var Groho = gsap.timeline();
@@ -248,21 +250,21 @@ successTitle.from(".success-title-sec", {
   opacity: 0,
   duration: 0.8,
 });
-const successImg = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".success-img-div",
-    scroller: "body",
-    start: "top 65%",
-    toggleActions: "play none none reverse",
-    // markers: true,
-  },
-});
+// const successImg = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".success-img-div",
+//     scroller: "body",
+//     start: "top 65%",
+//     toggleActions: "play none none reverse",
+//     // markers: true,
+//   },
+// });
 
-successImg.from(".success-img", {
-  x: -100,
-  opacity: 0,
-  duration: 0.8,
-});
+// successImg.from(".success-img", {
+//   x: -100,
+//   opacity: 0,
+//   duration: 0.8,
+// });
 
 const successImg1 = gsap.timeline({
   scrollTrigger: {
@@ -337,7 +339,7 @@ const reviewSecArrow = gsap.timeline({
   },
 });
 
-reviewSecArrow.from(".review-title .left-right-arrow", {
+reviewSecArrow.from(".left-right-arrow", {
   y: 100,
   opacity: 0,
   duration: 0.8,
@@ -441,8 +443,6 @@ NewsBlogsCard2.from(".card-div .blogs-card2", {
   duration: 0.9,
 });
 
-
-
 const team = gsap.timeline({
   scrollTrigger: {
     trigger: ".team",
@@ -475,4 +475,22 @@ teamCard.from(".card-section", {
   opacity: 0,
   stagger: 0.2,
   duration: 0.8,
+});
+
+gsap.utils.toArray(".row .col-lg-4").forEach((row) => {
+  let NewsBlogsCard = gsap.timeline({
+    scrollTrigger: {
+      trigger: row,
+      scroller: "body",
+      start: "top 70%",
+      toggleActions: "play none none reverse",
+      // markers: true,
+    },
+  });
+
+  NewsBlogsCard.from(row.querySelectorAll(".blogs-card"), {
+    y: 60,
+    opacity: 0,
+    duration: 0.5,
+  });
 });

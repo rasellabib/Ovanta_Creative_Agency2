@@ -13,12 +13,16 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <!-- Bootstrap Icons for quote -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/dist/style.css" />
     <link rel="stylesheet" href="/dist/CustomNav1.css" />
-    <link rel="stylesheet" href="/dist/success.css" />
     <link rel="stylesheet" href="/dist/home1.css" />
-
-    <title>Document</title>
+    <link rel="stylesheet" href="/dist/home2.css" />
+    <title>Portfolio Grid</title>
   </head>
   <body>
     <section>
@@ -91,13 +95,26 @@
                 <a class="nav-link p-18 fw-bold" href="/Pages/AboutUs.html"
                   >About</a
                 >
-              </li>
-              <li class="">
-                <a
-                  class="nav-link p-18 fw-bold"
-                  href="/Pages/PortfolioGrid.html"
-                  >Portfolio</a
+              <li class="nav-item dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
+                  <span class="p-20 fw-bold">Portfolio</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-white">
+                  <li>
+                    <a class="dropdown-item" href="/Pages/PortfolioDetails.html"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/Pages/PortfolioGrid.html"
+                      >Portfolio Grid</a
+                    >
+                  </li>
+                </ul>
               </li>
               <li class="">
                 <a class="nav-link p-18 fw-bold" href="/Pages/PricingPlan.html"
@@ -282,7 +299,7 @@
     <section>
       <div class="container1">
         <div class="section-ptb">
-          <div class="success-img-div m-0">
+          <div class="row success-img-div m-0">
             <div class="success-img mt-0">
               <div class="row">
                 <div class="col-lg-6">
@@ -486,7 +503,7 @@
                       <div class="w-100 d-flex justify-content-center mt-40">
                         <img
                           class="rotation"
-                          src="./Assets/images/footer/goltext.webp"
+                          src="/Assets/images/footer/goltext.webp"
                           alt=""
                         />
                       </div>
@@ -501,7 +518,7 @@
                   <div class="footer-brand mb-3">
                     <!-- Replace with your logo -->
                     <img
-                      src="./assets/images/navbar/logo.png"
+                      src="/assets/images/whiteLogo.png"
                       alt="Logo"
                       height="30"
                       class="mb-3"
@@ -629,16 +646,21 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11.8.2/lib/browser/math.js"></script>
+    <script src="/js/portfolio.js"></script>
+    <script src="/js/textAnimetionGsap.js"></script>
     <script src="/js/home1/gsap.js"></script>
+    <script src="/js/footerGsap.js"></script>
+    <script src="/js/text.js"></script>
+    <script src="/js/Home2/gsap.js"></script>
   </body>
 </html>

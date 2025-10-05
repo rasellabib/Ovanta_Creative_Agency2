@@ -162,3 +162,36 @@ OurBlogsRow.from(".blog-entry", {
   stagger: 0.4,
   duration: 1,
 });
+
+// Pricing===============
+const Pricing = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".pricing-content",
+    scroller: "body",
+    start: "top 75%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+Pricing.from(".pricing-content", {
+  y: 70,
+  opacity: 0,
+  stagger: 0.1,
+  duration: 0.5,
+});
+
+const PricingCard = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".pricing-card",
+    scroller: "body",
+    start: "top 80%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+PricingCard.from(" .pricing-card", {
+  y: 100,
+  opacity: 0,
+  stagger: 0.1,
+  duration: 0.5,
+});

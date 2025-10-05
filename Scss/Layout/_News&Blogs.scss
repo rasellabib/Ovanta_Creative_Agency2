@@ -27,12 +27,6 @@
           margin: 0 8px;
         }
       }
-      .link {
-        margin-top: 30px;
-        a {
-          border-bottom: 2px solid rgba(0, 0, 0, 1);
-        }
-      }
     }
   }
 }
@@ -49,10 +43,12 @@
     border-radius: 100px;
     border: 1px solid rgba(238, 238, 238, 1);
     padding: 18px 20px;
+    cursor: pointer;
   }
   .numBtn-div {
     display: flex;
     gap: 12px;
+    cursor: pointer;
 
     .numBtn {
       width: 60px;
@@ -183,6 +179,43 @@
           background: #ffffff;
           border-radius: 100%;
         }
+      }
+    }
+  }
+}
+
+.link {
+  margin-top: 30px;
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  a {
+    svg {
+      margin: 0 5px;
+    }
+    // background-color: rebeccapurple;
+    .hr-a {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: -webkit-fill-available;
+
+      background: #000;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      .hr-a {
+        left: 100%;
+      }
+      .hr-a1 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: -webkit-fill-available;
+        background: #000;
+        transition: all 2s ease;
       }
     }
   }

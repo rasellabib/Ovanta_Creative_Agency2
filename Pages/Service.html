@@ -13,8 +13,15 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <!-- Bootstrap Icons for quote -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/dist/style.css" />
     <link rel="stylesheet" href="/dist/CustomNav1.css" />
+    <link rel="stylesheet" href="/dist/home1.css" />
+    <link rel="stylesheet" href="/dist/home2.css" />
 
     <title>Service</title>
   </head>
@@ -89,13 +96,26 @@
                 <a class="nav-link p-18 fw-bold" href="/Pages/AboutUs.html"
                   >About</a
                 >
-              </li>
-              <li class="">
-                <a
-                  class="nav-link p-18 fw-bold"
-                  href="/Pages/PortfolioGrid.html"
-                  >Portfolio</a
+              <li class="nav-item dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
+                  <span class="p-20 fw-bold">Portfolio</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-white">
+                  <li>
+                    <a class="dropdown-item" href="/Pages/PortfolioDetails.html"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/Pages/PortfolioGrid.html"
+                      >Portfolio Grid</a
+                    >
+                  </li>
+                </ul>
               </li>
               <li class="">
                 <a class="nav-link p-18 fw-bold" href="/Pages/PricingPlan.html"
@@ -447,41 +467,73 @@
           </div>
           <div class="pricing-card-div row-mt">
             <div class="row">
-              <div class="col-lg-6 col-md-6 col-xl-4">
+              <div class="col-xxl-4 col-lg-6 col-md-12">
                 <div class="pricing-card">
+                  <div class="card-top">
+                    <svg
+                      class="pricing-card-svg"
+                      width="160"
+                      height="75"
+                      viewBox="0 0 160 75"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M141.131 0C151.072 0 159.131 8.05887 159.131 18V74.1357C159.131 64.1946 151.072 56.1357 141.131 56.1357H36C26.0592 56.1356 18.0003 48.0766 18 38.1357V18C18 8.05888 9.94113 0 0 0H141.131Z"
+                      />
+                    </svg>
+                    <div class="discount">
+                      <p>
+                        <svg
+                          width="15"
+                          height="18"
+                          viewBox="0 0 15 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13.66 8.2C13.43 7.9 13.15 7.64 12.89 7.38C12.22 6.78 11.46 6.35 10.82 5.72C9.32999 4.26 8.99999 1.85 9.94999 0C8.99999 0.23 8.16999 0.75 7.45999 1.32C4.86999 3.4 3.84999 7.07 5.06999 10.22C5.10999 10.32 5.14999 10.42 5.14999 10.55C5.14999 10.77 4.99999 10.97 4.79999 11.05C4.56999 11.15 4.32999 11.09 4.13999 10.93C4.08323 10.8825 4.03577 10.8248 3.99999 10.76C2.86999 9.33 2.68999 7.28 3.44999 5.64C1.77999 7 0.869989 9.3 0.999989 11.47C1.05999 11.97 1.11999 12.47 1.28999 12.97C1.42999 13.57 1.69999 14.17 1.99999 14.7C3.07999 16.43 4.94999 17.67 6.95999 17.92C9.09999 18.19 11.39 17.8 13.03 16.32C14.86 14.66 15.5 12 14.56 9.72L14.43 9.46C14.22 9 13.66 8.2 13.66 8.2ZM10.5 14.5C10.22 14.74 9.75999 15 9.39999 15.1C8.27999 15.5 7.15999 14.94 6.49999 14.28C7.68999 14 8.39999 13.12 8.60999 12.23C8.77999 11.43 8.45999 10.77 8.32999 10C8.20999 9.26 8.22999 8.63 8.49999 7.94C8.68999 8.32 8.88999 8.7 9.12999 9C9.89999 10 11.11 10.44 11.37 11.8C11.41 11.94 11.43 12.08 11.43 12.23C11.46 13.05 11.1 13.95 10.5 14.5Z"
+                            fill="#0F0F0F"
+                          />
+                        </svg>
+                        20% Off
+                      </p>
+                    </div>
+                  </div>
+
                   <div class="pricing-card-title">
-                    <h3 class="p-28">Basic Plan</h3>
+                    <p class="p-28 fw-bold">Basic Plan</p>
                     <p class="p-18">
                       Ideal for scalable businesses or startups.
                     </p>
                   </div>
                   <div class="price">
-                    <h5>$99.00 <span class="p-18 Inter">/Monthly</span></h5>
+                    <h5>$99.00<span class="p-18 Inter">/Monthly</span></h5>
                   </div>
                   <div class="price-details">
                     <ul>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">
                           Access to all basic features
                         </p>
                       </li>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">Work customization</p>
                       </li>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">Mobile and desktop app</p>
                       </li>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">
                           Access to all design templates
                         </p>
                       </li>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">Priority customer support</p>
                       </li>
                     </ul>
@@ -502,41 +554,73 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-xl-4">
+              <div class="col-xxl-4 col-lg-6 col-md-12">
                 <div class="pricing-card">
+                  <div class="card-top">
+                    <svg
+                      class="pricing-card-svg"
+                      width="160"
+                      height="75"
+                      viewBox="0 0 160 75"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M141.131 0C151.072 0 159.131 8.05887 159.131 18V74.1357C159.131 64.1946 151.072 56.1357 141.131 56.1357H36C26.0592 56.1356 18.0003 48.0766 18 38.1357V18C18 8.05888 9.94113 0 0 0H141.131Z"
+                      />
+                    </svg>
+                    <div class="discount">
+                      <p>
+                        <svg
+                          width="15"
+                          height="18"
+                          viewBox="0 0 15 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13.66 8.2C13.43 7.9 13.15 7.64 12.89 7.38C12.22 6.78 11.46 6.35 10.82 5.72C9.32999 4.26 8.99999 1.85 9.94999 0C8.99999 0.23 8.16999 0.75 7.45999 1.32C4.86999 3.4 3.84999 7.07 5.06999 10.22C5.10999 10.32 5.14999 10.42 5.14999 10.55C5.14999 10.77 4.99999 10.97 4.79999 11.05C4.56999 11.15 4.32999 11.09 4.13999 10.93C4.08323 10.8825 4.03577 10.8248 3.99999 10.76C2.86999 9.33 2.68999 7.28 3.44999 5.64C1.77999 7 0.869989 9.3 0.999989 11.47C1.05999 11.97 1.11999 12.47 1.28999 12.97C1.42999 13.57 1.69999 14.17 1.99999 14.7C3.07999 16.43 4.94999 17.67 6.95999 17.92C9.09999 18.19 11.39 17.8 13.03 16.32C14.86 14.66 15.5 12 14.56 9.72L14.43 9.46C14.22 9 13.66 8.2 13.66 8.2ZM10.5 14.5C10.22 14.74 9.75999 15 9.39999 15.1C8.27999 15.5 7.15999 14.94 6.49999 14.28C7.68999 14 8.39999 13.12 8.60999 12.23C8.77999 11.43 8.45999 10.77 8.32999 10C8.20999 9.26 8.22999 8.63 8.49999 7.94C8.68999 8.32 8.88999 8.7 9.12999 9C9.89999 10 11.11 10.44 11.37 11.8C11.41 11.94 11.43 12.08 11.43 12.23C11.46 13.05 11.1 13.95 10.5 14.5Z"
+                            fill="#0F0F0F"
+                          />
+                        </svg>
+                        25% Off
+                      </p>
+                    </div>
+                  </div>
+
                   <div class="pricing-card-title">
-                    <h3 class="p-28">Standard Plan</h3>
+                    <p class="p-28 fw-bold">Standard Plan</p>
                     <p class="p-18">
                       Ideal for scalable businesses or startups.
                     </p>
                   </div>
                   <div class="price">
-                    <h5>$119.00 <span class="p-18 Inter">/Monthly</span></h5>
+                    <h5>$119.00<span class="p-18 Inter">/Monthly</span></h5>
                   </div>
                   <div class="price-details">
                     <ul>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">
                           Access to all basic features
                         </p>
                       </li>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">Work customization</p>
                       </li>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">Mobile and desktop app</p>
                       </li>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">
                           Access to all design templates
                         </p>
                       </li>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">Priority customer support</p>
                       </li>
                     </ul>
@@ -557,41 +641,73 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-xl-4">
+              <div class="col-xxl-4 col-lg-6 col-md-12">
                 <div class="pricing-card">
+                  <div class="card-top">
+                    <svg
+                      class="pricing-card-svg"
+                      width="160"
+                      height="75"
+                      viewBox="0 0 160 75"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M141.131 0C151.072 0 159.131 8.05887 159.131 18V74.1357C159.131 64.1946 151.072 56.1357 141.131 56.1357H36C26.0592 56.1356 18.0003 48.0766 18 38.1357V18C18 8.05888 9.94113 0 0 0H141.131Z"
+                      />
+                    </svg>
+                    <div class="discount">
+                      <p>
+                        <svg
+                          width="15"
+                          height="18"
+                          viewBox="0 0 15 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13.66 8.2C13.43 7.9 13.15 7.64 12.89 7.38C12.22 6.78 11.46 6.35 10.82 5.72C9.32999 4.26 8.99999 1.85 9.94999 0C8.99999 0.23 8.16999 0.75 7.45999 1.32C4.86999 3.4 3.84999 7.07 5.06999 10.22C5.10999 10.32 5.14999 10.42 5.14999 10.55C5.14999 10.77 4.99999 10.97 4.79999 11.05C4.56999 11.15 4.32999 11.09 4.13999 10.93C4.08323 10.8825 4.03577 10.8248 3.99999 10.76C2.86999 9.33 2.68999 7.28 3.44999 5.64C1.77999 7 0.869989 9.3 0.999989 11.47C1.05999 11.97 1.11999 12.47 1.28999 12.97C1.42999 13.57 1.69999 14.17 1.99999 14.7C3.07999 16.43 4.94999 17.67 6.95999 17.92C9.09999 18.19 11.39 17.8 13.03 16.32C14.86 14.66 15.5 12 14.56 9.72L14.43 9.46C14.22 9 13.66 8.2 13.66 8.2ZM10.5 14.5C10.22 14.74 9.75999 15 9.39999 15.1C8.27999 15.5 7.15999 14.94 6.49999 14.28C7.68999 14 8.39999 13.12 8.60999 12.23C8.77999 11.43 8.45999 10.77 8.32999 10C8.20999 9.26 8.22999 8.63 8.49999 7.94C8.68999 8.32 8.88999 8.7 9.12999 9C9.89999 10 11.11 10.44 11.37 11.8C11.41 11.94 11.43 12.08 11.43 12.23C11.46 13.05 11.1 13.95 10.5 14.5Z"
+                            fill="#0F0F0F"
+                          />
+                        </svg>
+                        50% Off
+                      </p>
+                    </div>
+                  </div>
+
                   <div class="pricing-card-title">
-                    <h3 class="p-28">Premium Plan</h3>
+                    <p class="p-28 fw-bold">Premium plan</p>
                     <p class="p-18">
                       Ideal for scalable businesses or startups.
                     </p>
                   </div>
                   <div class="price">
-                    <h5>$139.00 <span class="p-18 Inter">/Monthly</span></h5>
+                    <h5>$139.00<span class="p-18 Inter">/Monthly</span></h5>
                   </div>
                   <div class="price-details">
                     <ul>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">
                           Access to all basic features
                         </p>
                       </li>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">Work customization</p>
                       </li>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">Mobile and desktop app</p>
                       </li>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">
                           Access to all design templates
                         </p>
                       </li>
                       <li>
-                        <img src="./Assets/images/price/tik.svg" alt="" />
+                        <img src="/Assets/images/price/tik.svg" alt="" />
                         <p class="font-normal-20">Priority customer support</p>
                       </li>
                     </ul>
@@ -653,7 +769,7 @@
                       <div class="w-100 d-flex justify-content-center mt-40">
                         <img
                           class="rotation"
-                          src="./Assets/images/footer/goltext.webp"
+                          src="/Assets/images/footer/goltext.webp"
                           alt=""
                         />
                       </div>
@@ -668,7 +784,7 @@
                   <div class="footer-brand mb-3">
                     <!-- Replace with your logo -->
                     <img
-                      src="./assets/images/navbar/logo.png"
+                      src="/assets/images/whiteLogo.png"
                       alt="Logo"
                       height="30"
                       class="mb-3"
@@ -796,16 +912,17 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11.8.2/lib/browser/math.js"></script>
     <script src="/js/home1/gsap.js"></script>
+    <script src="/js/footerGsap.js"></script>
   </body>
 </html>

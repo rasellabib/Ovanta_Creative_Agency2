@@ -17,7 +17,6 @@
   }
 }
 
-
 .button-white {
   background-color: white;
   color: white;
@@ -272,7 +271,7 @@
   height: auto;
   gap: 160px;
   background: #0f0f0fe5;
-  background-image: url("../assets/images/section5/bg.png");
+  background-image: url("./Assets/images/section5/bg.png");
   background-size: cover;
 }
 
@@ -548,9 +547,21 @@
 .nav-link {
   text-decoration: none;
   transition: all 0.4s ease;
+
   &:hover {
-    scale: 1.2;
-    color: rgb(197, 185, 185);
+    scale: 1;
+  }
+}
+.offcanvas {
+  .nav-link {
+    text-decoration: none;
+    transition: all 0.4s ease;
+    color: white;
+    scale: 0.9;
+    &:hover {
+      scale: 1;
+      color: brown;
+    }
   }
 }
 .nav-sm-none {
@@ -815,7 +826,7 @@
   display: flex;
   gap: 172px;
   align-items: center;
-  padding: 40px 60px;
+  // padding: 40px 60px;
   border-radius: 6px;
   @media screen and (max-width: 1024px) {
     gap: 50px;
