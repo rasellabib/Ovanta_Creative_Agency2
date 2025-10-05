@@ -34,24 +34,27 @@ document.querySelectorAll(".menu-item").forEach((item) => {
 });
 gsap.registerPlugin(ScrollTrigger);
 
-var tl = gsap.timeline();
 
-tl.from("nav", {
-  y: -100,
-  opacity: 0,
-  ease: "power2.out",
-  //   scale: 0.4,
-  duration: 0.8,
-});
+// var tl = gsap.timeline();
 
-tl.from("#hero-content, #hero-content2, .hero-button, .hero-logo", {
-  y: 100,
-  opacity: 0,
-  duration: 0.3,
-  ease: "power3",
-  stagger: 0,
-  duration: 0.8,
-});
+// tl.from("nav", {
+//   y: -100,
+//   opacity: 0,
+//   ease: "power2.out",
+//   //   scale: 0.4,
+//   duration: 0.8,
+// });
+
+// tl.from("#hero-content, #hero-content2, .hero-button, .hero-logo", {
+//   y: 100,
+//   opacity: 0,
+//   duration: 0.3,
+//   ease: "power3",
+//   stagger: 0,
+//   duration: 0.8,
+// });
+
+
 
 const tl2 = gsap.timeline({
   scrollTrigger: {
@@ -75,7 +78,7 @@ const tl3 = gsap.timeline({
     scroller: "body",
     start: "top 65%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 tl3.from(".services-div #services1, .services-items", {
@@ -84,47 +87,13 @@ tl3.from(".services-div #services1, .services-items", {
   stagger: 0.2,
 });
 
-const team = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".team",
-    scroller: "body",
-    start: "top 60%",
-    toggleActions: "play none none reverse",
-    markers: true,
-  },
-});
-team.from(".title-section", {
-  y: 100,
-  x: 40,
-  opacity: 0,
-  stagger: 0.2,
-  duration: 0.8,
-});
-
-const teamCard = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".team",
-    scroller: "body",
-    start: "top 58%",
-    toggleActions: "play none none reverse",
-    markers: true,
-  },
-});
-teamCard.from(".card-section", {
-  y: 100,
-  x: -40,
-  opacity: 0,
-  stagger: 0.2,
-  duration: 0.8,
-});
-
 const testimonialDiv = gsap.timeline({
   scrollTrigger: {
     trigger: ".testimonial-div",
     scroller: "body",
     start: "top 58%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 testimonialDiv.from(".testimonial-div", {
@@ -136,7 +105,7 @@ const testimonialClients = gsap.timeline({
     scroller: "body",
     start: "top 58%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 testimonialClients.from(".clients", {
@@ -151,7 +120,7 @@ const testimonialContent = gsap.timeline({
     scroller: "body",
     start: "top 58%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 testimonialContent.from(".content .testimonialTitle, .content .blockquote", {
@@ -167,7 +136,7 @@ const OurBlogs = gsap.timeline({
     scroller: "body",
     start: "top 58%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 OurBlogs.from(".OurBlogs .OurBlogsTittle, .OurBlogs .btn-bg-none", {
@@ -183,13 +152,13 @@ const OurBlogsRow = gsap.timeline({
     scroller: "body",
     start: "top 58%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 
 OurBlogsRow.from(".blog-entry", {
   y: 100,
   opacity: 0,
-  // stagger: 0.4,
+  stagger: 0.4,
   duration: 1,
 });

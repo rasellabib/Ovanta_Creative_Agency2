@@ -290,7 +290,7 @@ const award = gsap.timeline({
     scroller: "body",
     start: "top 75%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 award.from(" .award .title, .award .mt-40", {
@@ -321,7 +321,7 @@ const blogsImg = gsap.timeline({
     scroller: "body",
     start: "top 70%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 blogsImg.from(".blogs .blog-card", {
@@ -337,7 +337,7 @@ const blogs = gsap.timeline({
     scroller: "body",
     start: "top 60%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 blogs.from(".blogs .h-300px, .blogs .blog-content", {
@@ -353,7 +353,7 @@ blogs.from(".blogs .h-300px, .blogs .blog-content", {
 //     scroller: "body",
 //     start: "top 60%",
 //     toggleActions: "play none none reverse",
-//     markers: true,
+    // markers: true,
 //   },
 // });
 // footer.from(".footer-bg .bg", {

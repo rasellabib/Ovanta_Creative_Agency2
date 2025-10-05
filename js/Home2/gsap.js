@@ -1,9 +1,37 @@
-const nav = gsap.timeline();
+var nav = gsap.timeline();
+var pageTitle = gsap.timeline();
+var Groho = gsap.timeline();
 nav.from(".custom-navbar1", {
   y: -100,
   opacity: 0,
   duration: 0.8,
 });
+pageTitle.from(".all-page h1, .all-page .link-btn", {
+  y: 100,
+  opacity: 0,
+  duration: 0.8,
+});
+Groho.from(" .groho", {
+  x: -100,
+  opacity: 0,
+  duration: 0.8,
+});
+
+// const upBg = gsap.timeline();
+
+// upBg.from(".all-page", {
+//   y: 100,
+//   opacity: 0,
+//   duration: 1,
+// });
+
+// const groho = gsap.timeline();
+// groho.from(".all-page", {
+//   y: 100,
+//   opacity: 0,
+//   duration: 0.8,
+// });
+
 const HeroHeading = gsap.timeline();
 HeroHeading.from(".hero-heading h1", {
   x: 80,
@@ -355,7 +383,7 @@ const NewsBlogs = gsap.timeline({
     scroller: "body",
     start: "top 60%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -403,7 +431,7 @@ const NewsBlogsCard2 = gsap.timeline({
     scroller: "body",
     start: "top 70%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -411,4 +439,40 @@ NewsBlogsCard2.from(".card-div .blogs-card2", {
   x: 100,
   opacity: 0,
   duration: 0.9,
+});
+
+
+
+const team = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".team",
+    scroller: "body",
+    start: "top 60%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+team.from(".title-section", {
+  y: 100,
+  x: 40,
+  opacity: 0,
+  stagger: 0.2,
+  duration: 0.8,
+});
+
+const teamCard = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".team",
+    scroller: "body",
+    start: "top 58%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+teamCard.from(".card-section", {
+  y: 100,
+  x: -40,
+  opacity: 0,
+  stagger: 0.2,
+  duration: 0.8,
 });
