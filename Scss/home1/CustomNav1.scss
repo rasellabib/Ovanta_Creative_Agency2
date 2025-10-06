@@ -23,11 +23,14 @@
     align-items: center;
     gap: 50px;
     // flex-direction: column;
+    @media screen and (max-width: 1024.98px) {
+      gap: 25px;
+    }
     margin: 0 auto;
     li {
       color: #ffffff;
     }
-    &:hover{
+    &:hover {
       color: brown;
     }
   }

@@ -160,41 +160,36 @@
     }
   }
 
-  @media only screen and (max-width: 991.98px) {
-    flex-direction: column-reverse;
-    .total-rate-card-up {
-      .total-rate-card {
-        width: 100%;
-      }
-    }
+  // @media only screen and (max-width: 991.98px) {
+  //   flex-direction: column-reverse;
+  //   .total-rate-card-up {
+  //     .total-rate-card {
+  //       width: 100%;
+  //     }
+  //   }
 
-    .testimonial-card {
-      height: auto;
-      width: 100%;
-      padding: 15px;
-      .left-panel {
-        padding-left: 20px;
-      }
-      .right-panel {
-        .quote {
-          font-size: 30px;
-          line-height: 1;
-          color: #000;
-          margin-bottom: 0px;
-        }
-        .text {
-          font-size: 14px;
-          color: #333;
-          line-height: 1.3;
-        }
-      }
-    }
-    .overflow {
-      position: relative;
-      left: 0;
-      width: 100%;
-    }
-  }
+  //   .testimonial-card {
+  //     height: auto;
+  //     width: 100%;
+  //     padding: 15px;
+  //     .left-panel {
+  //       padding-left: 20px;
+  //     }
+  //     .right-panel {
+  //       .quote {
+  //         font-size: 30px;
+  //         line-height: 1;
+  //         color: #000;
+  //         margin-bottom: 0px;
+  //       }
+  //       .text {
+  //         font-size: 14px;
+  //         color: #333;
+  //         line-height: 1.3;
+  //       }
+  //     }
+  //   }
+  // }
   @media only screen and (max-width: 446.98px) {
     flex-direction: column-reverse;
     .total-rate-card-up {

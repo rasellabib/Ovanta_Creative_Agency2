@@ -1,15 +1,37 @@
 .circle-sec-div {
   .row {
-    .col-lg-3 {
-      height: 420px;
+    justify-content: center;
+    .col-3 {
       padding: 0;
       margin-left: -25px;
+      @media screen and (max-width: 1024.98px) {
+        margin-left: -15px;
+      }
       &:nth-child(1) {
         margin-left: 0;
       }
       .circle {
-        width: 100%;
-        height: 100%;
+        width: 420px;
+        height: 420px;
+        @media screen and (max-width: 1399.98px) {
+          width: 300px;
+          height: 300px;
+        }
+        @media screen and (max-width: 1024.98px) {
+          width: 190px;
+          height: 190px;
+          h4{
+            font-size: 50px;
+          }
+        }
+        @media screen and (max-width: 767.98px) {
+          width: 150px;
+          height: 150px;
+        }
+        @media screen and (max-width: 575.98px) {
+          width: 200px;
+          height: 200px;
+        }
         border-radius: 100%;
         display: flex;
         justify-content: center;

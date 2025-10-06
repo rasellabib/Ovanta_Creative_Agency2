@@ -167,6 +167,12 @@ h6,
   font-size: 90px;
   line-height: 1;
   letter-spacing: -1%;
+  @media screen and (max-width: 1024px) {
+    font-size: 70px;
+  }
+  @media screen and (max-width: 767.98px) {
+    font-size: 50px;
+  }
 }
 .p-14 {
   font-family: var(--ff-Inter-sans);
@@ -214,6 +220,15 @@ h6,
   @media screen and (max-width: 991.98px) {
     font-size: 18px;
     line-height: 25px;
+  }
+}
+.p-md-18 {
+  @media screen and (max-width: 1050.98px) {
+    font-family: var(--ff-Inter-sans);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.44;
+    letter-spacing: 0%;
   }
 }
 .p-28 {
@@ -273,17 +288,8 @@ h6,
     line-height: 40px;
   }
 }
-@media only screen and (max-width: 1399.98px) {
-  h1,
-  .h1 {
-    font-size: 90px;
-  }
-}
+
 @media only screen and (max-width: 1199.98px) {
-  h1,
-  .h1 {
-    font-size: 120px;
-  }
   h2,
   .h2 {
     font-size: 100px;
@@ -296,10 +302,6 @@ h6,
   }
 }
 @media only screen and (max-width: 991.98px) {
-  h1,
-  .h1 {
-    font-size: 60px;
-  }
   h2,
   .h2 {
     text-align: center;
@@ -321,10 +323,6 @@ h6,
   }
 }
 @media only screen and (max-width: 767.98px) {
-  h1,
-  .h1 {
-    font-size: 50px;
-  }
   h2,
   .h2 {
     font-size: 50px;
@@ -565,5 +563,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .dropdown-toggle {
-  color: white; 
+  color: white;
+}
+
+.dropdown {
+  align-content: center;
 }

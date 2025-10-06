@@ -28,6 +28,11 @@
     }
   }
 }
+.title {
+  @media screen and (max-width: 767.98px) {
+    justify-content: center;
+  }
+}
 .section-title-div {
   display: flex;
   align-items: center;
@@ -396,7 +401,7 @@ hr {
 }
 
 /*Back to Top btn End*/
-@media (min-width: 100px) {
+@media (max-width: 767.98px) {
   .container,
   .container1 {
     max-width: 990px;
@@ -404,15 +409,17 @@ hr {
     margin-left: auto;
   }
 }
-@media (min-width: 768px) {
-  .container {
-    width: 90%;
+@media (max-width: 991.99px) {
+  .container,
+  .container1 {
+    width: 95%;
     margin-right: auto;
     margin-left: auto;
   }
 }
-@media (min-width: 992px) {
-  .container {
+@media (max-width: 1199px) {
+  .container,
+  .container1 {
     margin-left: calc((100% - 970px) / 2);
     width: 90% !important;
     min-width: auto;
@@ -422,8 +429,9 @@ hr {
     margin-left: auto;
   }
 }
-@media (min-width: 1200px) {
-  .container {
+@media (max-width: 1399px) {
+  .container,
+  .container1 {
     margin-left: calc((100% - 1143px) / 2);
     width: auto;
     min-width: auto;
@@ -435,13 +443,15 @@ hr {
   }
 }
 @media (min-width: 1400px) {
-  .container {
+  .container,
+  .container1 {
     margin-left: calc((100% - 1366px) / 2);
     width: auto;
     min-width: auto;
     max-width: inherit;
   }
-  .container {
+  .container,
+  .container1 {
     margin-right: calc((100% - 1366px) / 2);
   }
 }
@@ -459,7 +469,8 @@ hr {
   .container-md,
   .container-sm,
   .container-xl,
-  .container-xxl {
+  .container-xxl,
+  .container1 {
     max-width: 1638px;
     margin: auto;
   }
@@ -478,12 +489,7 @@ hr {
   max-width: 1604px;
   margin: auto;
 }
-@media (min-width: 1400px) {
-  .container1 {
-    max-width: 1604px;
-    margin: auto;
-  }
-}
+
 .container-1332 {
   max-width: 1332px;
   margin: auto;
@@ -501,5 +507,21 @@ hr {
 .margin-sm-auto {
   @media screen and (max-width: 575.98px) {
     margin: auto;
+  }
+}
+.md-none {
+  @media screen and (max-width: 1024.98px) {
+    display: none !important;
+  }
+}
+.md-justify-content-center {
+  @media screen and (max-width: 1024.98px) {
+    justify-content: center;
+  }
+}
+
+.title {
+  @media screen and (max-width: 767.98px) {
+    justify-content: center;
   }
 }

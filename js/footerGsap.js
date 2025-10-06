@@ -36,3 +36,34 @@ document.fonts.ready.then(() => {
     });
   });
 });
+
+const footerDown = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".border-secondary ",
+    scroller: "body",
+    start: "top 75%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+footerDown.from(".border-secondary .footer-brand, .footer-down-content", {
+  y: 100,
+  opacity: 0,
+  stagger: 0,
+  duration: 0.91,
+});
+const QuickLinks = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".border-secondary ",
+    scroller: "body",
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+QuickLinks.from(".QuickLinks h4, .QuickLinks li", {
+  y: 100,
+  opacity: 0,
+  stagger: 0,
+  duration: 0.91,
+});

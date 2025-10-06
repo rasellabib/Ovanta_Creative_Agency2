@@ -65,6 +65,14 @@
           width: 80px;
           height: 80px;
           transition: all 0.3s ease;
+          @media screen and (max-width: 575.98px) {
+            width: 150px;
+            height: 60px;
+          }
+          svg {
+            width: 100% !important;
+            height: 100% !important;
+          }
 
           circle {
             fill: #000 !important;
@@ -75,9 +83,12 @@
         }
         .expert-content {
           transition: all 0.3s ease;
-
           margin-left: 100px;
           margin-right: 47px;
+          @media screen and (max-width: 767.99px) {
+            margin-left: 0px;
+            margin-right: 0px;
+          }
         }
         .expart-arrow-btn {
           width: 60px;
@@ -86,5 +97,12 @@
         }
       }
     }
+  }
+}
+
+.ExpertTitle{
+  @media screen and (max-width: 1199.98px) {
+   margin-bottom: 30px;
+    
   }
 }
