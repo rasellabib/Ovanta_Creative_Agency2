@@ -174,7 +174,7 @@ const chose = gsap.timeline({
     scroller: "body",
     start: "top 70%",
     toggleActions: "play none none reverse",
-    // markers: true,
+    markers: true,
   },
 });
 
@@ -339,11 +339,11 @@ const reviewSecArrow = gsap.timeline({
   },
 });
 
-reviewSecArrow.from(".left-right-arrow", {
-  y: 100,
-  opacity: 0,
-  duration: 0.8,
-});
+// reviewSecArrow.from(".left-right-arrow", {
+//   y: 100,
+//   opacity: 0,
+//   duration: 0.8,
+// });
 
 const reviewCard = gsap.timeline({
   scrollTrigger: {

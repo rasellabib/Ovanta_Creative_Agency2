@@ -61,10 +61,16 @@
 
 .section-margin-top {
   margin-top: 130px;
+  @media screen and (max-width: 767.98px) {
+    margin-top: 80px;
+  }
 }
 
 .section-margin-bottom {
   margin-bottom: 130px;
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 80px;
+  }
 }
 
 .section-title-margin-bottom {
@@ -77,10 +83,18 @@
 .section-margin-top-bottom {
   margin-top: 130px;
   margin-bottom: 130px;
+  @media screen and (max-width: 1199.98px) {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
 }
 .section-ptb {
   padding-top: 130px;
   padding-bottom: 130px;
+  @media screen and (max-width: 1199.98px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
 
 .row-mt {
@@ -96,10 +110,16 @@
 
 .section-pt {
   padding-top: 130px;
+  @media screen and (max-width: 1199.98px) {
+    padding-top: 80px;
+  }
 }
 
 .section-pb {
   padding-bottom: 130px;
+  @media screen and (max-width: 1199.98px) {
+    padding-bottom: 80px;
+  }
 }
 .section-pt-272 {
   padding-top: 272px;
@@ -110,9 +130,16 @@
 .section-pt-bottom {
   padding-top: 130px;
   padding-bottom: 130px;
+  @media screen and (max-width: 1199.98px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
 .row-pb-130 {
   padding-bottom: 130px;
+  @media screen and (max-width: 1199.98px) {
+    padding-bottom: 80px;
+  }
 }
 .row-ptb {
   padding-top: 60px;
@@ -338,6 +365,7 @@
 
 .ms-130 {
   margin-left: 130px;
+
 }
 .social-icon {
   width: 52px;
@@ -409,6 +437,7 @@ hr {
     margin-left: auto;
   }
 }
+
 @media (max-width: 991.99px) {
   .container,
   .container1 {
@@ -469,8 +498,7 @@ hr {
   .container-md,
   .container-sm,
   .container-xl,
-  .container-xxl,
-  .container1 {
+  .container-xxl {
     max-width: 1638px;
     margin: auto;
   }
@@ -485,9 +513,22 @@ hr {
     padding-right: 40px;
   }
 }
+.containerCus {
+  margin-left: calc((100% - 1604px) / 2);
+  @media screen and (max-width: 1600px) {
+    margin-left: calc((100% - 94%) / 2);
+  }
+}
 .container1 {
   max-width: 1604px;
   margin: auto;
+}
+
+@media (max-width: 1600px) {
+  .container1 {
+    max-width: 94%;
+    margin: auto;
+  }
 }
 
 .container-1332 {

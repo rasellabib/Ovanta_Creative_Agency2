@@ -62,12 +62,12 @@
         transition: all 0.3s ease;
 
         .logo {
-          width: 80px;
-          height: 80px;
+          width: 80px !important;
+          height: 80px !important;
           transition: all 0.3s ease;
           @media screen and (max-width: 575.98px) {
-            width: 150px;
-            height: 60px;
+            width: 150px !important;
+            height: 60px !important;
           }
           svg {
             width: 100% !important;
@@ -83,8 +83,11 @@
         }
         .expert-content {
           transition: all 0.3s ease;
-          margin-left: 100px;
-          margin-right: 47px;
+          padding-left: 100px;
+          padding-right: 47px;
+          @media screen and (max-width: 1299.99px) {
+            padding-left: 10px;
+          }
           @media screen and (max-width: 767.99px) {
             margin-left: 0px;
             margin-right: 0px;
@@ -100,9 +103,8 @@
   }
 }
 
-.ExpertTitle{
+.ExpertTitle {
   @media screen and (max-width: 1199.98px) {
-   margin-bottom: 30px;
-    
+    margin-bottom: 30px;
   }
 }

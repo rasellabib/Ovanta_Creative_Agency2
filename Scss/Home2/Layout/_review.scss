@@ -1,9 +1,14 @@
 .review-sec {
   background-image: url("/Assets/images/review/bg.png");
   background-size: cover;
-
+  position: relative;
+  @media screen and (max-width: 1200.98px) {
+    padding-bottom: 130px;
+  }
   @media only screen and (max-width: 991.98px) {
     background-image: none;
+  }
+  @media screen {
   }
 }
 
@@ -13,12 +18,21 @@
   align-items: center;
   .title {
     width: 50%;
+    @media screen and (max-width: 1200.98px) {
+      width: 100%;
+    }
   }
   .left-right-arrow {
     display: flex;
     gap: 24px;
     align-items: center;
     transition: all 0.3s ease;
+    @media screen and (max-width: 1200.98px) {
+      position: absolute;
+      bottom: 130px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
     .arrow-divs {
       height: 60px;
       width: 60px;
@@ -59,22 +73,25 @@
 }
 
 .review-cards-sec {
-  top: 0;
-  left: 0;
   display: flex;
   gap: 28px;
-
-  position: relative;
-
+  /* position: relative; */
+  @media screen and (max-width: 991.98px) {
+    flex-wrap: wrap;
+  }
   .total-rate-card-up {
+    width: 160%;
     background-image: url("/Assets/images/Home2/review/cardbg.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 18px;
     overflow: hidden;
+    @media screen and (max-width: 1200.98px) {
+      width: 70%;
+    }
     .total-rate-card {
       background: rgba(15, 15, 15, 0.8);
-      width: 516px;
+      height: 100%;
       padding: 70px 30px 80px 30px;
       display: flex;
       gap: 47px;
@@ -92,8 +109,8 @@
   }
   .overflow {
     overflow: hidden;
-    position: absolute;
-    left: 40%;
+    /* position: absolute; */
+    /* left: 40%; */
     @media only screen and (max-width: 991.98px) {
     }
   }
@@ -160,36 +177,6 @@
     }
   }
 
-  // @media only screen and (max-width: 991.98px) {
-  //   flex-direction: column-reverse;
-  //   .total-rate-card-up {
-  //     .total-rate-card {
-  //       width: 100%;
-  //     }
-  //   }
-
-  //   .testimonial-card {
-  //     height: auto;
-  //     width: 100%;
-  //     padding: 15px;
-  //     .left-panel {
-  //       padding-left: 20px;
-  //     }
-  //     .right-panel {
-  //       .quote {
-  //         font-size: 30px;
-  //         line-height: 1;
-  //         color: #000;
-  //         margin-bottom: 0px;
-  //       }
-  //       .text {
-  //         font-size: 14px;
-  //         color: #333;
-  //         line-height: 1.3;
-  //       }
-  //     }
-  //   }
-  // }
   @media only screen and (max-width: 446.98px) {
     flex-direction: column-reverse;
     .total-rate-card-up {
@@ -207,4 +194,84 @@
 .slider1 {
   margin-right: 2px;
   flex-shrink: 0;
+}
+/* --- Responsive Enhancements (no style changes) --- */
+@media (max-width: 1200px) {
+  .review-cards-sec {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .testimonial-card {
+    width: 600px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .review-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .review-title .title {
+    width: 100%;
+  }
+  .review-title .left-right-arrow {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .review-cards-sec {
+    flex-direction: column;
+    align-items: center;
+  }
+  .total-rate-card-up .total-rate-card {
+    width: 100%;
+    max-width: 520px;
+  }
+  .testimonial-card {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    padding: 40px 30px;
+    flex-direction: column;
+  }
+  .testimonial-card .left-panel {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    border-left: none;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+    padding: 0 0 20px 0;
+    margin-bottom: 20px;
+  }
+  .testimonial-card .right-panel {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .total-rate-card-up .total-rate-card {
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .testimonial-card {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  .quote svg {
+    width: 40px;
+    height: 28px;
+  }
+  .p-28 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .total-rate-card-up .total-rate-card,
+  .testimonial-card {
+    width: 100%;
+    padding: 20px;
+  }
 }
