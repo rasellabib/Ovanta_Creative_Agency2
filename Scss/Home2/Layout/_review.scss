@@ -1,14 +1,291 @@
+// .review-sec {
+//   background-image: url("/Assets/images/review/bg.png");
+//   background-size: cover;
+//   position: relative;
+//   @media screen and (max-width: 1200.98px) {
+//     padding-bottom: 130px;
+//   }
+//   @media only screen and (max-width: 991.98px) {
+//     background-image: none;
+//   }
+//   @media screen {
+//   }
+// }
+
+// .review-title {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   .title {
+//     width: 50%;
+//     @media screen and (max-width: 1200.98px) {
+//       width: 100%;
+//     }
+//   }
+//   .left-right-arrow {
+//     display: flex;
+//     gap: 24px;
+//     align-items: center;
+//     transition: all 0.3s ease;
+//     @media screen and (max-width: 1200.98px) {
+//       position: absolute;
+//       bottom: 130px;
+//       left: 50%;
+//       transform: translateX(-50%);
+//     }
+//     .arrow-divs {
+//       height: 60px;
+//       width: 60px;
+//       border-radius: 999px;
+//       border: 2px solid rgba(15, 15, 15, 0.5);
+//       display: flex;
+//       justify-content: center;
+//       transition: all 0.3s ease;
+//       align-items: center;
+//       cursor: pointer;
+//       svg {
+//         path {
+//           fill: rgba(0, 0, 0, 0.25);
+//         }
+//       }
+//       &:hover {
+//         background: black;
+//         svg {
+//           path {
+//             fill: #ffffff;
+//           }
+//         }
+//       }
+//     }
+//   }
+//   @media screen and (max-width: 991.98px) {
+//     flex-direction: column;
+//     align-items: flex-start;
+//     .title {
+//       width: 100%;
+//     }
+//     .left-right-arrow {
+//       margin-top: 20px;
+//       width: 100%;
+//       justify-content: space-between;
+//     }
+//   }
+// }
+
+// .review-cards-sec {
+//   display: flex;
+//   gap: 28px;
+//   /* position: relative; */
+//   @media screen and (max-width: 991.98px) {
+//     flex-wrap: wrap;
+//   }
+//   .total-rate-card-up {
+//     width: 160%;
+//     background-image: url("/Assets/images/Home2/review/cardbg.jpg");
+//     background-size: cover;
+//     background-position: center;
+//     border-radius: 18px;
+//     overflow: hidden;
+//     @media screen and (max-width: 1200.98px) {
+//       width: 70%;
+//     }
+//     .total-rate-card {
+//       background: rgba(15, 15, 15, 0.8);
+//       height: 100%;
+//       padding: 70px 30px 80px 30px;
+//       display: flex;
+//       gap: 47px;
+//       flex-direction: column;
+//       align-items: center;
+//       h1 {
+//         color: white;
+//         margin-bottom: 11px;
+//       }
+//       .font-normal-20 {
+//         color: rgba(255, 255, 255, 0.5);
+//         margin-top: 5px;
+//       }
+//     }
+//   }
+//   .overflow {
+//     overflow: hidden;
+//     /* position: absolute; */
+//     /* left: 40%; */
+//     @media only screen and (max-width: 991.98px) {
+//     }
+//   }
+//   .testimonial {
+//     display: flex;
+//     gap: 28px;
+//     transition: transform 0.5s ease;
+//     will-change: transform;
+//   }
+//   .slider-track1 {
+//     display: flex;
+//     gap: 20px;
+//     transition: transform 0.6s ease-in-out;
+//     will-change: transform;
+//   }
+//   .testimonial-card {
+//     height: 494px;
+//     width: 788px;
+//     display: flex;
+//     background: #ffffff;
+//     border-radius: 12px;
+//     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+//     overflow: hidden;
+//     border: 1px solid #eee;
+//     padding: 50px;
+//     .left-panel {
+//       background: #ffffff;
+//       border-left: 2px solid #ddd;
+//       text-align: start;
+//       writing-mode: vertical-rl;
+//       margin: 0;
+//       transform: rotate(180deg);
+//       flex-shrink: 0;
+//       padding-left: 50px;
+//       p {
+//         margin: 0;
+//       }
+//       .p-36 {
+//         margin-left: 18px !important;
+//       }
+//     }
+
+//     .right-panel {
+//       padding-left: 50px;
+//       flex: 1;
+//       .quote {
+//         font-size: 40px;
+//         line-height: 1;
+//         color: #000;
+//         margin-bottom: 22px;
+//       }
+
+//       .text {
+//         font-size: 16px;
+//         color: #333;
+//         line-height: 1.6;
+//       }
+
+//       .stars {
+//         color: #f1c40f;
+//         font-size: 20px;
+//         margin-top: 40px;
+//       }
+//     }
+//   }
+
+//   @media only screen and (max-width: 446.98px) {
+//     flex-direction: column-reverse;
+//     .total-rate-card-up {
+//       .total-rate-card {
+//         width: 405px;
+//       }
+//     }
+
+//     .testimonial-card {
+//       width: 405px;
+//     }
+//   }
+// }
+
+// .slider1 {
+//   margin-right: 2px;
+//   flex-shrink: 0;
+// }
+// /* --- Responsive Enhancements (no style changes) --- */
+// @media (max-width: 1200px) {
+//   .review-cards-sec {
+//     flex-wrap: wrap;
+//     justify-content: center;
+//   }
+//   .testimonial-card {
+//     width: 600px;
+//     padding: 40px;
+//   }
+// }
+
+// @media (max-width: 991.98px) {
+//   .review-title {
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
+//   .review-title .title {
+//     width: 100%;
+//   }
+//   .review-title .left-right-arrow {
+//     margin-top: 20px;
+//     width: 100%;
+//     justify-content: space-between;
+//   }
+
+//   .review-cards-sec {
+//     flex-direction: column;
+//     align-items: center;
+//   }
+//   .total-rate-card-up .total-rate-card {
+//     width: 100%;
+//     max-width: 520px;
+//   }
+//   .testimonial-card {
+//     width: 100%;
+//     max-width: 520px;
+//     height: auto;
+//     padding: 40px 30px;
+//     flex-direction: column;
+//   }
+//   .testimonial-card .left-panel {
+//     writing-mode: horizontal-tb;
+//     transform: rotate(0deg);
+//     border-left: none;
+//     border-bottom: 2px solid #ddd;
+//     text-align: center;
+//     padding: 0 0 20px 0;
+//     margin-bottom: 20px;
+//   }
+//   .testimonial-card .right-panel {
+//     padding-left: 0;
+//   }
+// }
+
+// @media (max-width: 575.98px) {
+//   .total-rate-card-up .total-rate-card {
+//     width: 100%;
+//     padding: 50px 20px;
+//   }
+//   .testimonial-card {
+//     width: 100%;
+//     padding: 30px 20px;
+//   }
+//   .quote svg {
+//     width: 40px;
+//     height: 28px;
+//   }
+//   .p-28 {
+//     font-size: 18px;
+//   }
+// }
+
+// @media (max-width: 400px) {
+//   .total-rate-card-up .total-rate-card,
+//   .testimonial-card {
+//     width: 100%;
+//     padding: 20px;
+//   }
+// }
+
+/* --- START: Enhanced Responsive Styles --- */
+
 .review-sec {
   background-image: url("/Assets/images/review/bg.png");
   background-size: cover;
-  position: relative;
-  @media screen and (max-width: 1200.98px) {
-    padding-bottom: 130px;
-  }
-  @media only screen and (max-width: 991.98px) {
+}
+
+@media only screen and (max-width: 991.98px) {
+  .review-sec {
     background-image: none;
-  }
-  @media screen {
   }
 }
 
@@ -18,21 +295,12 @@
   align-items: center;
   .title {
     width: 50%;
-    @media screen and (max-width: 1200.98px) {
-      width: 100%;
-    }
   }
   .left-right-arrow {
     display: flex;
     gap: 24px;
     align-items: center;
     transition: all 0.3s ease;
-    @media screen and (max-width: 1200.98px) {
-      position: absolute;
-      bottom: 130px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
     .arrow-divs {
       height: 60px;
       width: 60px;
@@ -74,21 +342,33 @@
 
 .review-cards-sec {
   display: flex;
-  gap: 28px;
-  /* position: relative; */
+  gap: 36px;
+
+  /* New transitional breakpoint for fluidity on wider screens */
+  @media screen and (max-width: 1300px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   @media screen and (max-width: 991.98px) {
     flex-wrap: wrap;
   }
+
   .total-rate-card-up {
-    width: 160%;
+    /* Adjusted for better fluidity and constraint on large screens */
+    width: clamp(300px, 30%, 520px);
     background-image: url("/Assets/images/Home2/review/cardbg.jpg");
     background-size: cover;
     background-position: center;
     border-radius: 18px;
     overflow: hidden;
+
     @media screen and (max-width: 1200.98px) {
-      width: 70%;
+      /* Fallback and control for medium screens */
+      width: 100%;
+      max-width: 520px;
     }
+
     .total-rate-card {
       background: rgba(15, 15, 15, 0.8);
       height: 100%;
@@ -107,13 +387,13 @@
       }
     }
   }
+
   .overflow {
     overflow: hidden;
-    /* position: absolute; */
-    /* left: 40%; */
-    @media only screen and (max-width: 991.98px) {
-    }
+    flex-grow: 1; /* Allows it to take up remaining horizontal space */
+    max-width: 100%;
   }
+
   .testimonial {
     display: flex;
     gap: 28px;
@@ -128,7 +408,9 @@
   }
   .testimonial-card {
     height: 494px;
-    width: 788px;
+    min-width: 300px;
+    width: 68%;
+    max-width: 788px;
     display: flex;
     background: #ffffff;
     border-radius: 12px;
@@ -136,6 +418,7 @@
     overflow: hidden;
     border: 1px solid #eee;
     padding: 50px;
+   
     .left-panel {
       background: #ffffff;
       border-left: 2px solid #ddd;
@@ -145,11 +428,15 @@
       transform: rotate(180deg);
       flex-shrink: 0;
       padding-left: 50px;
+
       p {
         margin: 0;
       }
       .p-36 {
         margin-left: 18px !important;
+      }
+      @media screen and (max-width: 1199.98px) {
+        padding-left: 20px;
       }
     }
 
@@ -174,19 +461,23 @@
         font-size: 20px;
         margin-top: 40px;
       }
+      @media screen and (max-width: 1199.98px) {
+        
+      }
     }
   }
 
   @media only screen and (max-width: 446.98px) {
     flex-direction: column-reverse;
     .total-rate-card-up {
+      width: 100%;
       .total-rate-card {
-        width: 405px;
+        width: 100%;
       }
     }
 
     .testimonial-card {
-      width: 405px;
+      width: 100%;
     }
   }
 }
@@ -195,7 +486,8 @@
   margin-right: 2px;
   flex-shrink: 0;
 }
-/* --- Responsive Enhancements (no style changes) --- */
+
+/* --- Original Responsive Enhancements (Maintained) --- */
 @media (max-width: 1200px) {
   .review-cards-sec {
     flex-wrap: wrap;
@@ -209,7 +501,6 @@
 
 @media (max-width: 991.98px) {
   .review-title {
-    flex-direction: column;
     align-items: flex-start;
   }
   .review-title .title {
@@ -235,18 +526,6 @@
     height: auto;
     padding: 40px 30px;
     flex-direction: column;
-  }
-  .testimonial-card .left-panel {
-    writing-mode: horizontal-tb;
-    transform: rotate(0deg);
-    border-left: none;
-    border-bottom: 2px solid #ddd;
-    text-align: center;
-    padding: 0 0 20px 0;
-    margin-bottom: 20px;
-  }
-  .testimonial-card .right-panel {
-    padding-left: 0;
   }
 }
 
@@ -275,3 +554,67 @@
     padding: 20px;
   }
 }
+/* --- END: Enhanced Responsive Styles --- */
+
+/* ======= Large-screen width fixes (add at end of your existing styles) ======= */
+@media (min-width: 1200px) {
+  /* Make the total-rate card wider on large & up screens without changing look */
+  .review-cards-sec .total-rate-card-up {
+    /* increase max width and give a slightly larger flexible basis */
+    width: clamp(420px, 34%, 780px);
+    max-width: 780px;
+  }
+
+  /* Give the inner card a little more horizontal padding so content breathes */
+  .review-cards-sec .total-rate-card {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  /* Make testimonial cards wider / more prominent on large screens */
+  .review-cards-sec .testimonial-card {
+    min-width: 440px; /* ensures each testimonial is visibly wider */
+    width: 56%; /* allow it to take more horizontal space in the slider */
+    max-width: 860px; /* avoid runaway stretching */
+    padding: 50px; /* keep visual balance (matches your existing padding style) */
+  }
+
+  /* Slightly increase gap between cards so layout looks balanced on wide displays */
+  .review-cards-sec .testimonial,
+  .review-cards-sec .slider-track1 {
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .review-cards-sec .total-rate-card-up {
+    width: 150%;
+    max-width: 920px;
+  }
+  .review-cards-sec .testimonial-card {
+    min-width: 800px;
+    width: 54%;
+    max-width: 980px;
+  }
+  .review-cards-sec .testimonial,
+  .review-cards-sec .slider-track1 {
+    gap: 36px;
+  }
+}
+/* Extra-large screens (very wide monitors) — give even more space */
+@media (min-width: 1600px) {
+  .review-cards-sec .total-rate-card-up {
+    width: 130%;
+    max-width: 920px;
+  }
+  .review-cards-sec .testimonial-card {
+    min-width: 800px;
+    width: 54%;
+    max-width: 980px;
+  }
+  .review-cards-sec .testimonial,
+  .review-cards-sec .slider-track1 {
+    gap: 36px;
+  }
+}
+/* ======= end overrides ======= */
