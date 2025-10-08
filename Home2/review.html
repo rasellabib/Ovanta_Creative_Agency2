@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,23 +11,24 @@
       crossorigin="anonymous"
     />
 
-    <!-- Bootstrap Icons -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
       rel="stylesheet"
     />
 
-    <!-- Custom CSS -->
-
     <link rel="stylesheet" href="/dist/style.css" />
 
     <title>Digital Agency</title>
     <style>
+      /* --- START: Enhanced Responsive Styles --- */
+
       .review-sec {
         background-image: url("/Assets/images/review/bg.png");
         background-size: cover;
+      }
 
-        @media only screen and (max-width: 991.98px) {
+      @media only screen and (max-width: 991.98px) {
+        .review-sec {
           background-image: none;
         }
       }
@@ -87,20 +87,32 @@
       .review-cards-sec {
         display: flex;
         gap: 28px;
-        /* position: relative; */
+        
+        /* New transitional breakpoint for fluidity on wider screens */
+        @media screen and (max-width: 1300px) { 
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         @media screen and (max-width: 991.98px) {
           flex-wrap: wrap;
         }
+
         .total-rate-card-up {
-          width: 160%;
+          /* Adjusted for better fluidity and constraint on large screens */
+          width: clamp(300px, 30%, 520px); 
           background-image: url("/Assets/images/Home2/review/cardbg.jpg");
           background-size: cover;
           background-position: center;
           border-radius: 18px;
           overflow: hidden;
+
           @media screen and (max-width: 1200.98px) {
-            width: 70%;
+            /* Fallback and control for medium screens */
+            width: 100%;
+            max-width: 520px;
           }
+
           .total-rate-card {
             background: rgba(15, 15, 15, 0.8);
             height: 100%;
@@ -119,13 +131,13 @@
             }
           }
         }
+        
         .overflow {
           overflow: hidden;
-          /* position: absolute; */
-          /* left: 40%; */
-          @media only screen and (max-width: 991.98px) {
-          }
+          flex-grow: 1; /* Allows it to take up remaining horizontal space */
+          max-width: 100%;
         }
+
         .testimonial {
           display: flex;
           gap: 28px;
@@ -140,7 +152,11 @@
         }
         .testimonial-card {
           height: 494px;
-          width: 788px;
+          /* Adjusted for better fluidity on all screens */
+          min-width: 300px;
+          width: 48%; 
+          max-width: 788px;
+          
           display: flex;
           background: #ffffff;
           border-radius: 12px;
@@ -192,13 +208,14 @@
         @media only screen and (max-width: 446.98px) {
           flex-direction: column-reverse;
           .total-rate-card-up {
+            width: 100%;
             .total-rate-card {
-              width: 405px;
+              width: 100%;
             }
           }
 
           .testimonial-card {
-            width: 405px;
+            width: 100%;
           }
         }
       }
@@ -207,7 +224,8 @@
         margin-right: 2px;
         flex-shrink: 0;
       }
-      /* --- Responsive Enhancements (no style changes) --- */
+      
+      /* --- Original Responsive Enhancements (Maintained) --- */
       @media (max-width: 1200px) {
         .review-cards-sec {
           flex-wrap: wrap;
@@ -287,10 +305,10 @@
           padding: 20px;
         }
       }
+       /* --- END: Enhanced Responsive Styles --- */
     </style>
   </head>
   <body>
-    <!-- Review -->
     <section>
       <div class="review-sec section-pt">
         <div class="container1">
@@ -528,11 +546,6 @@
         </div>
       </div>
     </section>
-    <!-- News & Blogs -->
-
-    <!-- footer  -->
-
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
@@ -549,7 +562,7 @@
       function getTranslateX() {
         let translateX = 0;
         for (let i = 0; i < currentIndex; i++) {
-          translateX += items1[i].offsetWidth + 20; // include margin-right
+          translateX += items1[i].offsetWidth + 20; // include margin-right (gap is 20px)
         }
         return translateX;
       }
@@ -560,6 +573,7 @@
       }
 
       next1.addEventListener("click", () => {
+        // Check if there are more items to the right to prevent going into empty space
         if (currentIndex < items1.length - 1) {
           currentIndex++;
           updateSlider1();
@@ -567,6 +581,7 @@
       });
 
       prev1.addEventListener("click", () => {
+        // Check if index is greater than 0 to prevent going into empty space
         if (currentIndex > 0) {
           currentIndex--;
           updateSlider1();
@@ -574,9 +589,11 @@
       });
 
       window.addEventListener("resize", () => {
-        updateSlider1(); // adjust on resize
+        // Recalculate and adjust slider position on resize
+        updateSlider1(); 
       });
 
+      // Initial call to set correct position
       updateSlider1();
     </script>
   </body>

@@ -32,11 +32,17 @@
     }
     .success-img-cont {
       width: 50%;
+      @media screen and (max-width: 767.98px) {
+        width: 100%;
+      }
       img {
         height: 700px;
         width: 100%;
         object-fit: cover;
         border-radius: 18px;
+        @media screen and (max-width: 767.98px) {
+          height: 500px;
+        }
       }
     }
   }
@@ -51,8 +57,9 @@
   @media screen and (max-width: 1199.98px) {
     padding-left: 20px;
   }
-  @media screen and (max-width: 991.98px) {
-    padding-left: 15px;
+  @media screen and (max-width: 767.98px) {
+    width: 100%;
+    padding: 0;
   }
 }
 .success-img-div .success-img-cont:nth-child(2) {
@@ -60,7 +67,8 @@
   @media screen and (max-width: 1199.98px) {
     padding-right: 20px;
   }
-  @media screen and (max-width: 991.98px) {
-    padding-right: 15px;
+  @media screen and (max-width: 767.98px) {
+    width: 100%;
+    padding: 0;
   }
 }
