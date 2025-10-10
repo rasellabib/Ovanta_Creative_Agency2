@@ -1,13 +1,22 @@
-.nav1 {
-  top: 30px;
-  width: 100%;
+.nav-sec {
+  .nav1 {
+    top: 30px;
+  }
+  @media screen and (max-width: 767.98px) {
+    .nav1 {
+      width: 100%;
+    }
+    .container {
+      width: 0%;
+    }
+  }
 }
 .nav-wrap {
   width: 80%;
   display: flex;
   justify-content: flex-end; /* right align */
-  .dropdown{
-    .btn{
+  .dropdown {
+    .btn {
       border: none !important;
     }
   }
@@ -35,6 +44,9 @@
 /* expanded */
 .nav-pill.expanded {
   width: 80%; /* expand width */
+  @media screen and (max-width: 1599.98px) {
+    width: 100%; /* full width on small screens */
+  }
 }
 
 /* nav items hidden initially */
@@ -74,6 +86,8 @@
   cursor: pointer;
   transition: transform 0.3s ease;
   flex: 0 0 46px;
+  data-bs-toggle: "offcanvas";
+  data-bs-target: "#offcanvasMenu";
 }
 .nav-pill.expanded .menu-toggle {
   transform: rotate(45deg);

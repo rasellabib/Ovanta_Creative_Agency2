@@ -51,8 +51,8 @@
     </div>
     <div id="app" aria-hidden="true" class="position-reletive gradual-section">
       <div id="cursor"></div>
-      <section>
-        <nav class="fixed-top container rounded-pill nav1">
+      <section class="nav-sec">
+        <nav class="fixed-top rounded-pill nav1 container">
           <div class="In-nav d-flex justify-content-between align-items-center">
             <div class="logo-section">
               <a class="navbar-brand p-0" href="/">
@@ -165,7 +165,7 @@
 
                 <!-- right side buttons -->
                 <button
-                  class="menu-toggle"
+                  class="menu-toggle d-none d-xl-block"
                   id="toggleBtn"
                   aria-expanded="false"
                 >
@@ -185,7 +185,29 @@
                     />
                   </svg>
                 </button>
-
+                <button
+                  class="menu-toggle d-xl-none"
+                  id="toggleBtn"
+                  aria-expanded="false"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasMenu"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 5v14M5 12h14"
+                      stroke="#111"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
                 <div class="contact-pill">
                   <button type="submit" class="button-btn btn margin-sm-auto">
                     <p class="p-18 fw-bold">Let's Talk</p>
@@ -204,6 +226,55 @@
             </div>
           </div>
         </nav>
+        <!-- Menu Drawer -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Navigation</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div
+            class="offcanvas-body d-flex p-4 flex-column justify-content-between"
+          >
+            <ul class="nav-items1 nav flex-column gap-2">
+              <li class="">
+                <a class="nav-link p-18 fw-bold" href="/index.html">Home</a>
+              </li>
+              <li class="">
+                <a class="nav-link p-18 fw-bold" href="/Pages/AboutUs.html"
+                  >About</a
+                >
+              </li>
+              <li class="">
+                <a
+                  class="nav-link p-18 fw-bold"
+                  href="/Pages/PortfolioGrid.html"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="">
+                <a class="nav-link p-18 fw-bold" href="/Pages/PricingPlan.html"
+                  >Pricing</a
+                >
+              </li>
+              <li class="">
+                <a class="nav-link p-18 fw-bold" href="/Pages/Service.html"
+                  >Service</a
+                >
+              </li>
+              <li class="">
+                <a class="nav-link p-18 fw-bold" href="/Pages/OurTeam.html"
+                  >Our Team</a
+                >
+              </li>
+            </ul>
+
+            <div class="text-muted small text-center">© 2024 Labib Rasel</div>
+          </div>
+        </div>
       </section>
 
       <!-- hero -->
@@ -342,49 +413,52 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section class="hero-logo-sec">
+        <div class="container hero-logo section-pb">
+          <div id="LogoImage" class="d-flex justify-content-center">
+            <!-- 1st column (no left border) -->
+            <div id="logoImage" class="LogoImage">
+              <img src="/Assets/images/about-company/Logo-1.png" alt="Logo 1" />
+            </div>
 
-            <div class="companys-logo section-pt" id="logoWrapper">
-              <div class="row logo-track" id="logoTrack">
-                <div
-                  class="logo-track-div col-lg-2 col-md-4 col-md-6"
-                  id="logoTrackDiv"
-                >
-                  <img src="/Assets/images/about-company/Logo-1.png" alt="" />
-                </div>
-                <div
-                  class="logo-track-div col-lg-2 col-md-4 col-md-6"
-                  id="logoTrackDiv"
-                >
-                  <img src="/Assets/images/about-company/logo-29.png" alt="" />
-                </div>
-                <div
-                  class="logo-track-div col-lg-2 col-md-4 col-md-6"
-                  id="logoTrackDiv"
-                >
-                  <img
-                    src="/Assets/images/about-company/logoipsum-256 1.png"
-                    alt=""
-                  />
-                </div>
-                <div
-                  class="logo-track-div col-lg-2 col-md-4 col-md-6"
-                  id="logoTrackDiv"
-                >
-                  <img src="/Assets/images/about-company/logo-31.png" alt="" />
-                </div>
-                <div
-                  class="logo-track-div col-lg-2 col-md-4 col-md-6"
-                  id="logoTrackDiv"
-                >
-                  <img src="/Assets/images/about-company/logo-64.png" alt="" />
-                </div>
-                <div
-                  class="logo-track-div col-lg-2 col-md-4 col-md-6"
-                  id="logoTrackDiv"
-                >
-                  <img src="/Assets/images/about-company/Logo-1.png" alt="" />
-                </div>
-              </div>
+            <!-- 2nd column -->
+            <div id="logoImage1" class="LogoImage">
+              <img
+                src="/Assets/images/about-company/logo-29.png"
+                alt="Logo 2"
+              />
+            </div>
+
+            <!-- 3rd column -->
+            <div id="logoImage2" class="LogoImage">
+              <img
+                src="/Assets/images/about-company/logo-31.png"
+                alt="Logo 3"
+              />
+            </div>
+
+            <!-- 4th column -->
+            <div id="logoImage3" class="LogoImage">
+              <img
+                src="/Assets/images/about-company/logo-64.png"
+                alt="Logo 4"
+              />
+            </div>
+
+            <!-- 5th column -->
+            <div id="logoImage4" class="LogoImage">
+              <img
+                src="/Assets/images/about-company/logoipsum-256 1.png"
+                alt="Logo 5"
+              />
+            </div>
+
+            <!-- 6th column -->
+            <div id="logoImage5" class="LogoImage">
+              <img src="/Assets/images/about-company/Logo.png" alt="Logo 6" />
             </div>
           </div>
         </div>
@@ -1538,7 +1612,7 @@
       <footer>
         <div class="footer-bg">
           <div class="bg">
-            <div class="container">
+            <div class="container1">
               <div class="section-pt row-pb">
                 <div class="footer-top-content">
                   <div class="row">
@@ -1590,7 +1664,7 @@
                         class="mb-3"
                       />
                     </div>
-                    <div class="row">
+                    <div class="row footer-down-content">
                       <div class="col-9">
                         <p class="p-20 mr-20">
                           Creative design agency specializes In Innovative
@@ -1600,12 +1674,12 @@
                     </div>
                     <a
                       href="mailto:Info@example.com"
-                      class="text-decoration-underline d-inline-block mt-2"
+                      class="text-decoration-underline d-inline-block mt-2 mail"
                       >Info@example.com</a
                     >
                   </div>
                   <!-- Quick Links -->
-                  <div class="col-md-6 col-lg-2">
+                  <div class="col-md-6 col-lg-2 QuickLinks">
                     <h4 class="mb-28 p-24 line-height-0">Quick Links</h4>
                     <ul class="list-unstyled">
                       <li class="mb-12">
@@ -1640,7 +1714,9 @@
                   </div>
 
                   <!-- Support -->
-                  <div class="col-md-6 col-lg-2 offset-1">
+                  <div
+                    class="col-md-6 col-lg-2 offset-xl-1 offset-md-0 Support"
+                  >
                     <h4 class="mb-28 p-24 line-height-0">Support</h4>
                     <ul class="list-unstyled">
                       <li class="mb-12">
@@ -1666,7 +1742,7 @@
                     </ul>
                   </div>
                   <!-- Contact Info -->
-                  <div class="col-md-6 col-lg-2">
+                  <div class="col-md-6 col-lg-2 ContactInfo">
                     <h4 class="p-24">Contact US</h4>
 
                     <div class="footer-contact">
@@ -1734,7 +1810,6 @@
     <script src="./js/textAnimetionGsap.js"></script>
     <script src="./js/footerGsap.js"></script>
     <script src="./js/Nav.js"></script>
-
     <script src="./js/CircularText.js"></script>
     <script src="./js/text.js"></script>
     <script src="./js/Cursor.js"></script>

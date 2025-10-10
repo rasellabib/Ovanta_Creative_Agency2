@@ -289,3 +289,41 @@ img {
   opacity: 1;
   visibility: visible;
 }
+
+.hero-logo-sec {
+  .hero-logo {
+  }
+  @media screen and (max-width: 767px) {
+    .pt-150 {
+      padding-top: 0;
+    }
+  }
+}
+.LogoImage {
+  padding: 75px 90px;
+  border-right: gray solid 1px;
+  border-top: gray solid 1px;
+  border-bottom: gray solid 1px;
+  @media screen and (max-width: 1199.98px) {
+    padding: 60px 50px;
+    img {
+      width: 100px;
+    }
+    
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 50px 30px;
+    img {
+      width: 80px;
+    }
+  }
+  @media screen and (max-width: 767.99px) {
+    padding: 30px 20px;
+    img {
+      width: 50px;
+    }
+  }
+}
+.LogoImage:first-child {
+  border-left: gray solid 1px;
+}

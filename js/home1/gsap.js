@@ -34,27 +34,42 @@ document.querySelectorAll(".menu-item").forEach((item) => {
 });
 gsap.registerPlugin(ScrollTrigger);
 
+var tl = gsap.timeline();
 
-// var tl = gsap.timeline();
+tl.from("nav", {
+  y: -100,
+  opacity: 0,
+  ease: "power2.out",
+  //   scale: 0.4,
+  duration: 0.8,
+});
 
-// tl.from("nav", {
-//   y: -100,
-//   opacity: 0,
-//   ease: "power2.out",
-//   //   scale: 0.4,
-//   duration: 0.8,
-// });
+tl.from("#hero-content, #hero-content2, .hero-button", {
+  y: 100,
+  opacity: 0,
+  duration: 0.3,
+  ease: "power3",
+  stagger: 0,
+  duration: 0.8,
+});
 
-// tl.from("#hero-content, #hero-content2, .hero-button, .hero-logo", {
-//   y: 100,
-//   opacity: 0,
-//   duration: 0.3,
-//   ease: "power3",
-//   stagger: 0,
-//   duration: 0.8,
-// });
+var logo = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".hero-logo",
+    scroller: "body",
+    start: "top 60%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
 
-
+logo.from(".hero-logo", {
+  y: -100,
+  opacity: 0,
+  ease: "power2.out",
+  //   scale: 0.4,
+  duration: 0.8,
+});
 
 const tl2 = gsap.timeline({
   scrollTrigger: {
@@ -69,7 +84,7 @@ tl2.from(".hero-down", {
   y: 100,
   opacity: 0,
   stagger: 0.1,
-  duration: 0.8,
+  duration: 1,
 });
 
 const tl3 = gsap.timeline({
@@ -96,24 +111,10 @@ const testimonialDiv = gsap.timeline({
     // markers: true,
   },
 });
-testimonialDiv.from(".testimonial-div", {
+testimonialDiv.from(".testimonial-div .clients, .testimonial-div  .content", {
   opacity: 0,
 });
-const testimonialClients = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".testimonial",
-    scroller: "body",
-    start: "top 58%",
-    toggleActions: "play none none reverse",
-    // markers: true,
-  },
-});
-testimonialClients.from(".clients", {
-  y: 100,
-  x: -40,
-  opacity: 0,
-  stagger: 0.2,
-});
+
 const testimonialContent = gsap.timeline({
   scrollTrigger: {
     trigger: ".testimonial",
