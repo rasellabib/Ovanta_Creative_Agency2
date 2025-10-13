@@ -261,28 +261,27 @@ const review = gsap.timeline({
     // markers: true,
   },
 });
-review.from(" .circle-div", {
-  x: -100,
+review.from(" .circle-div, .review1-content-div", {
+  y: 100,
   opacity: 0,
-  stagger: 0,
-  duration: 0.8,
+  stagger: 0.5,
 });
 
-const review1 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".review1",
-    scroller: "body",
-    start: "top 60%",
-    toggleActions: "play none none reverse",
-    // markers: true,
-  },
-});
-review1.from(" .review1-content-div", {
-  x: 100,
-  opacity: 0,
-  stagger: 0,
-  duration: 0.8,
-});
+// const review1 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".review1",
+//     scroller: "body",
+//     start: "top 60%",
+//     toggleActions: "play none none reverse",
+//     // markers: true,
+//   },
+// });
+// review1.from(" .review1-content-div", {
+//   x: 100,
+//   opacity: 0,
+//   stagger: 0,
+//   duration: 0.8,
+// });
 
 const award = gsap.timeline({
   scrollTrigger: {
@@ -294,7 +293,7 @@ const award = gsap.timeline({
   },
 });
 award.from(" .award .title, .award .mt-40", {
-  x: 100,
+  y: 100,
   opacity: 0,
   stagger: 0,
   duration: 1,
@@ -312,7 +311,7 @@ const QA = gsap.timeline({
 QA.from(" .qa-section .title-div, .qa-section .accordions", {
   y: 100,
   opacity: 0,
-  stagger: 0,
+  stagger: 0.5,
   duration: 1,
 });
 const blogsImg = gsap.timeline({
@@ -353,7 +352,7 @@ blogs.from(".blogs .h-300px, .blogs .blog-content", {
 //     scroller: "body",
 //     start: "top 60%",
 //     toggleActions: "play none none reverse",
-    // markers: true,
+// markers: true,
 //   },
 // });
 // footer.from(".footer-bg .bg", {
@@ -363,10 +362,4 @@ blogs.from(".blogs .h-300px, .blogs .blog-content", {
 //   duration: 0.41,
 // });
 
-
-
-
-
-
 // =====================================================================home 1========================================================================================
-
