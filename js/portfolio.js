@@ -1,3 +1,7 @@
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 const portfolioContent = gsap.timeline({
   scrollTrigger: {
     trigger: ".portfolio-content",

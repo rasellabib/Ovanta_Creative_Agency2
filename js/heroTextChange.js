@@ -1,3 +1,7 @@
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 const staticWord = "Creative"; // স্থায়ী শব্দ
 const texts = ["Design", "Arts", "!"]; // পরিবর্তনশীল অংশ
 

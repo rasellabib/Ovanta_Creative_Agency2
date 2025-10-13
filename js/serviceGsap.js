@@ -1,3 +1,7 @@
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 function findClosestEdge(mouseX, mouseY, width, height) {
   const topEdgeDist = Math.pow(mouseX - width / 2, 2) + Math.pow(mouseY, 2);
   const bottomEdgeDist =

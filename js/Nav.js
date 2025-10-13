@@ -74,7 +74,10 @@
 //     gsap.set(outer, { width: COLLAPSED_W + "px" });
 //   }
 // });
-
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 const nav = document.getElementById("mainNav");
 const toggle = document.getElementById("toggleBtn");
 

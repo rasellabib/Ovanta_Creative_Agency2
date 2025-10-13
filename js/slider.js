@@ -1,3 +1,7 @@
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 const track = document.querySelector(".project-track");
 const slides = Array.from(document.querySelectorAll(".project-img-div"));
 const prevArrow = document.getElementById("prevArrow");

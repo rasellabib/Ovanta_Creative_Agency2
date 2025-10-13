@@ -1,3 +1,11 @@
+gsap.registerPlugin(ScrollTrigger);
+
+
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
+
+
 function findClosestEdge(mouseX, mouseY, width, height) {
   const topEdgeDist = Math.pow(mouseX - width / 2, 2) + Math.pow(mouseY, 2);
   const bottomEdgeDist =
@@ -32,7 +40,6 @@ document.querySelectorAll(".menu-item").forEach((item) => {
     gsap.to(marquee, { y: edge === "top" ? "-101%" : "101%", ...animDefaults });
   });
 });
-gsap.registerPlugin(ScrollTrigger);
 
 var tl = gsap.timeline();
 
@@ -59,7 +66,7 @@ var logo = gsap.timeline({
     scroller: "body",
     start: "top 60%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 
@@ -195,4 +202,36 @@ PricingCard.from(" .pricing-card", {
   opacity: 0,
   stagger: 0.1,
   duration: 0.5,
+});
+
+const team = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".team",
+    scroller: "body",
+    start: "top 60%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+team.from(".title-section .section-title-div, .title-section h5", {
+  y: 100,
+  opacity: 0,
+  stagger: 0.2,
+  duration: 1,
+});
+
+const teamCard = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".team",
+    scroller: "body",
+    start: "top 58%",
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+});
+teamCard.from(".card-section .col-md-6", {
+  y: 100,
+  opacity: 0,
+  stagger: 0.2,
+  duration: 0.8,
 });

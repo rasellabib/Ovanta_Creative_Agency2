@@ -1,3 +1,7 @@
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 function updateAllTexts() {
   const elements = document.querySelectorAll(".responsiveText");
   const width = window.innerWidth;

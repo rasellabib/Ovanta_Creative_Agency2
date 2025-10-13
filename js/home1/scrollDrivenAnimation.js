@@ -1,3 +1,7 @@
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 const texts = ["LATEST PROJECTS ", "Scroll Down"];
 const rows = document.querySelectorAll(".parallax-row");
 

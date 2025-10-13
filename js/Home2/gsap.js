@@ -1,4 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 
 var nav = gsap.timeline();
 var pageTitle = gsap.timeline();
@@ -441,40 +444,6 @@ NewsBlogsCard2.from(".card-div .blogs-card2", {
   x: 100,
   opacity: 0,
   duration: 0.9,
-});
-
-const team = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".team",
-    scroller: "body",
-    start: "top 60%",
-    toggleActions: "play none none reverse",
-    // markers: true,
-  },
-});
-team.from(".title-section", {
-  y: 100,
-  x: 40,
-  opacity: 0,
-  stagger: 0.2,
-  duration: 0.8,
-});
-
-const teamCard = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".team",
-    scroller: "body",
-    start: "top 58%",
-    toggleActions: "play none none reverse",
-    // markers: true,
-  },
-});
-teamCard.from(".card-section", {
-  y: 100,
-  x: -40,
-  opacity: 0,
-  stagger: 0.2,
-  duration: 0.8,
 });
 
 gsap.utils.toArray(".row .col-lg-4").forEach((row) => {

@@ -1,6 +1,8 @@
 // script.js
 gsap.registerPlugin(ScrollTrigger);
-
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 // basic fade/slide in for each card
 const cards = gsap.utils.toArray(".project-card");
 

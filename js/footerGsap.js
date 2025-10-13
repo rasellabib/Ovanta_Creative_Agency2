@@ -1,3 +1,9 @@
+gsap.registerPlugin(ScrollTrigger);
+
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
+
 const footerHeading = gsap.timeline({
   scrollTrigger: {
     trigger: "footer ",

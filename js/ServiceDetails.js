@@ -1,3 +1,7 @@
+gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 const items = document.querySelectorAll(".faq-item");
 
 items.forEach((item) => {
@@ -25,4 +29,3 @@ items.forEach((item) => {
     }
   });
 });
-
