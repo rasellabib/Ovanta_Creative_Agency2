@@ -1,8 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-window.addEventListener("load", () => {
-  ScrollTrigger.refresh();
-});
+
 const CURVE_FUNCTIONS = {
   linear: (p) => p,
   bezier: (p) => p * p * (3 - 2 * p),

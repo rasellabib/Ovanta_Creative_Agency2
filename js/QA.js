@@ -1,7 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-window.addEventListener("load", () => {
-  ScrollTrigger.refresh();
-});
+
 document.querySelectorAll(".accordion-button").forEach((button) => {
   button.addEventListener("click", () => {
     const item = button.closest(".accordion-item");

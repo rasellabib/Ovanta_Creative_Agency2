@@ -1,7 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-window.addEventListener("load", () => {
-  ScrollTrigger.refresh();
-});
+
 document.addEventListener("DOMContentLoaded", () => {
   const els = Array.from(
     document.querySelectorAll(".animated-textW, .animated-text")

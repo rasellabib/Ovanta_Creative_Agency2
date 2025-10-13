@@ -1,7 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-window.addEventListener("load", () => {
-  ScrollTrigger.refresh();
-});
+
 const track1 = document.querySelector(".slider-track1");
 const items1 = document.querySelectorAll(".slider1");
 const prev1 = document.getElementById("prevArrow1");

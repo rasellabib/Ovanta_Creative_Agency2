@@ -1,8 +1,6 @@
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger);
-window.addEventListener("load", () => {
-  ScrollTrigger.refresh();
-});
+
 var timeline = gsap.timeline({});
 
 document.fonts.ready.then(() => {

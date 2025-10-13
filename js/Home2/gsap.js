@@ -1,7 +1,4 @@
-gsap.registerPlugin(ScrollTrigger);
-window.addEventListener("load", () => {
-  ScrollTrigger.refresh();
-});
+
 
 var nav = gsap.timeline();
 var pageTitle = gsap.timeline();
