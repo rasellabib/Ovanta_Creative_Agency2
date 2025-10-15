@@ -179,7 +179,7 @@ const project = gsap.timeline({
     scroller: "body",
     start: "top 70%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 project.from(".project-image", {
