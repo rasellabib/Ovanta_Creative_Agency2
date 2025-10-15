@@ -167,27 +167,27 @@ const projectTitle = gsap.timeline({
     // markers: true,
   },
 });
-projectTitle.from(" .projects-title, .arrow-div, .project-image", {
+projectTitle.from(" .projects-title, .arrow-div", {
   y: 100,
   opacity: 0,
-  stagger: 0.1,
+  stagger: 0.3,
   duration: 1,
 });
-// const project = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".project-image",
-//     scroller: "body",
-//     start: "top 70%",
-//     toggleActions: "play none none reverse",
-// markers: true,
-//   },
-// });
-// project.from(" .project-image", {
-//   y: 100,
-//   opacity: 0,
-//   stagger: 0,
-//   duration: 0.8,
-// });
+const project = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".project-image",
+    scroller: "body",
+    start: "top 70%",
+    toggleActions: "play none none reverse",
+    markers: true,
+  },
+});
+project.from(".project-image", {
+  y: 100,
+  opacity: 0,
+  stagger: 0.4,
+  duration: 1,
+});
 
 const process = gsap.timeline({
   scrollTrigger: {

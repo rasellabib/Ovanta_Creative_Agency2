@@ -74,12 +74,22 @@ const QuickLinks = gsap.timeline({
     // markers: true,
   },
 });
-QuickLinks.from(
-  ".QuickLinks h4, .QuickLinks li, .Support h4, .Support li, .ContactInfo h4, .ContactInfo p ",
-  {
-    y: 100,
-    opacity: 0,
-    stagger: 0,
-    duration: 0.91,
-  }
-);
+QuickLinks.from(".QuickLinks h4,.QuickLinks li", {
+  y: 100,
+  opacity: 0,
+  stagger: 0,
+  duration: 0.5,
+});
+QuickLinks.from(".Support h4, .Support li  ", {
+  y: 100,
+  opacity: 0,
+  stagger: 0,
+  duration: 0.5,
+});
+
+QuickLinks.from(".ContactInfo h4, .ContactInfo p ", {
+  y: 100,
+  opacity: 0,
+  stagger: 0,
+  duration: 0.5,
+});

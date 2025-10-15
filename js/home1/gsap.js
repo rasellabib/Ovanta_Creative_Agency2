@@ -134,7 +134,6 @@ const testimonialContent = gsap.timeline({
 });
 testimonialContent.from(".content .testimonialTitle, .content .blockquote", {
   y: 100,
-  x: 40,
   opacity: 0,
   stagger: 0.2,
 });

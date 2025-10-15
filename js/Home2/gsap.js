@@ -1,5 +1,3 @@
-
-
 var nav = gsap.timeline();
 var pageTitle = gsap.timeline();
 var Groho = gsap.timeline();
@@ -266,52 +264,70 @@ successTitle.from(".success-title-sec", {
 //   duration: 0.8,
 // });
 
-const successImg1 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".success-img1",
-    scroller: "body",
-    start: "top 75%",
-    toggleActions: "play none none reverse",
-    // markers: true,
-  },
+gsap.utils.toArray(".success-img-div").forEach((row) => {
+  let NewsBlogsCard = gsap.timeline({
+    scrollTrigger: {
+      trigger: row,
+      scroller: "body",
+      start: "top 70%",
+      toggleActions: "play none none reverse",
+      // markers: true,
+    },
+  });
+
+  NewsBlogsCard.from(row.querySelectorAll(".success-img1"), {
+    y: 60,
+    opacity: 0,
+    duration: 0.5,
+  });
 });
 
-successImg1.from(".success-img1", {
-  x: -100,
-  opacity: 0,
-  duration: 0.8,
-});
+// const successImg1 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".success-img1",
+//     scroller: "body",
+//     start: "top 75%",
+//     toggleActions: "play none none reverse",
+//     // markers: true,
+//   },
+// });
 
-const successImg2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".success-img1",
-    scroller: "body",
-    start: "top 75%",
-    toggleActions: "play none none reverse",
-    // markers: true,
-  },
-});
+// successImg1.from(".success-img1", {
+//   x: -100,
+//   opacity: 0,
+//   duration: 0.8,
+// });
 
-successImg2.from(".success-img2", {
-  x: 100,
-  opacity: 0,
-  duration: 0.8,
-});
-const successImg3 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".success-img3",
-    scroller: "body",
-    start: "top 75%",
-    toggleActions: "play none none reverse",
-    // markers: true,
-  },
-});
+// const successImg2 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".success-img1",
+//     scroller: "body",
+//     start: "top 75%",
+//     toggleActions: "play none none reverse",
+//     // markers: true,
+//   },
+// });
 
-successImg3.from(".success-img3", {
-  y: 100,
-  opacity: 0,
-  duration: 0.8,
-});
+// successImg2.from(".success-img2", {
+//   x: 100,
+//   opacity: 0,
+//   duration: 0.8,
+// });
+// const successImg3 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: ".success-img3",
+//     scroller: "body",
+//     start: "top 75%",
+//     toggleActions: "play none none reverse",
+//     // markers: true,
+//   },
+// });
+
+// successImg3.from(".success-img3", {
+//   y: 100,
+//   opacity: 0,
+//   duration: 0.8,
+// });
 
 const reviewSec = gsap.timeline({
   scrollTrigger: {
