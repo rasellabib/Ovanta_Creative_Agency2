@@ -2,196 +2,164 @@
 <html lang="bn">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Testimonial Section</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sidebars2 Menu - Bootstrap 5</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Optional: Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg:#0f0f0f;
-      --muted:#bfbfbf;
-      --accent:#fff;
+      --divider: #e9e9e9;
+      --accent: #071e4a; /* optional right border color like screenshot */
+      --text: #0b0b0b;
     }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:'Poppins',sans-serif;background:#0b0b0b;color:var(--accent)}
 
-    .wrap{
-      min-height:100vh;
+    body {
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #ffffff;
+      color: var(--text);
+      padding: 22px;
+    }
+
+    .sidebars2 {
+      max-width: 380px;
+      border-radius: 4px;
+      overflow: hidden;
+      border-right: 4px solid transparent; /* keep layout */
+    }
+
+    .nav-vertical1 {
+      background: #fff;
+      box-shadow: none;
+    }
+
+    .nav-vertical1 .nav-item-drower {
+      border-bottom: 1px solid var(--divider);
+    }
+
+    /* Top-level button style to look like list rows */
+    .btn-toggle1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 20px 18px;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      background: transparent;
+      border: none;
+      text-align: left;
+    }
+
+    .btn-toggle1:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    /* right chevron style */
+    .btn-toggle1 .bi {
+      transition: transform .22s ease;
+      font-size: 18px;
+    }
+
+    /* rotate icon when expanded (Bootstrap will toggle aria-expanded) */
+    .btn-toggle1[aria-expanded="true"] .bi {
+      transform: rotate(-180deg); /* shows an "up" style when open */
+    }
+
+    /* Submenu items */
+    .submenu .nav-links2 {
+      display: block;
+      padding: 18px 18px;
+      padding-left: 40px; /* indent */
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .submenu .nav-links2:hover {
+      background: #fafafa;
+      text-decoration: none;
+    }
+
+    /* Slight spacing above/below collapse */
+    .collapse + .nav-item-drower {
+      border-top: 1px solid transparent;
+    }
+
+    /* Make the whole row clickable when it's a simple link */
+    .top-link {
       display:flex;
       align-items:center;
-      justify-content:center;
-      padding:60px 80px;
-      background: radial-gradient(at 10% 10%, rgba(255,255,255,0.02), transparent 10%), #0b0b0b;
-      background-image: url('Screenshot 2025-09-14 at 10.06.52\u2009AM.png');
-      background-size: cover;
-      background-position: center;
+      justify-content:space-between;
+      padding: 20px 18px;
+      font-size: 20px;
+      font-weight:700;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .top-link + .nav-item-drower { /* ensure border between items */
+      border-top: 1px solid transparent;
     }
 
-    .testimonial{
-      width:100%;
-      max-width:1400px;
-      display:grid;
-      grid-template-columns: 160px 1fr;
-      gap:40px;
-      align-items:center;
-      padding:40px 60px;
-      background: linear-gradient(180deg, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
-      border-radius:6px;
-    }
-
-    /* left avatars */
-    .clients{
-      display:flex;
-      align-items:center;
-      justify-content:flex-start;
-    }
-
-    .pill{
-      width:120px;
-      background:rgba(0,0,0,0.55);
-      border-radius:80px;
-      padding:22px 10px;
-      display:flex;
-      flex-direction:column;
-      gap:26px;
-      align-items:center;
-      position:relative;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.6), inset 0 3px 10px rgba(255,255,255,0.02);
-    }
-
-    .avatar{
-      width:64px;height:64px;border-radius:50%;overflow:hidden;cursor:pointer;border:4px solid rgba(255,255,255,0.03);transition:transform .28s,box-shadow .28s,opacity .28s;
-      display:block;
-    }
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-    .avatar.active{transform:scale(1.08);box-shadow:0 8px 24px rgba(0,0,0,0.6);opacity:1}
-    .avatar.inactive{opacity:0.65}
-
-    /* arrow */
-    .arrow{
-      position:absolute;
-      left:120px; /* sits between pill and content */
-      width:0;height:0;
-      border-top:14px solid transparent;
-      border-bottom:14px solid transparent;
-      border-left:20px solid #ffffff;
-      transform:translateX(-10px);
-      transition:top .28s;
-      filter:drop-shadow(0 4px 10px rgba(0,0,0,0.6));
-    }
-
-    /* right content */
-    .content{
-      padding:10px 40px 30px 40px;
-    }
-    .kicker{display:flex;align-items:center;gap:14px;color:var(--muted);font-weight:600;font-size:13px;letter-spacing:2px}
-    .kicker::before{content:'';width:48px;height:2px;background:linear-gradient(90deg,#fff,rgba(255,255,255,0.15));display:inline-block}
-    h1{font-size:64px;margin:8px 0 18px;line-height:0.95}
-    blockquote{font-size:20px;line-height:1.8;color:#e6e6e6;margin:28px 0 36px;max-width:920px}
-
-    .divider{height:1px;background:rgba(255,255,255,0.06);margin:10px 0 24px}
-    .author{font-size:28px;font-weight:700}
-    .role{color:var(--muted);margin-top:6px}
-
-    /* responsive */
-    @media(max-width:900px){
-      .testimonial{grid-template-columns:80px 1fr;padding:24px}
-      h1{font-size:40px}
-      .pill{padding:18px}
-      .avatar{width:54px;height:54px}
-      .arrow{left:88px}
-    }
-    @media(max-width:600px){
-      .wrap{padding:30px}
-      .testimonial{grid-template-columns:1fr;padding:20px;gap:20px}
-      .clients{order:2;justify-content:center}
-      .arrow{display:none}
-      h1{font-size:28px}
-      blockquote{font-size:16px}
+    /* Responsive tweaks */
+    @media (max-width: 576px) {
+      .sidebars2 { max-width: 100%; }
+      .btn-toggle1, .top-link { padding: 16px; font-size: 18px; }
+      .submenu .nav-links2 { padding-left: 34px; font-size: 17px; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <section class="testimonial">
-      <div class="clients">
-        <div class="pill" id="pill">
-          <div class="avatar" data-index="0"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=80&auto=format&fit=crop" alt="client 1"></div>
-          <div class="avatar" data-index="1"><img src="https://images.unsplash.com/photo-1545996124-1f7a1f6a6f6a?w=800&q=80&auto=format&fit=crop" alt="client 2"></div>
-          <div class="avatar" data-index="2"><img src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?w=800&q=80&auto=format&fit=crop" alt="client 3"></div>
-          <div class="arrow" id="arrow"></div>
+
+  <div class="sidebars2">
+    <nav class="nav nav-vertical1">
+      <!-- Item without submenu -->
+      <div class="nav-item-drower">
+        <a href="#" class="top-link">Demo <i class="bi bi-chevron-right"></i></a>
+      </div>
+
+      <div class="nav-item-drower">
+        <a href="#" class="top-link">Pages <i class="bi bi-chevron-right"></i></a>
+      </div>
+
+      <div class="nav-item-drower">
+        <a href="#" class="top-link">Portfolio <i class="bi bi-chevron-right"></i></a>
+      </div>
+
+      <!-- Item with submenu (Blog) -->
+      <div class="nav-item-drower">
+        <!-- Button toggles collapse -->
+        <button class="btn btn-toggle1" data-bs-toggle="collapse" data-bs-target="#blogMenu" aria-expanded="false" aria-controls="blogMenu">
+          Blog
+          <i class="bi bi-chevron-right"></i>
+        </button>
+
+        <!-- Collapsible submenu -->
+        <div class="collapse" id="blogMenu">
+          <nav class="nav flex-column submenu">
+            <a class="nav-links2" href="#">Blog Grid</a>
+            <a class="nav-links2" href="#">Blog List</a>
+            <a class="nav-links2" href="#">Blog Details</a>
+          </nav>
         </div>
       </div>
 
-      <div class="content">
-        <div class="kicker">TESTIMONIAL</div>
-        <h1>Clients Feedback</h1>
-        <blockquote id="quote">"Craincy exceeded our expectations, delivering a stunning design that truly reflects our brand’s essence. Their creativity and professionalism made a lasting impact. They create stunning architectural concepts that capture the essence of the community and its surroundings, blending aesthetics with functionality."</blockquote>
-        <div class="divider"></div>
-        <div class="author" id="author">Jenny Bennett</div>
-        <div class="role" id="role">Senior Marketing Manager</div>
-      </div>
-    </section>
+      <!-- extra bottom border line (visual) -->
+      <div style="height:1px;background:transparent;"></div>
+    </nav>
   </div>
 
-  <script>
-    const testimonials = [
-      {
-        name: 'Jenny Bennett',
-        role: 'Senior Marketing Manager',
-        quote: '"Craincy exceeded our expectations, delivering a stunning design that truly reflects our brand’s essence. Their creativity and professionalism made a lasting impact. They create stunning architectural concepts that capture the essence of the community and its surroundings, blending aesthetics with functionality."'
-      },
-      {
-        name: 'Liam Parker',
-        role: 'Product Designer',
-        quote: '"Working with this team was a pleasure. They translated our vague idea into a clean, scalable design system. Communication was clear and timely, and final delivery surpassed expectations."'
-      },
-      {
-        name: 'Sofia Turner',
-        role: 'CEO, BrightCo',
-        quote: '"A highly professional studio — they drove the project with care, delivered on time, and brought smart design decisions that improved our conversion metrics significantly."'
-      }
-    ];
-
-    const avatars = Array.from(document.querySelectorAll('.avatar'));
-    const quoteEl = document.getElementById('quote');
-    const authorEl = document.getElementById('author');
-    const roleEl = document.getElementById('role');
-    const arrow = document.getElementById('arrow');
-    const pill = document.getElementById('pill');
-
-    let active = 0;
-
-    function setActive(i, animate=true){
-      active = i;
-      avatars.forEach(a=>{a.classList.remove('active');a.classList.remove('inactive')});
-      avatars.forEach((a,idx)=>{ if(idx!==i) a.classList.add('inactive') });
-      avatars[i].classList.add('active');
-
-      // update content
-      quoteEl.textContent = testimonials[i].quote;
-      authorEl.textContent = testimonials[i].name;
-      roleEl.textContent = testimonials[i].role;
-
-      // position arrow vertically near active avatar
-      const avatarRect = avatars[i].getBoundingClientRect();
-      const pillRect = pill.getBoundingClientRect();
-      const top = avatarRect.top - pillRect.top + (avatarRect.height/2) - (arrow.offsetHeight/2);
-      arrow.style.top = `${top}px`;
-    }
-
-    avatars.forEach(av=>{
-      av.addEventListener('click', (e)=>{
-        const i = Number(av.getAttribute('data-index'));
-        setActive(i);
-      })
-    });
-
-    // initial
-    window.addEventListener('load', ()=>{
-      setActive(0);
-      // ensure arrow repositions on resize
-      window.addEventListener('resize', ()=>setActive(active));
-    });
-  </script>
+  <!-- Bootstrap bundle (includes Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

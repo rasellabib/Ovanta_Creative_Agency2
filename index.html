@@ -241,7 +241,28 @@
           >
             <ul class="nav-items1 nav flex-column gap-2">
               <li class="">
-                <a class="nav-link p-18 fw-bold" href="/index.html">Home</a>
+                <div class="nav-item">
+                  <!-- Button toggles collapse -->
+                  <a
+                    class="nav-link btn btn-toggle d-flex justify-content-start"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#blogMenu"
+                    aria-expanded="false"
+                    aria-controls="blogMenu"
+                  >
+                    Home
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+
+                  <!-- Collapsible submenu -->
+                  <div class="collapse" id="blogMenu">
+                    <nav class="nav flex-column submenu">
+                      <a class="nav-link" href="/index.html">Home</a>
+                      <a class="nav-link" href="/Home1/index.html">Home2</a>
+                      <a class="nav-link" href="/Home2/index.html">Home3</a>
+                    </nav>
+                  </div>
+                </div>
               </li>
               <li class="">
                 <a class="nav-link p-18 fw-bold" href="/Pages/AboutUs.html"
@@ -249,26 +270,92 @@
                 >
               </li>
               <li class="">
-                <a
-                  class="nav-link p-18 fw-bold"
-                  href="/Pages/PortfolioGrid.html"
-                  >Portfolio</a
-                >
+                <div class="nav-item">
+                  <!-- Button toggles collapse -->
+                  <a
+                    class="nav-link btn btn-toggle d-flex justify-content-start"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#blogMenu"
+                    aria-expanded="false"
+                    aria-controls="blogMenu"
+                  >
+                    Portfolio
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+
+                  <!-- Collapsible submenu -->
+                  <div class="collapse" id="blogMenu">
+                    <nav class="nav flex-column submenu">
+                      <a class="nav-link" href="/Pages/PortfolioGrid.html"
+                        >Portfolio Grid</a
+                      >
+                      <a class="nav-link" href="/Pages/PortfolioDetails.html"
+                        >Portfolio Details</a
+                      >
+                    </nav>
+                  </div>
+                </div>
               </li>
               <li class="">
                 <a class="nav-link p-18 fw-bold" href="/Pages/PricingPlan.html"
                   >Pricing</a
                 >
               </li>
+
               <li class="">
-                <a class="nav-link p-18 fw-bold" href="/Pages/Service.html"
-                  >Service</a
-                >
+                <div class="nav-item">
+                  <!-- Button toggles collapse -->
+                  <a
+                    class="nav-link btn btn-toggle d-flex justify-content-start"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#blogMenu"
+                    aria-expanded="false"
+                    aria-controls="blogMenu"
+                  >
+                    Service
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+
+                  <!-- Collapsible submenu -->
+                  <div class="collapse" id="blogMenu">
+                    <nav class="nav flex-column submenu">
+                      <a class="nav-link" href="/Pages/Service.html">Service</a>
+                      <a class="nav-link" href="/Pages/ServiceDetails.html"
+                        >Service Details</a
+                      >
+                    </nav>
+                  </div>
+                </div>
               </li>
               <li class="">
-                <a class="nav-link p-18 fw-bold" href="/Pages/OurTeam.html"
-                  >Our Team</a
-                >
+                <div class="nav-item">
+                  <!-- Button toggles collapse -->
+                  <a
+                    class="nav-link btn btn-toggle d-flex justify-content-start"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#blogMenu"
+                    aria-expanded="false"
+                    aria-controls="blogMenu"
+                  >
+                    Blog
+                    <i class="bi bi-chevron-right"></i>
+                  </a>
+
+                  <!-- Collapsible submenu -->
+                  <div class="collapse" id="blogMenu">
+                    <nav class="nav flex-column submenu">
+                      <a class="nav-link" href="/Pages/BlogPost.html"
+                        >Blog Post</a
+                      >
+                      <a class="nav-link" href="/Pages/BlogStandard.html"
+                        >Blog Standard</a
+                      >
+                      <a class="nav-link" href="/Pages/BlogDetails.html"
+                        >Blog Details</a
+                      >
+                    </nav>
+                  </div>
+                </div>
               </li>
             </ul>
 
