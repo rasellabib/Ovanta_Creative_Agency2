@@ -258,7 +258,7 @@ const team = gsap.timeline({
     scroller: "body",
     start: "top 60%",
     toggleActions: "play none none reverse",
-    markers: true,
+    // markers: true,
   },
 });
 team.from(".title-section .section-title-div, .title-section h5", {
