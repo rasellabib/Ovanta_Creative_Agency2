@@ -23,295 +23,94 @@
     <!-- Navbar -->
     <section>
       <nav class="container fixed-top shadow-lg rounded-pill custom-navbar">
-        <div class="In-nav d-flex justify-content-around align-items-center">
-          <!-- Logo -->
-          <div class="col">
+        <div class="d-flex justify-content-between align-items-center py-2">
+          <!-- logo -->
+          <div class="logo-section">
             <a class="navbar-brand p-0" href="/">
-              <img
-                src="/Assets/images/Logo.png"
-                alt="labib logo"
-                class="logo-img"
-              />
+              <img src="/Assets/images/Logo.png" alt="labib logo" class="logo-img" />
             </a>
           </div>
-          <div class="col d-none d-sm-none d-md-none d-lg-block">
-            <ul class="nav-items">
+
+          <!-- desktop nav -->
+          <div class="nav-wrap d-none d-lg-block">
+            <ul class="nav-items d-flex gap-4 mb-0 align-items-center">
               <li class="nav-item dropdown">
-                <button
-                  class="btn dropdown-toggle color-black"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                <button class="btn dropdown-toggle color-black" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="p-18 fw-bold">Home</span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-white">
-                  <li>
-                    <a class="dropdown-item" href="/index.html">Home1</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/Home1/index.html">Home2</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/Home2/index.html">Home3</a>
-                  </li>
+                  <li><a class="dropdown-item" href="/index.html">Home 1</a></li>
+                  <li><a class="dropdown-item" href="/Home1/index.html">Home 2</a></li>
+                  <li><a class="dropdown-item" href="/Home2/index.html">Home 3</a></li>
                 </ul>
               </li>
+
+              <li class="nav-item"><a class="nav-link p-18 fw-bold" href="/Pages/AboutUs.html">About us</a></li>
+
               <li class="nav-item dropdown">
-                <a class="nav-link p-18 fw-bold" href="/Pages/AboutUs.html"
-                  >About</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <button
-                  class="btn dropdown-toggle color-black"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <span class="p-18 fw-bold">Service</span>
+                <button class="btn dropdown-toggle color-black" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="p-20 fw-bold">Pages</span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-white">
-                  <li>
-                    <a class="dropdown-item" href="/Pages/Service.html"
-                      >Service</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/Pages/ServiceDetails.html"
-                      >Service details</a
-                    >
-                  </li>
+                  <li><a class="dropdown-item" href="/Pages/404.html">404</a></li>
+                  <li><a class="dropdown-item" href="/Pages/AboutUs.html">About Us</a></li>
+                  <li><a class="dropdown-item" href="/Pages/BlogDetails.html">Blog Details</a></li>
+                  <li><a class="dropdown-item" href="/Pages/BlogPost.html">Blog Post</a></li>
+                  <li><a class="dropdown-item" href="/Pages/BlogStandard.html">Blog Standard</a></li>
+                  <li><a class="dropdown-item" href="/Pages/contact.html">Contact</a></li>
+                  <li><a class="dropdown-item" href="/Pages/Faqs.html">FAQs</a></li>
+                  <li><a class="dropdown-item" href="/Pages/OurTeam.html">Our Team</a></li>
+                  <li><a class="dropdown-item" href="/Pages/PortfolioDetails.html">Portfolio Details</a></li>
+                  <li><a class="dropdown-item" href="/Pages/PortfolioGrid.html">Portfolio Grid</a></li>
+                  <li><a class="dropdown-item" href="/Pages/PricingPlan.html">Pricing Plan</a></li>
+                  <li><a class="dropdown-item" href="/Pages/Service.html">Service</a></li>
+                  <li><a class="dropdown-item" href="/Pages/ServiceDetails.html">Service Details</a></li>
+                  <li><a class="dropdown-item" href="/Pages/TeamDetails.html">Team Details</a></li>
                 </ul>
               </li>
+
               <li class="nav-item dropdown">
-                <button
-                  class="btn dropdown-toggle color-black"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                <button class="btn dropdown-toggle color-black" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="p-18 fw-bold">Portfolio</span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-white">
-                  <li>
-                    <a class="dropdown-item" href="/Pages/PortfolioDetails.html"
-                      >Portfolio</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/Pages/PortfolioGrid.html"
-                      >Portfolio Grid</a
-                    >
-                  </li>
+                  <li><a class="dropdown-item" href="/Pages/PortfolioDetails.html">Portfolio</a></li>
+                  <li><a class="dropdown-item" href="/Pages/PortfolioGrid.html">Portfolio Grid</a></li>
                 </ul>
               </li>
+
               <li class="nav-item dropdown">
-                <button
-                  class="btn dropdown-toggle color-black"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                <button class="btn dropdown-toggle color-black" data-bs-toggle="dropdown" aria-expanded="false">
                   <span class="p-18 fw-bold">Blogs</span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-white">
-                  <li>
-                    <a class="dropdown-item" href="/Pages/BlogPost.html"
-                      >Blogs</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="/Pages/BlogStandard.html"
-                      >Blogs Grid</a
-                    >
-                  </li>
+                  <li><a class="dropdown-item" href="/Pages/BlogPost.html">Blogs</a></li>
+                  <li><a class="dropdown-item" href="/Pages/BlogStandard.html">Blogs Grid</a></li>
                 </ul>
               </li>
+
+              <li class="nav-item"><a class="nav-link p-18 fw-bold" href="/Pages/contact.html">Contact</a></li>
             </ul>
           </div>
-          <div class="col">
-            <div class="d-flex justify-content-end align-items-center gap-3">
-              <button type="submit" class="button-btn btn nav-sm-none">
-                <p class="p-18 fw-bold">Get in Touch</p>
-                <svg
-                  class="arrow-icon"
-                  viewBox="0 0 16 19"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-                  ></path>
-                </svg>
-              </button>
 
-              <!-- Menu toggle -->
-              <button
-                class="btn btn-sm"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasMenu"
-              >
-                <svg
-                  width="52"
-                  height="52"
-                  viewBox="0 0 52 52"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="26"
-                    cy="26"
-                    r="25.5"
-                    fill="white"
-                    stroke="#545454"
-                  />
-                  <path
-                    d="M26 32.9287H14.2998C13.853 32.9288 13.5002 33.2854 13.5 33.7139C13.5 34.1425 13.8529 34.4999 14.2998 34.5H26C26.447 34.5 26.7998 34.1425 26.7998 33.7139C26.7996 33.2853 26.4468 32.9287 26 32.9287ZM37.7002 25.2139H14.2998C13.8529 25.214 13.5 25.5714 13.5 26C13.5 26.4287 13.8529 26.786 14.2998 26.7861H37.7002C38.1471 26.786 38.5 26.4287 38.5 26C38.5 25.5714 38.1471 25.214 37.7002 25.2139ZM31.2002 17.5H14.2998C13.8529 17.5001 13.5 17.8575 13.5 18.2861C13.5002 18.7146 13.853 19.0712 14.2998 19.0713H31.2002C31.647 19.0712 31.9998 18.7146 32 18.2861C32 17.8575 31.6471 17.5001 31.2002 17.5Z"
-                    fill="#545454"
-                    stroke="#545454"
-                  />
-                </svg>
-              </button>
-            </div>
+          <!-- right controls -->
+          <div class="d-flex align-items-center gap-3">
+            <button type="submit" class="button-btn btn nav-sm-none">
+              <p class="p-18 fw-bold">Get in Touch</p>
+              <svg class="arrow-icon" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"/>
+              </svg>
+            </button>
+
+            <button class="btn btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+              <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="26" cy="26" r="25.5" fill="white" stroke="#545454"/>
+                <path d="M26 32.9287H14.2998C13.853 32.9288 13.5002 33.2854 13.5 33.7139C13.5 34.1425 13.8529 34.4999 14.2998 34.5H26C26.447 34.5 26.7998 34.1425 26.7998 33.7139C26.7996 33.2853 26.4468 32.9287 26 32.9287ZM37.7002 25.2139H14.2998C13.8529 25.214 13.5 25.5714 13.5 26C13.5 26.4287 13.8529 26.786 14.2998 26.7861H37.7002C38.1471 26.786 38.5 26.4287 38.5 26C38.5 25.5714 38.1471 25.214 37.7002 25.2139ZM31.2002 17.5H14.2998C13.8529 17.5001 13.5 17.8575 13.5 18.2861C13.5002 18.7146 13.853 19.0712 14.2998 19.0713H31.2002C31.647 19.0712 31.9998 18.7146 32 18.2861C32 17.8575 31.6471 17.5001 31.2002 17.5Z" fill="#545454" stroke="#545454"/>
+              </svg>
+            </button>
           </div>
-
-          <!-- Control buttons -->
         </div>
       </nav>
-
-      <!-- Menu Drawer -->
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title">Navigation</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="offcanvas"
-          ></button>
-        </div>
-        <div
-          class="offcanvas-body d-flex p-4 flex-column justify-content-between"
-        >
-          <ul class="nav-items1 nav flex-column gap-2">
-              <li class="">
-                <div class="nav-item">
-                  <!-- Button toggles collapse -->
-                  <a
-                    class="nav-link btn btn-toggle d-flex justify-content-start"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#blogMenu"
-                    aria-expanded="false"
-                    aria-controls="blogMenu"
-                  >
-                    Home
-                    <i class="bi bi-chevron-right"></i>
-                  </a>
-
-                  <!-- Collapsible submenu -->
-                  <div class="collapse" id="blogMenu">
-                    <nav class="nav flex-column submenu">
-                      <a class="nav-link" href="/index.html">Home</a>
-                      <a class="nav-link" href="/Home1/index.html">Home2</a>
-                      <a class="nav-link" href="/Home2/index.html">Home3</a>
-                    </nav>
-                  </div>
-                </div>
-              </li>
-              <li class="">
-                <a class="nav-link p-18 fw-bold" href="/Pages/AboutUs.html"
-                  >About</a
-                >
-              </li>
-              <li class="">
-                <div class="nav-item">
-                  <!-- Button toggles collapse -->
-                  <a
-                    class="nav-link btn btn-toggle d-flex justify-content-start"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#blogMenu"
-                    aria-expanded="false"
-                    aria-controls="blogMenu"
-                  >
-                    Portfolio
-                    <i class="bi bi-chevron-right"></i>
-                  </a>
-
-                  <!-- Collapsible submenu -->
-                  <div class="collapse" id="blogMenu">
-                    <nav class="nav flex-column submenu">
-                      <a class="nav-link" href="/Pages/PortfolioGrid.html"
-                        >Portfolio Grid</a
-                      >
-                      <a class="nav-link" href="/Pages/PortfolioDetails.html"
-                        >Portfolio Details</a
-                      >
-                    </nav>
-                  </div>
-                </div>
-              </li>
-              <li class="">
-                <a class="nav-link p-18 fw-bold" href="/Pages/PricingPlan.html"
-                  >Pricing</a
-                >
-              </li>
-
-              <li class="">
-                <div class="nav-item">
-                  <!-- Button toggles collapse -->
-                  <a
-                    class="nav-link btn btn-toggle d-flex justify-content-start"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#blogMenu"
-                    aria-expanded="false"
-                    aria-controls="blogMenu"
-                  >
-                    Service
-                    <i class="bi bi-chevron-right"></i>
-                  </a>
-
-                  <!-- Collapsible submenu -->
-                  <div class="collapse" id="blogMenu">
-                    <nav class="nav flex-column submenu">
-                      <a class="nav-link" href="/Pages/Service.html">Service</a>
-                      <a class="nav-link" href="/Pages/ServiceDetails.html"
-                        >Service Details</a
-                      >
-                    </nav>
-                  </div>
-                </div>
-              </li>
-              <li class="">
-                <div class="nav-item">
-                  <!-- Button toggles collapse -->
-                  <a
-                    class="nav-link btn btn-toggle d-flex justify-content-start"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#blogMenu"
-                    aria-expanded="false"
-                    aria-controls="blogMenu"
-                  >
-                    Blog
-                    <i class="bi bi-chevron-right"></i>
-                  </a>
-
-                  <!-- Collapsible submenu -->
-                  <div class="collapse" id="blogMenu">
-                    <nav class="nav flex-column submenu">
-                      <a class="nav-link" href="/Pages/BlogPost.html"
-                        >Blog Post</a
-                      >
-                      <a class="nav-link" href="/Pages/BlogStandard.html"
-                        >Blog Standard</a
-                      >
-                      <a class="nav-link" href="/Pages/BlogDetails.html"
-                        >Blog Details</a
-                      >
-                    </nav>
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-          <div class="text-muted small text-center">© 2024 Labib Rasel</div>
-        </div>
-      </div>
     </section>
     <!-- ===== Nav section end ==== -->
     <!-- =====hero section start ==== -->
@@ -1224,7 +1023,7 @@
       <div class="container">
         <div class="row justify-content-between align-items-center px-3">
           <div class="col-md-6 p-18">
-            All rights reserved — 2024 © Hurraytheme
+            All rights reserved — 2026 © Hurraytheme
           </div>
           <div class="col-md-6 p-18 footer-end">
             <a href="#">Privacy Policy</a>
@@ -1248,7 +1047,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="/js/home1/gsap.js"></script>
     <script src="/js/home1/project.js"></script>
-    <script src="/js/home1/scrollDrivenAnimation.js"></script>
+    <!-- <script src="/js/home1/scrollDrivenAnimation.js"></script> -->
     <script src="/js/home1/feedback.js"></script>
     <script src="/js/footerGsap.js"></script>
   </body>
